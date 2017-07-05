@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/radiocheckbox.css">
+	<link rel="stylesheet" type="text/css" href="css/calculator.css">
+	<link rel="stylesheet" type="text/css" href="css/tabs.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>R. Garcia Portfolio</title>
+</head>
+<body>
+	<header id="main-header">
+		<div id="logo-wrapper">
+			Rafael Garcia
+		</div>
+		<nav id="main-nav">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Skills</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="search-bar-wrapper">
+			<input type="text" id="search" name="search" required>
+			<label for="search">search</label>
+			<button><i class="fa fa-search" aria-hidden="true"></i></button>
+		</div>
+	</header>
+
+	<main>
+		<section id="projects">
+			<div class="section-wrapper">
+				<h2>Projects</h2>
+				<p>These are the projects I've built for the BovAcademy courses.</p>
+				<div id="tabs-wrapper">
+					<ul id="tabs-list">
+						<li>
+							<input type="radio" name="projects" id="calc" checked>
+							<label for="calc">Calculator</label>
+							<div class="tab-content">
+								<div id="calculator">
+									<input type="text" name="screen" id="screen" disabled value="0">
+									<input type="text" name="history" id="history" disabled value="0">
+									<div class="top">
+										<button class="btn op" id="div">&#247;</button>
+										<button class="btn op" id="del">del</button>
+										<button class="btn op" id="clear">c</button>
+									</div>
+									<div class="right">
+										<button class="btn op" id="plus">&plus;</button>
+										<button class="btn op" id="minus">&minus;</button>
+										<button class="btn op" id="mult">x</button>
+										<button class="btn op" id="equal">=</button>
+									</div>
+									<div class="left">
+										<button class="btn num">9</button>
+										<button class="btn num">8</button>
+										<button class="btn num">7</button>
+										<button class="btn num">6</button>
+										<button class="btn num">5</button>
+										<button class="btn num">4</button>
+										<button class="btn num">3</button>
+										<button class="btn num">2</button>
+										<button class="btn num">1</button>
+										<button class="btn num" id="point">.</button>
+										<button class="btn num" id="zero">0</button>
+									</div>								
+								</div>
+								<footer class="tab-footer">
+									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
+								</footer>
+							</div>
+						</li>
+						<li>
+							<input type="radio" name="projects" id="shop">
+							<label for="shop">Shopping Cart</label>
+							<div class="tab-content">
+								<div class="carousel">
+									<input type="radio" name="p2-slides" id="slide-2-1" checked>
+									<div class="slide">
+										<img src="img/shop1.png">
+									</div>
+									<input type="radio" name="p2-slides" id="slide-2-2">
+									<div class="slide">
+										<img src="img/shop2.png">
+									</div>
+									<input type="radio" name="p2-slides" id="slide-2-3">
+									<div class="slide">
+										<img src="img/shop3.png">
+									</div>
+									<div class="carousel-labels">
+										<label class="slide-pill" for="slide-2-1"></label>
+										<label class="slide-pill" for="slide-2-2"></label>
+										<label class="slide-pill" for="slide-2-3"></label>
+										<label class="arrow-left" for="slide-2-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-2-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-2-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-2-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-2-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-2-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+									</div>
+								</div>
+								<footer class="tab-footer">
+									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
+								</footer>
+							</div>
+						</li>
+						<li>
+							<input type="radio" name="projects" id="forms">
+							<label for="forms">Forms</label>
+							<div class="tab-content">
+								<div class="carousel">
+									<input type="radio" name="p3-slides" id="slide-3-1" checked>
+									<div class="slide">
+										<img src="img/forms1.png">
+									</div>
+									<input type="radio" name="p3-slides" id="slide-3-2">
+									<div class="slide">
+										<img src="img/forms2.png">
+									</div>
+									<input type="radio" name="p3-slides" id="slide-3-3">
+									<div class="slide">
+										<img src="img/forms3.png">
+									</div>
+									<div class="carousel-labels">
+										<label class="slide-pill" for="slide-3-1"></label>
+										<label class="slide-pill" for="slide-3-2"></label>
+										<label class="slide-pill" for="slide-3-3"></label>
+										<label class="arrow-left" for="slide-3-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-3-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-3-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-3-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-3-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-3-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+									</div>
+								</div>
+								<footer class="tab-footer">
+									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
+								</footer>
+							</div>				
+						</li>
+						<li>
+							<input type="radio" name="projects" id="uicomp">
+							<label for="uicomp">Non-JS UI Components</label>
+							<div class="tab-content">
+								<div class="carousel">
+									<input type="radio" name="p4-slides" id="slide-4-1" checked>
+									<div class="slide">
+										<div id="buttons">
+											<h3>Buttons</h3>
+											<button class="btn btn-sm">Small</button>
+											<br>
+											<button class="btn btn-md">Medium</button>
+											<br>
+											<button class="btn btn-lg">Large</button>
+										</div>
+									</div>
+									<input type="radio" name="p4-slides" id="slide-4-2">
+									<div class="slide">
+										<h3>Pill Tabs</h3>
+										<div class="pilltabs">
+										    <input type="radio" name="tabs" id="tab1" checked>
+										    <label for="tab1">Home Decor</label>
+										    <div id="tab1content" class="content">
+										    	<p>Browse through our list of Home Decor Items.</p>
+										    </div>
+
+										    <input type="radio" name="tabs" id="tab2">
+										    <label for="tab2">Furniture</label>
+										    <div id="tab2content" class="content">
+										      <p>Flash sale on Living Room and Bedroom Furniture.</p>
+										    </div>
+
+										    <input type="radio" name="tabs" id="tab3">
+										    <label for="tab3">Kitchen</label>
+										    <div id="tab3content" class="content">
+										      <p>Bring the best out of the Masterchief in you!</p>
+										    </div>
+
+										    <input type="radio" name="tabs" id="tab4">
+										    <label for="tab4">Clearance</label>
+										    <div id="tab4content" class="content">
+										      <p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+										    </div>    
+									    </div>
+
+										<h3>Underline Tabs</h3>
+										<div class="undertabs">
+									    	<input type="radio" name="undertabs" id="tab5" checked>
+									    	<label for="tab5">Home Decor</label>
+									    	<div id="tab5content" class="content">
+									    		<p>Browse through our list of Home Decor Items.</p>
+									    	</div>
+
+									    	<input type="radio" name="undertabs" id="tab6">
+									    	<label for="tab6">Furniture</label>
+									    	<div id="tab6content" class="content">
+									    		<p>Flash sale on Living Room and Bedroom Furniture.</p>
+									    	</div>
+
+									    	<input type="radio" name="undertabs" id="tab7">
+									    	<label for="tab7">Kitchen</label>
+									    	<div id="tab7content" class="content">
+									    		<p>Bring the best out of the Masterchief in you!</p>
+									    	</div>
+
+									    	<input type="radio" name="undertabs" id="tab8">
+									    	<label for="tab8">Clearance</label>
+									    	<div id="tab8content" class="content">
+									    		<p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+									    	</div>
+									    </div>
+									</div>
+									<input type="radio" name="p4-slides" id="slide-4-3">
+									<div class="slide">
+										<div id="radiocheckbox">
+											<h3>Radio Buttons and Checkboxes</h3>
+											<div id="radiocheckbox">
+												<input class="mybox" type="radio" name="radiofill" id="radiofill">
+												<label for="radiofill">Filled Radio Button</label>
+												<br>
+												<input class="mybox gapped" type="radio" name="radiogap" id="radiogap">
+												<label for="radiogap">Gapped Radio Button</label>
+												<br>
+												<input class="mybox no-box" type="checkbox" name="nobox" id="nobox">
+												<label for="nobox">No-box checkbox</label>
+												<br>
+												<input class="mybox fill-in" type="checkbox" name="fillin" id="fillin">
+												<label for="fillin">Filled in checkbox</label>
+												<br>
+												<input class="mybox" type="checkbox" name="normal" id="normal">
+												<label for="normal">Normal checkbox</label>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-labels">
+										<label class="slide-pill" for="slide-4-1"></label>
+										<label class="slide-pill" for="slide-4-2"></label>
+										<label class="slide-pill" for="slide-4-3"></label>
+										<label class="arrow-left" for="slide-4-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-4-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-4-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-4-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-4-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
+										<label class="arrow-right" for="slide-4-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+									</div>
+								</div>
+								<footer class="tab-footer">
+									<p>Technologies: HTML5, and CSS3.</p>
+								</footer>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills">
+			<div class="section-wrapper">
+				<h2>Skills</h2>
+				<p>I started doing Web Development as a hobby about 4 years ago. After some time playing with it I started loving it and got more serious about it. I've completed numerous courses on Computer Science and Web Development since. I'm more inclined to Front-End Development but I also have knowledge of PHP and Laravel, as well as some Back-End Javascript. I intend to become a FullStack Web Developer.</p>
+				<div id="skills-container">
+					<div id="percentage-bar">
+						<span id="percentage-bar-fend">70%</span>
+						<span id="percentage-bar-bend">30%</span>
+					</div>
+					<div id="skills-block-container">
+						<div class="skill-block" id="front-end-skills">
+							<h3>Frontend Development</h3>
+							<div class="skill-graph">
+								<div class="labels-left">
+									<p>Expert</p>
+									<p>Proficient</p>
+									<p>Competent</p>
+									<p>Learning</p>
+								</div>
+								<div class="graph">
+									<div class="graph-bar"><div class="tooltip">I can get things done and have good conceptual knowledge of the Language. Eager to learn more!</div></div>
+									<div class="graph-bar"><div class="tooltip">I've been using them since 2014.</div></div>
+									<div class="graph-bar"><div class="tooltip">I know the basics.</div></div>
+									<div class="graph-bar"><div class="tooltip">Comfortable with it but still learning a lot.</div></div>
+									<div class="graph-bar"><div class="tooltip">Always learning and very interested.</div></div>
+								</div>
+								<div class="labels-bottom">
+									<p>Javascript</p>
+									<p>HTML5/CSS3</p>
+									<p>ReactJS</p>
+									<p>jQuery</p>
+									<p>UI Design</p>
+								</div>
+							</div>
+						</div>
+						<div class="skill-block" id="back-end-skills">
+							<h3>Backend Development</h3>
+							<div class="skill-graph">
+								<div class="labels-left">
+									<p>Expert</p>
+									<p>Proficient</p>
+									<p>Competent</p>
+									<p>Learning</p>
+								</div>
+								<div class="graph">
+									<div class="graph-bar"><div class="tooltip">PHP was the second programing language I learnt. I completed a Harvard Extension School course on building dynamic web apps with Laravel5</div></div>
+									<div class="graph-bar"><div class="tooltip">Used MySQL databases with Laravel. I have some background on relational databases, which I've learned online.</div></div>
+									<div class="graph-bar"><div class="tooltip">Played around with it and built some simple programs.</div></div>
+									<div class="graph-bar"><div class="tooltip">Thoroughly read the book EXPRESS in Action (Manning) and built some simple apps. I'm currently developing an app in order to gain deeper knowledge.</div></div>
+									<div class="graph-bar"><div class="tooltip">Used it within express apps with Mongoose.</div></div>
+								</div>
+								<div class="labels-bottom">
+									<p>PHP/Laravel</p>
+									<p>MySQL</p>
+									<p>NodeJS</p>
+									<p>Express</p>
+									<p>MongoDB</p>
+								</div>
+							</div>
+						</div>
+						<div class="skill-block" id="other-skills">
+							<h3>Other Skills</h3>
+							<div class="skill-graph">
+								<div class="labels-left">
+									<p>Expert</p>
+									<p>Proficient</p>
+									<p>Competent</p>
+									<p>Learning</p>
+								</div>
+								<div class="graph">
+									<div class="graph-bar"><div class="tooltip">Always been a reader, both in Spanish and English. I have a good sense of writing but I want to keep honing my writing skills.</div></div>
+									<div class="graph-bar"><div class="tooltip">Love to tackle a challenge! I have some background in engineering.</div></div>
+									<div class="graph-bar"><div class="tooltip">Independent worker, I can get things done without depending on others if it's possible. However, I can take the lead in a team if necessary and be a good teammate too.</div></div>
+									<div class="graph-bar"><div class="tooltip">Always been my own teacher on various areas of knowledge that itch my curiosity. I have a good sense for filtering useful information and to find out where I'm lacking knowledge.</div></div>
+									<div class="graph-bar"><div class="tooltip"></div></div>
+								</div>
+								<div class="labels-bottom">
+									<p>Written Communication</p>
+									<p>Problem Solving</p>
+									<p>Project Management</p>
+									<p>Research</p>
+									<p>Public Speaking</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="section-wrapper">
+				<h2>Contact</h2>
+				<div id="contact-wrapper">
+					<label for="card-toggle">
+						<input type="checkbox" id="card-toggle">
+					    <div class="card">
+					    	<div class="front">
+					    		<h1>Rafael Garcia</h1>
+					    		<p><small>Full Stack Web Developer</small></p>
+					    		<p id="info">Full-Stack Web Developer and computer science enthusiast. Working as a freelance developer since mid 2016.</p>
+					    		<p id="email">rafuk89@gmail.com</p>
+					    		<p id="website"><a href="https://github.com/rafuka">github.com/rafuka</a></p>
+					    		<div id="enc-info">
+					    			<img src="img/enc2.png">
+					    			<p><span>J.R. Garcia</span><br> on <a id="enc-anchor">Enciclopedia.MD</a></p>
+					    		</div>
+					    		<div id="social-media">
+					    			<span><a href="#"><img src="img/twitter.png"></a></span>
+					    			<span><a href="#"><img src="img/github2.png"></a></span>
+					    			<span><a href="#"><img src="img/facebook.png"></a></span>
+					    			<span><a href="#"><img src="img/linkedin.png"></a></span>
+					    		</div>
+					    	</div>
+					    	<div class="back">
+					    	</div>
+					    </div>
+
+					</label>
+				</div>	
+			</div>
+		</section>
+	</main>
+
+	<footer id="main-footer">
+		<p>&copy; 2017 Rafael Garcia</p>
+	</footer>
+	<script type="text/javascript">
+		var calculator = document.getElementById("calculator");
+		var screen = document.getElementById("screen");
+		var history = document.getElementById("history");
+		var op = null;
+		var lastOp = false;
+		var val1 = null;
+		var val2 = null;
+
+
+		function calculate(val1, op, val2) {
+			switch(op) {
+				case "plus":
+					return +val1 + +val2;
+					break;
+				case "minus":
+					return +val1 - +val2;
+					break;
+				case "mult":
+					return +val1 * +val2;
+					break;
+				case "div":
+					return +val1 / +val2;
+					break;
+			}
+		}
+
+		calculator.addEventListener('click', function(e) {
+			
+			var element = e.target;
+
+			if (element.classList.contains('btn')) {
+
+				if (element.classList.contains('num')) {
+
+					console.log('num');
+
+					if (lastOp) {
+
+						screen.value = '' + element.innerHTML;
+						lastOp = false;
+					}	
+
+					else if (screen.value == '0') {
+
+						screen.value = element.innerHTML;
+					}
+					else {
+						
+						screen.value += element.innerHTML;				
+					}
+				}
+				else {
+					console.log('op');
+
+					if (!lastOp) {
+
+						if (!val1) {
+							val1 = screen.value;
+						}
+						else {
+							screen.value = calculate(val1, op, screen.value);
+							val1 = screen.value;
+						}
+					}	
+
+					op = element.id;
+					lastOp = true;
+
+					
+					
+					
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

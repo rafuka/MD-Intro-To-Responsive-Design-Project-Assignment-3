@@ -1,0 +1,85 @@
+div.pilltabs, div.undertabs {
+	position: relative;
+	padding: 20px;
+	font-family: 'Futura', sans-serif;
+	margin-bottom: 100px;
+}
+
+div.pilltabs input,
+div.undertabs input {
+	display: none;
+}
+
+div.pilltabs label {
+	padding: 10px;
+	cursor: pointer;
+	user-select: none;
+	transition: border .2s ease, background-color .2s ease;
+	color: #ffac41;
+	border: 1px solid transparent;
+	border-radius: 7px;
+}
+
+#tabs-list div.pilltabs input[type="radio"]:checked + label {
+	background-color: #ffac41;
+	color: white;
+	border-radius: 7px;
+}
+
+#tabs-list div.pilltabs input[type="radio"]:not(:checked) + label:hover {
+	border: 1px solid #ffac41;
+	color: #ffac41;
+}
+
+div.pilltabs div.content,
+div.undertabs div.content {
+	position: absolute;
+	top: 80px;
+	opacity: 0;
+	padding: 10px;
+	width: 100%;
+	font-weight: 300; 
+	transition: top .3s ease-in-out, opacity .15s ease-in-out;
+}
+
+#tabs-list div.pilltabs input[type="radio"]:checked + label + div.content,
+#tabs-list div.undertabs input[type="radio"]:checked + label + div.content  {
+	opacity: 1;
+	top: 50px;
+}
+
+
+div.undertabs label {
+	padding: 10px;
+	padding-bottom: 7px;
+	cursor: pointer;
+	user-select: none;
+	transition: color .2s ease-in-out;
+	position: relative;
+}
+
+
+
+div.undertabs label::after {
+	content: '';
+	width: 0px;
+	border-bottom: 2px solid #ffac41;
+	position: absolute;
+	display: inline-block;
+	bottom: 0px;
+    right: 50%;
+    transition: width .3s ease-in-out, right .3s ease-in-out;
+}
+
+#tabs-list div.undertabs input[type="radio"]:checked + label::after {
+	width: 100%;
+	right: 0;
+}
+
+#tabs-list div.undertabs label:hover {
+	color: #ffac41;
+}
+
+#tabs-list div.undertabs input[type="radio"]:checked + label  {
+	color: #ffac41;
+}
