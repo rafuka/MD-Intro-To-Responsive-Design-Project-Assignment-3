@@ -13,7 +13,7 @@
 <body>
 	<header id="main-header">
 		<div id="logo-wrapper">
-			Rafael Garcia
+			Rafael García
 		</div>
 		<nav id="main-nav">
 			<ul>
@@ -26,10 +26,22 @@
 		<div id="search-bar-wrapper">
 			<input type="text" id="search" name="search" required>
 			<label for="search">search</label>
-			<button><i class="fa fa-search" aria-hidden="true"></i></button>
+			<button id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
 	</header>
-
+	<div id="search-modal">
+		<div id="modal-content">
+			<div class="modal-header">
+				<span id="close-btn">&times;</span>
+			</div>
+			<div class="modal-body">
+				<p>Sorry! <br><br> Search feature is currently disabled.</p>		
+			</div>
+			<div class="modal-footer">
+				<p id="devwidth"></p>
+			</div>
+		</div>
+	</div>
 	<main>
 		<section id="projects">
 			<div class="section-wrapper">
@@ -151,11 +163,16 @@
 									<div class="slide">
 										<div id="buttons">
 											<h3>Buttons</h3>
-											<button class="btn btn-sm">Small</button>
+											<button class="btn btn-sm">One</button>
 											<br>
-											<button class="btn btn-md">Medium</button>
+											<button class="btn btn-md">Two</button>
 											<br>
-											<button class="btn btn-lg">Large</button>
+											<button class="btn btn-lg">Three</button>
+											<br>
+											<button class="btn btn-lg btn-press">Press Me</button>
+											<br>
+											<button class="btn btn-lg btn-press2">Press Me Too</button>
+											<br>
 										</div>
 									</div>
 									<input type="radio" name="p4-slides" id="slide-4-2">
@@ -330,7 +347,7 @@
 								<div class="graph">
 									<div class="graph-bar"><div class="tooltip">Always been a reader, both in Spanish and English. I have a good sense of writing but I want to keep honing my writing skills.</div></div>
 									<div class="graph-bar"><div class="tooltip">Love to tackle a challenge! I have some background in engineering.</div></div>
-									<div class="graph-bar"><div class="tooltip">Independent worker, I can get things done without depending on others if it's possible. However, I can take the lead in a team if necessary and be a good teammate too.</div></div>
+									<div class="graph-bar"><div class="tooltip">Independent worker, I can get things done without depending on others if necessary. However, I can take the lead in a team if necessary and be a good teammate too.</div></div>
 									<div class="graph-bar"><div class="tooltip">Always been my own teacher on various areas of knowledge that itch my curiosity. I have a good sense for filtering useful information and to find out where I'm lacking knowledge.</div></div>
 									<div class="graph-bar"><div class="tooltip"></div></div>
 								</div>
@@ -386,6 +403,7 @@
 	<footer id="main-footer">
 		<p>&copy; 2017 Rafael Garcia</p>
 	</footer>
+
 	<script type="text/javascript">
 		var calculator = document.getElementById("calculator");
 		var screen = document.getElementById("screen");
@@ -454,13 +472,39 @@
 
 					op = element.id;
 					lastOp = true;
-
-					
-					
-					
+			
 				}
 			}
 		});
+	</script>
+	<script type="text/javascript">
+		var modal 		= document.getElementById('search-modal');
+		var srchbtn 	= document.getElementById('search-btn');
+		var close 		= document.getElementById('close-btn');
+		var devwidth 	= document.getElementById('devwidth');
+
+		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		devwidth.innerHTML = "" + w;
+
+		srchbtn.onclick = function() {
+			modal.style.display = 'block';
+			setTimeout(function() {
+				modal.style.opacity = 1;
+			}, 100);
+
+			w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+			devwidth.innerHTML = "" + w;
+			
+		}
+
+		close.onclick = function() {
+			modal.style.opacity = 0;
+			setTimeout(function() {
+				modal.style.display = 'none';
+			}, 200);
+			
+
+		}
 	</script>
 </body>
 
