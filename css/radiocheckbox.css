@@ -140,3 +140,32 @@ input[type="radio"].mybox.gapped:checked::before {
   top: 6px;
   left: 6px;
 }
+
+input.mybox.switch {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+input.mybox.switch::before {
+  border: none;
+  background-color: #cfcfcf;
+  width: 50%;
+  height: 100%;
+  transform: none;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+input.mybox.switch:checked::before {
+    border: none;
+    background-color: #33c5dc;
+    transform: none;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+}

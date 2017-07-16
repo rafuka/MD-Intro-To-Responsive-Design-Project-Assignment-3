@@ -9,12 +9,21 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+.material-icons {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 html {
     background-color: #343739;
 }
 
 body {
 	background-color: #F2F2F1;
+}
+
+main section {
+	min-height: 90vh;
 }
 
 ul li {
@@ -49,6 +58,10 @@ a {
 
 #search-bar-wrapper {
 	display: inline-block;
+	padding-right: 5px;
+    background-color: rgba(200,200,200,0.3);
+    position: relative;
+	top: 5px;
 }
 
 #search-bar-wrapper .form-group {
@@ -94,6 +107,10 @@ section:nth-child(odd) {
 	padding: 100px 0px;
 	max-width: 900px;
 	margin: 0 auto;
+	transition: opacity 1s ease, top 1s ease;
+	opacity: 0;
+	position: relative;
+	top: 100px;
 } 
 
 .section-wrapper > h2 {
@@ -548,6 +565,10 @@ input#card-toggle:checked + .card {
 
 .skill-block {
 	width: 50%;
+    position: relative;
+	top: 100px;
+	opacity: 0;
+	transition: top .7s ease-in-out, opacity .7s ease-in-out;
 }
 
 .skill-block h3 {
@@ -773,8 +794,7 @@ input#card-toggle:checked + .card {
 /* ===== SEARCH BAR ===== */
 
 #search-bar-wrapper {
-	position: relative;
-	top: 5px;
+	
 }
 
 #search-bar-wrapper label {
@@ -782,19 +802,19 @@ input#card-toggle:checked + .card {
 	color: rgba(255,255,255,0.7);
 	text-transform: uppercase;
 	font-size: 16px;
-	left: 0;
-	top: 4px;
+	left: 4px;
+	top: 6px;
 	transition: top .3s ease, font-size .3s ease;
 }
 
 #search {
 	background-color: transparent;
     border: none;
-    border-bottom: 1px solid white;
     outline: none;
     color: white;
     width: 150px;
     font-size: 16px;
+    padding: 5px;
 }
 
 #search:focus + label,
@@ -804,17 +824,14 @@ input#card-toggle:checked + .card {
 }
 
 #search-bar-wrapper button {
-	padding: 5px;
+	padding: 3px;
     border: none;
     outline: none;
     -webkit-appearance: none;
     cursor: pointer;
     color: white;
-    border-bottom: 1px solid white;
-    background-color: #343739;
+    background-color: transparent;
     position: relative;
-    left: -4px;
-    top: -4px;
 }
 
 #search-bar-wrapper button i {
@@ -826,6 +843,9 @@ input#card-toggle:checked + .card {
 	transform: scale(1.2);
 }
 
+#saerch-btn {
+	height: 0;
+}
 
 /* ===== END SEARCH BAR ===== */
 
@@ -864,7 +884,7 @@ input#card-toggle:checked + .card {
 	text-align: center;
 	padding: 40px;
 	font-size: 2em;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
 } 
 
 #close-btn {

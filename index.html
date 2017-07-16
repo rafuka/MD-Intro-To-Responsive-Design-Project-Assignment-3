@@ -2,11 +2,12 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="css/radiocheckbox.css">
 	<link rel="stylesheet" type="text/css" href="css/calculator.css">
 	<link rel="stylesheet" type="text/css" href="css/tabs.css">
 	<link rel="stylesheet" type="text/css" href="css/button.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<title>R. Garcia Portfolio</title>
 </head>
@@ -39,6 +40,7 @@
 			</div>
 			<div class="modal-footer">
 				<p id="devwidth"></p>
+				<p id="scrolltop"></p>
 			</div>
 		</div>
 	</div>
@@ -107,12 +109,12 @@
 										<label class="slide-pill" for="slide-2-1"></label>
 										<label class="slide-pill" for="slide-2-2"></label>
 										<label class="slide-pill" for="slide-2-3"></label>
-										<label class="arrow-left" for="slide-2-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-2-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-2-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-2-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-2-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-2-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-2-1"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-2-1"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-2-2"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-2-2"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-2-3"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-2-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
 								<footer class="tab-footer">
@@ -141,12 +143,12 @@
 										<label class="slide-pill" for="slide-3-1"></label>
 										<label class="slide-pill" for="slide-3-2"></label>
 										<label class="slide-pill" for="slide-3-3"></label>
-										<label class="arrow-left" for="slide-3-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-3-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-3-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-3-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-3-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-3-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-3-1"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-3-1"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-3-2"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-3-2"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-3-3"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-3-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
 								<footer class="tab-footer">
@@ -236,19 +238,22 @@
 										<div id="radiocheckbox">
 											<h3>Radio Buttons and Checkboxes</h3>
 											<div id="radiocheckbox">
-												<input class="mybox" type="radio" name="radiofill" id="radiofill">
+												<input class="mybox" type="radio" name="radiodemo" id="radiofill">
 												<label for="radiofill">Filled Radio Button</label>
 												<br>
-												<input class="mybox gapped" type="radio" name="radiogap" id="radiogap">
+												<input class="mybox gapped" type="radio" name="radiodemo" id="radiogap">
 												<label for="radiogap">Gapped Radio Button</label>
 												<br>
-												<input class="mybox no-box" type="checkbox" name="nobox" id="nobox">
+												<input class="mybox switch" type="checkbox" name="radiodemo" id="checkbox4">
+												<label for="checkbox4">Switch Checkbox</label>
+												<br>
+												<input class="mybox no-box" type="checkbox" name="checkdemo" id="nobox">
 												<label for="nobox">No-box checkbox</label>
 												<br>
-												<input class="mybox fill-in" type="checkbox" name="fillin" id="fillin">
+												<input class="mybox fill-in" type="checkbox" name="checkdemo" id="fillin">
 												<label for="fillin">Filled in checkbox</label>
 												<br>
-												<input class="mybox" type="checkbox" name="normal" id="normal">
+												<input class="mybox" type="checkbox" name="checkdemo" id="normal">
 												<label for="normal">Normal checkbox</label>
 											</div>
 										</div>
@@ -257,12 +262,12 @@
 										<label class="slide-pill" for="slide-4-1"></label>
 										<label class="slide-pill" for="slide-4-2"></label>
 										<label class="slide-pill" for="slide-4-3"></label>
-										<label class="arrow-left" for="slide-4-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-4-1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-4-2"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-4-2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-										<label class="arrow-left" for="slide-4-3"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-										<label class="arrow-right" for="slide-4-3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
+										<label class="arrow-left" for="slide-4-1"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-4-1"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-4-2"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-4-2"><i class="material-icons">keyboard_arrow_right</i></label>
+										<label class="arrow-left" for="slide-4-3"><i class="material-icons">keyboard_arrow_left</i></label>
+										<label class="arrow-right" for="slide-4-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
 								<footer class="tab-footer">
@@ -482,6 +487,92 @@
 		var srchbtn 	= document.getElementById('search-btn');
 		var close 		= document.getElementById('close-btn');
 		var devwidth 	= document.getElementById('devwidth');
+		var sectionArr 	= document.getElementsByClassName('section-wrapper');
+		console.log(sectionArr);
+		var scrollTop 	= window.scrollY;
+		var scrollTopVal = document.getElementById('scrolltop');
+
+		var skillBlocks = document.getElementsByClassName('skill-block');
+		console.log('skillBlocks: ');
+		console.log(skillBlocks);
+
+		function getDocHeight() {
+		    var D = document;
+		    return Math.max(
+		        D.body.scrollHeight, D.documentElement.scrollHeight,
+		        D.body.offsetHeight, D.documentElement.offsetHeight,
+		        D.body.clientHeight, D.documentElement.clientHeight
+		    );
+		}
+
+		var docHeight = getDocHeight();
+
+
+		var visibleSections = new Array(sectionArr.length);
+		console.log('visible Sections');
+		console.log(visibleSections);
+
+		function displaySections(sections) {
+			if (modal.style.display !== 'none') {
+				scrollTopVal.innerHTML = "" + window.scrollY;
+			}
+
+			scrollTop = window.scrollY;
+
+			if (scrollTop >= 0 && scrollTop < 350 && !visibleSections[0]) {
+				setTimeout(function() {
+					sectionArr[0].style.opacity = 1;
+					sectionArr[0].style.top = '0px';
+				}, 200);
+
+				visibleSections[0] = true;
+			}
+
+			if (scrollTop >= 350 && scrollTop < 2500 && !visibleSections[1]) {
+				setTimeout(function() {
+					sectionArr[1].style.opacity = 1;
+					sectionArr[1].style.top = '0px';
+					sectionArr[1].style.left = '0px';
+					
+					setTimeout(function() {
+						skillBlocks[0].style.opacity = 1;
+						skillBlocks[0].style.top = '0px';
+					}, 200);
+					setTimeout(function() {
+						skillBlocks[1].style.opacity = 1;
+						skillBlocks[1].style.top = '0px';
+					}, 600);
+					setTimeout(function() {
+						skillBlocks[2].style.opacity = 1;
+						skillBlocks[2].style.top = '0px';
+					}, 900);
+
+				}, 200);
+
+				visibleSections[1] = true;
+			}
+
+			if (scrollTop >= 1400 && !visibleSections[2]) {
+				setTimeout(function() {
+					sectionArr[2].style.opacity = 1;
+					sectionArr[2].style.top = '0px';
+				}, 200);
+
+				visibleSections[2] = true;
+			}
+		}
+
+		displaySections(visibleSections);
+
+		window.addEventListener('scroll', function(e) {
+			if (modal.style.display !== 'none') {
+				scrollTopVal.innerHTML = "" + window.scrollY;
+			}
+
+			scrollTop = window.scrollY;
+
+			displaySections(visibleSections);
+		});
 
 		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		devwidth.innerHTML = "" + w;
@@ -503,7 +594,6 @@
 				modal.style.display = 'none';
 			}, 200);
 			
-
 		}
 	</script>
 </body>
