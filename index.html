@@ -12,12 +12,25 @@
 	<title>R. Garcia Portfolio</title>
 </head>
 <body>
+	<input type="checkbox" name="mobile-menu-btn" id="mobile-menu-btn">
+	<label for="mobile-menu-btn" id="hamburguer">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
 	<header id="main-header">
 		<div id="logo-wrapper">
 			Rafael García
 		</div>
 		<nav id="main-nav">
-			<ul>
+			<ul class="main-menu">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Skills</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="mobile-menu">
 				<li><a href="#">About</a></li>
 				<li><a href="#">Projects</a></li>
 				<li><a href="#">Skills</a></li>
@@ -44,7 +57,10 @@
 			</div>
 		</div>
 	</div>
+
+	<label for="mobile-menu-btn" class="mask"></label>
 	<main>
+
 		<section id="projects">
 			<div class="section-wrapper">
 				<h2>Projects</h2>
