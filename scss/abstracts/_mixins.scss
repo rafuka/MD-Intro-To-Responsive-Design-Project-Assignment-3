@@ -1,0 +1,31 @@
+@mixin perspective($px) {
+	-moz-perspective: $px;
+	-o-perspective: $px;
+	-ms-perspective: $px;
+	-webkit-perspective: $px;
+    perspective: $px;
+}
+
+@mixin transform-style($value) {
+	-moz-transform-style: $value;
+    -o-transform-style: $value;
+    -ms-transform-style: $value;
+    -webkit-transform-style: $value;
+    transform-style: $value;
+}
+
+@mixin rotateX($value) {
+	-moz-transform: rotateX($value);
+	-o-transform: rotateX($value);
+	-ms-transform: rotateX($value);
+	-webkit-transform: rotateX($value);
+	transform: rotateX($value);
+}
+
+@mixin transition($value...) {
+	-moz-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+    -webkit-transition: $value;
+    transition: $value;
+}

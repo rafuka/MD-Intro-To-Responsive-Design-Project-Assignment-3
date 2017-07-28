@@ -1,0 +1,43 @@
+#logo-wrapper {
+	display: inline-block;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5em;
+}
+
+#main-nav {
+	display: inline-block;
+	a {
+		color: white;
+	    padding: 20px;
+	    opacity: 0.8;
+	    &:hover {
+	    	opacity: 1;
+	    }
+	}
+}
+
+#search-bar-wrapper {
+	display: inline-block;
+	visibility: visible;
+	opacity: 1;
+	padding-right: 5px;
+    background-color: rgba(200,200,200,0.3);
+    position: relative;
+	top: 5px;
+	transition: opacity .3s ease, visibility 0s 0.3s;
+	.form-group {
+		display: inline-block;
+	}
+}
+
+#main-header {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #343739;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}

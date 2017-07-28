@@ -1,0 +1,50 @@
+#search-bar-wrapper {
+	label {
+		position: absolute;
+		color: rgba(255,255,255,0.7);
+		text-transform: uppercase;
+		font-size: 16px;
+		left: 4px;
+		top: 6px;
+		transition: top .3s ease, font-size .3s ease;
+	}
+
+	button {
+		padding: 3px;
+	    border: none;
+	    outline: none;
+	    -webkit-appearance: none;
+	    cursor: pointer;
+	    color: white;
+	    background-color: transparent;
+	    position: relative;
+
+	    i {
+	    	font-size: 1.5em;
+   			transition: transform .2s ease;
+	    }
+
+	    &:hover > i {
+	    	transform: scale(1.2);
+	    }
+	}
+
+	#search {
+		background-color: transparent;
+	    border: none;
+	    outline: none;
+	    color: white;
+	    width: 150px;
+	    font-size: 16px;
+	    padding: 5px;
+
+	    &:focus + label, &:valid + label {
+	    	top: -12px;
+			font-size: 10px;
+	    }
+	}
+
+	#search-btn {
+		height: 0;
+	}
+}

@@ -1,0 +1,96 @@
+#tabs-list {
+
+	.pilltabs {
+		position: relative;
+		padding: 20px;
+		font-family: 'Futura', sans-serif;
+		margin-bottom: 100px;
+		input {
+			display: none;
+		}
+		label {
+			padding: 10px;
+			cursor: pointer;
+			user-select: none;
+			@include transition(border .2s ease, background-color .2s ease);
+			color: #ffac41;
+			border: 1px solid transparent;
+			border-radius: 7px;
+		}
+
+		input[type='radio']:checked + label {
+			background-color: #ffac41;
+			color: white;
+			border-radius: 7px;
+			& + .content {
+				opacity: 1;
+				top: 50px;
+			}
+		}
+
+		input[type='radio']:not(:checked) + label:hover {
+			border: 1px solid #ffac41;
+			color: #ffac41;
+		}
+
+		.content {
+			position: absolute;
+			top: 80px;
+			opacity: 0;
+			padding: 10px;
+			width: 100%;
+			font-weight: 300; 
+			@include transition(top .3s ease-in-out, opacity .15s ease-in-out);
+		}
+
+	}
+
+	.undertabs {
+		position: relative;
+		padding: 20px;
+		font-family: 'Futura', sans-serif;
+		margin-bottom: 100px;
+		input {
+			display: none;
+		}
+		.content {
+			position: absolute;
+			top: 80px;
+			opacity: 0;
+			padding: 10px;
+			width: 100%;
+			font-weight: 300; 
+			@include transition(top .3s ease-in-out, opacity .15s ease-in-out);
+		}
+		input[type='radio']:checked + label {
+			color: #ffac41;
+			&::after {
+				width: 100%;
+				right: 0;
+			}
+			& + .content {
+				opacity: 1;
+				top: 50px;
+			}
+		}
+		label {
+			padding: 10px;
+			padding-bottom: 7px;
+			cursor: pointer;
+			user-select: none;
+			@include transition(color .2s ease-in-out);
+			position: relative;
+			&::after {
+				content: '';
+				width: 0px;
+				border-bottom: 2px solid #ffac41;
+				position: absolute;
+				display: inline-block;
+				bottom: 0px;
+			    right: 50%;
+			    @include transition(width .3s ease-in-out, right .3s ease-in-out);
+			}
+		}
+	}
+
+}
