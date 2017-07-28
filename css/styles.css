@@ -33,6 +33,8 @@ main {
 	top: 0px;
 	overflow: scroll;
 	transition: left .5s ease;
+	background-color: #f2f2f2;
+	padding-top: 60px;
 }
 
 .mask {
@@ -85,10 +87,13 @@ a {
 
 #search-bar-wrapper {
 	display: inline-block;
+	visibility: visible;
+	opacity: 1;
 	padding-right: 5px;
     background-color: rgba(200,200,200,0.3);
     position: relative;
 	top: 5px;
+	transition: opacity .3s ease, visibility 0s 0.3s;
 }
 
 #search-bar-wrapper .form-group {
@@ -115,11 +120,6 @@ a {
     width: 100%;
     color: white;
     margin-top: 100px;
-}
-
-main {
-	background-color: #f2f2f2;
-	padding-top: 60px;
 }
 
 section:nth-child(even) {
@@ -951,6 +951,9 @@ input#card-toggle:checked + .card {
 		position: absolute;
 		top: 20px;
 		right: 10px;
+		z-index: 999;
+		visibility: visible;
+		transition: opacity .5s ease, visibility 0s 0s;
 	}
 
 	#main-nav {
@@ -1017,7 +1020,8 @@ input#card-toggle:checked + .card {
 	#mobile-menu-btn:checked + label#hamburguer span:nth-child(4) {
 
 		top: 18px;
-
+		opacity: 0;
+		transition: transform .5s ease, opacity .3s ease, top .3s 0s ease;
 	}
 
 	#mobile-menu-btn:checked + label#hamburguer span:nth-child(2) {
@@ -1036,6 +1040,12 @@ input#card-toggle:checked + .card {
 
 	#mobile-menu-btn:checked ~ header > #main-nav {
 		left: 0px;
+	}
+
+	#mobile-menu-btn:checked ~ header > #search-bar-wrapper {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .5s ease, visibility 0s .3s;
 	}
 
 	#mobile-menu-btn:checked ~ main {
@@ -1058,6 +1068,26 @@ input#card-toggle:checked + .card {
 	.main-menu {
 		display: none;
 	}
+
+	#tabs-list {
+		display: block;
+		width: 100%;
+	}
+
+	#tabs-list li {
+		display: block;
+		padding: 0;
+	}
+
+	#tabs-list li label {
+		text-align: center;
+		padding-right: 0;
+	}
+
+	#tabs-list .tab-content {
+		position: relative;
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -1071,3 +1101,5 @@ input#card-toggle:checked + .card {
 
 	}
 }
+
+
