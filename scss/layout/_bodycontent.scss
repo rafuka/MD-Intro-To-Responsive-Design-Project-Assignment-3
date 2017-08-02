@@ -26,6 +26,7 @@
 	display: flex;
 	position: relative;
 	height: 650px;
+	min-width: 320px;
 }
 
 #tabs-list {
@@ -64,18 +65,20 @@
 }
 
 .tab-content {
-	display: none;
+	opacity: 0;
 	width: 80%;
 	position: absolute;
 	right: 0;
 	top: 0;
 	height: 675px;
 	background-color: white;
-	padding-top: 20px;
+	padding: 0;
+	@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
 }
 
 input[type="radio"]:checked ~ .tab-content {
-	display: block;
+	opacity: 1;
+    z-index: 1;
 }
 
 #skills {

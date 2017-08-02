@@ -118,7 +118,8 @@ section:nth-child(even) {
 #tabs-wrapper {
   display: flex;
   position: relative;
-  height: 650px; }
+  height: 650px;
+  min-width: 320px; }
 
 #tabs-list {
   display: inline-flex;
@@ -147,17 +148,23 @@ section:nth-child(even) {
     color: #000; }
 
 .tab-content {
-  display: none;
+  opacity: 0;
   width: 80%;
   position: absolute;
   right: 0;
   top: 0;
   height: 675px;
   background-color: white;
-  padding-top: 20px; }
+  padding: 0;
+  -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+  -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+  -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+  transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease; }
 
 input[type="radio"]:checked ~ .tab-content {
-  display: block; }
+  opacity: 1;
+  z-index: 1; }
 
 #skills #skills-container {
   background-color: white;
@@ -460,12 +467,57 @@ input[type="radio"]:checked ~ .tab-content {
     #tabs-list li {
       display: block;
       padding: 0; }
-      #tabs-list li label {
+      #tabs-list li > label {
         text-align: center;
-        padding-right: 0; }
+        padding-right: 0px;
+        background-color: white;
+        border-top: 1px solid #343739;
+        border-top: 1px solid rgba(50, 50, 50, 0.5);
+        border-bottom: none;
+        -moz-transition: background-color 0.1s ease, color 0.1s ease;
+        -o-transition: background-color 0.1s ease, color 0.1s ease;
+        -ms-transition: background-color 0.1s ease, color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease, color 0.1s ease;
+        transition: background-color 0.1s ease, color 0.1s ease; }
+        #tabs-list li > label:hover {
+          background-color: #343739;
+          color: white;
+          padding-right: 0px; }
+      #tabs-list li > input[type='radio']:checked + label {
+        padding-right: 0px;
+        border: none;
+        border-top: 1px solid #343739;
+        background-color: #343739;
+        color: white; }
+    #tabs-list li:last-child > label {
+      border-bottom: 1px solid #343739;
+      border-bottom: 1px solid rgba(50, 50, 50, 0.5); }
     #tabs-list .tab-content {
       position: relative;
-      width: 100%; } }
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
+    #tabs-list input[type=radio]:checked ~ .tab-content {
+      height: 675px;
+      padding-top: 20px; }
+    #tabs-list .carousel .slide {
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 450px; }
+      #tabs-list .carousel .slide img {
+        width: 80%;
+        display: block;
+        margin: 0 auto; }
+    #tabs-list .pilltabs, #tabs-list .undertabs {
+      text-align: center; }
+      #tabs-list .pilltabs .content, #tabs-list .undertabs .content {
+        left: 0px; } }
 #search-bar-wrapper label {
   position: absolute;
   color: rgba(255, 255, 255, 0.7);
@@ -689,16 +741,19 @@ input[type="radio"]:checked ~ .tab-content {
   left: 110px;
   top: 30px; }
 
+.carousel-labels .pills {
+  position: relative;
+  text-align: center;
+  top: 480px; }
 .carousel-labels label.slide-pill {
   margin-right: 10px;
-  position: relative;
-  left: 330px;
-  top: 480px;
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3); }
+  .carousel-labels label.slide-pill:hover {
+    cursor: pointer; }
 .carousel-labels label[class*='arrow'] {
   visibility: hidden;
   position: absolute;
@@ -736,18 +791,18 @@ input[type="radio"]:checked ~ .tab-content {
 #slide-4-3:checked ~ .carousel-labels > label.arrow-right[for="slide-4-1"] {
   visibility: visible; }
 
-#slide-1-1:checked ~ .carousel-labels > label.slide-pill[for="slide-1-1"],
-#slide-1-2:checked ~ .carousel-labels > label.slide-pill[for="slide-1-2"],
-#slide-1-3:checked ~ .carousel-labels > label.slide-pill[for="slide-1-3"],
-#slide-2-1:checked ~ .carousel-labels > label.slide-pill[for="slide-2-1"],
-#slide-2-2:checked ~ .carousel-labels > label.slide-pill[for="slide-2-2"],
-#slide-2-3:checked ~ .carousel-labels > label.slide-pill[for="slide-2-3"],
-#slide-3-1:checked ~ .carousel-labels > label.slide-pill[for="slide-3-1"],
-#slide-3-2:checked ~ .carousel-labels > label.slide-pill[for="slide-3-2"],
-#slide-3-3:checked ~ .carousel-labels > label.slide-pill[for="slide-3-3"],
-#slide-4-1:checked ~ .carousel-labels > label.slide-pill[for="slide-4-1"],
-#slide-4-2:checked ~ .carousel-labels > label.slide-pill[for="slide-4-2"],
-#slide-4-3:checked ~ .carousel-labels > label.slide-pill[for="slide-4-3"] {
+#slide-1-1:checked ~ .carousel-labels label.slide-pill[for="slide-1-1"],
+#slide-1-2:checked ~ .carousel-labels label.slide-pill[for="slide-1-2"],
+#slide-1-3:checked ~ .carousel-labels label.slide-pill[for="slide-1-3"],
+#slide-2-1:checked ~ .carousel-labels label.slide-pill[for="slide-2-1"],
+#slide-2-2:checked ~ .carousel-labels label.slide-pill[for="slide-2-2"],
+#slide-2-3:checked ~ .carousel-labels label.slide-pill[for="slide-2-3"],
+#slide-3-1:checked ~ .carousel-labels label.slide-pill[for="slide-3-1"],
+#slide-3-2:checked ~ .carousel-labels label.slide-pill[for="slide-3-2"],
+#slide-3-3:checked ~ .carousel-labels label.slide-pill[for="slide-3-3"],
+#slide-4-1:checked ~ .carousel-labels label.slide-pill[for="slide-4-1"],
+#slide-4-2:checked ~ .carousel-labels label.slide-pill[for="slide-4-2"],
+#slide-4-3:checked ~ .carousel-labels label.slide-pill[for="slide-4-3"] {
   background-color: #90b7f0; }
 
 #buttons-slide {
@@ -850,7 +905,13 @@ input[type="radio"]:checked ~ .tab-content {
   #radiocheckbox label {
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    -khtml-user-select: none;
+    -apple-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; }
   #radiocheckbox input[type='radio']:checked + label {
     color: black; }
   #radiocheckbox label:hover {
@@ -873,11 +934,11 @@ input[type="radio"]:checked ~ .tab-content {
         position: absolute;
         left: 5px;
         top: 5px;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        -ms-transition: all 0.2s ease-in-out;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out; }
+        -moz-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+        -o-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+        -ms-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+        -webkit-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+        transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease; }
     #radiocheckbox input[type='checkbox'].mybox::before {
       content: '';
       border-left: 2px solid #33c5dc;
@@ -889,11 +950,11 @@ input[type="radio"]:checked ~ .tab-content {
       left: 10px;
       transform: rotate(-45deg);
       opacity: 0;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
+      -moz-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -o-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -ms-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -webkit-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease; }
     #radiocheckbox input[type='checkbox'].mybox:hover {
       cursor: pointer; }
     #radiocheckbox input[type='checkbox'].mybox.fill-in::after {
@@ -906,11 +967,11 @@ input[type="radio"]:checked ~ .tab-content {
       top: 12px;
       left: 12px;
       opacity: 0;
-      -moz-transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
-      -o-transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
-      -ms-transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
-      -webkit-transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
-      transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out; }
+      -moz-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -o-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -ms-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -webkit-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease; }
     #radiocheckbox input[type='checkbox'].mybox.fill-in::before {
       z-index: 1; }
     #radiocheckbox input[type='checkbox'].mybox.fill-in:checked::after {
@@ -969,11 +1030,11 @@ input[type="radio"]:checked ~ .tab-content {
       top: 12px;
       left: 12px;
       border-radius: 50%;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
+      -moz-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -o-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -ms-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      -webkit-transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease; }
     #radiocheckbox input[type='radio'].mybox.gapped:checked::before {
       width: 11px;
       height: 11px;
