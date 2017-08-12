@@ -8,7 +8,7 @@
 
 	#search-bar-wrapper {
 		position: absolute;
-		top: 20px;
+		top: 16px;
 		right: 10px;
 		z-index: 999;
 		visibility: visible;
@@ -172,11 +172,12 @@
 			@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease, padding .4s ease);
 		}
 
-
+		input[type=radio]:not(:checked) ~ .tab-content {
+			padding-top: 0px;
+		} 
 
 		input[type=radio]:checked ~ .tab-content {
 			height: 675px;
-			padding-top: 20px;
 		} 
 
 		.carousel {
@@ -200,11 +201,93 @@
 			}
 		}
 	}
+
+	#skills {
+		#skills-block-container {
+			.skill-block {
+				width: 450px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
 	#main-nav {
 
+	}
+
+	.section-wrapper {
+		& > p {
+			padding: 0px 12px;
+		}
+	}
+
+	#skills {
+
+		#skills-container {
+			padding: 0px;
+		}
+
+		#skills-block-container {
+			display: block;
+			.skill-block {
+				padding: 0px;
+				margin: 0 auto;
+				width: 320px;
+				.skill-graph {
+					padding: 5px;
+					.labels-left {
+						p {
+							font-size: .7em;
+						}
+					}
+					.graph {
+						.graph-bar {
+							margin: 0 7px;
+						}
+					}
+					.labels-bottom {
+						padding-left: 40px;
+						p {
+							white-space: normal;
+							font-size: .7em;
+							margin-left: -2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.pilltabs {
+		label:nth-last-of-type(1) {
+			display: none!important;
+		}
+
+		label:nth-last-of-type(2) {
+			display: none!important;
+		}
+		
+	}
+
+	.undertabs {
+		label:nth-last-of-type(1) {
+			display: none!important;
+		}
+
+		label:nth-last-of-type(2) {
+			display: none!important;
+		}
+	}
+
+	.graph {
+		.graph-bar {
+			.tooltip {
+				display: none!important;
+			}
+		}
 	}
 }
 
@@ -212,4 +295,6 @@
 	#main-nav {
 
 	}
+
+	
 }

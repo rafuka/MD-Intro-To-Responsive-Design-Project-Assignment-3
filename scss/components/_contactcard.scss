@@ -136,3 +136,54 @@
 	}
 
 }
+
+@media screen and (max-width: 960px) {
+	#contact {
+		label {
+			left: 0;
+			position: static;
+			display: block;
+			margin: 0 auto;
+			width: 470px;
+		}
+
+		.card {
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 560px) {
+	#contact {
+		label {
+			width: 280px;
+		}
+		.card {
+			width: 280px;
+
+			#email {
+				margin-right: 20px;
+			}
+
+			#website {
+				margin-right: 0px;
+			}
+
+			.back {
+				background-position: 50%;
+			}
+		}
+
+		#enc-info {
+			display: none;
+		}
+
+		#social-media {
+			margin: 0;
+			text-align: center;
+			display: flex;
+    		justify-content: space-around;
+    		margin-top: 85px;
+		}
+	}
+}

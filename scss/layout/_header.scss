@@ -8,12 +8,17 @@
 #main-nav {
 	display: inline-block;
 	a {
+		position: relative;
 		color: white;
 	    padding: 20px;
 	    opacity: 0.8;
 	    &:hover {
 	    	opacity: 1;
 	    }
+	}
+
+	.main-menu {
+		position: relative;
 	}
 }
 
@@ -24,7 +29,8 @@
 	padding-right: 5px;
     background-color: rgba(200,200,200,0.3);
     position: relative;
-	top: 5px;
+	top: 0px;
+	border-radius: 8px;
 	transition: opacity .3s ease, visibility 0s 0.3s;
 	.form-group {
 		display: inline-block;

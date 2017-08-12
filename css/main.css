@@ -16,7 +16,7 @@ html {
 
 body {
   background-color: #F2F2F2;
-  overflow-x: hidden; }
+  min-width: 320px; }
 
 main {
   position: relative;
@@ -68,11 +68,14 @@ section:nth-child(even) {
 #main-nav {
   display: inline-block; }
   #main-nav a {
+    position: relative;
     color: white;
     padding: 20px;
     opacity: 0.8; }
     #main-nav a:hover {
       opacity: 1; }
+  #main-nav .main-menu {
+    position: relative; }
 
 #search-bar-wrapper {
   display: inline-block;
@@ -81,7 +84,8 @@ section:nth-child(even) {
   padding-right: 5px;
   background-color: rgba(200, 200, 200, 0.3);
   position: relative;
-  top: 5px;
+  top: 0px;
+  border-radius: 8px;
   transition: opacity .3s ease, visibility 0s 0.3s; }
   #search-bar-wrapper .form-group {
     display: inline-block; }
@@ -156,6 +160,7 @@ section:nth-child(even) {
   height: 675px;
   background-color: white;
   padding: 0;
+  padding-top: 20px;
   -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
   -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
   -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
@@ -286,7 +291,7 @@ input[type="radio"]:checked ~ .tab-content {
         height: 90px;
         width: 100%;
         padding-left: 70px;
-        padding-top: 10px;
+        padding-top: 15px;
         display: flex;
         border-top: 1px solid rgba(0, 0, 0, 0.2); }
         #skills #skills-block-container .skill-block .skill-graph .labels-bottom p {
@@ -355,7 +360,7 @@ input[type="radio"]:checked ~ .tab-content {
 
   #search-bar-wrapper {
     position: absolute;
-    top: 20px;
+    top: 16px;
     right: 10px;
     z-index: 999;
     visibility: visible;
@@ -502,9 +507,10 @@ input[type="radio"]:checked ~ .tab-content {
       -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
       -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
       transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
+    #tabs-list input[type=radio]:not(:checked) ~ .tab-content {
+      padding-top: 0px; }
     #tabs-list input[type=radio]:checked ~ .tab-content {
-      height: 675px;
-      padding-top: 20px; }
+      height: 675px; }
     #tabs-list .carousel .slide {
       width: 100%;
       left: 0;
@@ -517,7 +523,47 @@ input[type="radio"]:checked ~ .tab-content {
     #tabs-list .pilltabs, #tabs-list .undertabs {
       text-align: center; }
       #tabs-list .pilltabs .content, #tabs-list .undertabs .content {
-        left: 0px; } }
+        left: 0px; }
+
+  #skills #skills-block-container .skill-block {
+    width: 450px; } }
+@media screen and (max-width: 600px) {
+  .section-wrapper > p {
+    padding: 0px 12px; }
+
+  #skills #skills-container {
+    padding: 0px; }
+  #skills #skills-block-container {
+    display: block; }
+    #skills #skills-block-container .skill-block {
+      padding: 0px;
+      margin: 0 auto;
+      width: 320px; }
+      #skills #skills-block-container .skill-block .skill-graph {
+        padding: 5px; }
+        #skills #skills-block-container .skill-block .skill-graph .labels-left p {
+          font-size: .7em; }
+        #skills #skills-block-container .skill-block .skill-graph .graph .graph-bar {
+          margin: 0 7px; }
+        #skills #skills-block-container .skill-block .skill-graph .labels-bottom {
+          padding-left: 40px; }
+          #skills #skills-block-container .skill-block .skill-graph .labels-bottom p {
+            white-space: normal;
+            font-size: .7em;
+            margin-left: -2px; } }
+@media screen and (max-width: 430px) {
+  .pilltabs label:nth-last-of-type(1) {
+    display: none !important; }
+  .pilltabs label:nth-last-of-type(2) {
+    display: none !important; }
+
+  .undertabs label:nth-last-of-type(1) {
+    display: none !important; }
+  .undertabs label:nth-last-of-type(2) {
+    display: none !important; }
+
+  .graph .graph-bar .tooltip {
+    display: none !important; } }
 #search-bar-wrapper label {
   position: absolute;
   color: rgba(255, 255, 255, 0.7);
@@ -1063,6 +1109,8 @@ input[type="radio"]:checked ~ .tab-content {
       top: 0;
       left: 50%;
       border-radius: 50%; }
+  #radiocheckbox #radiocheckbox-content {
+    padding-left: 20px; }
 
 #contact #contact-wrapper {
   position: relative;
@@ -1184,5 +1232,34 @@ input[type="radio"]:checked ~ .tab-content {
   margin-left: 40px; }
   #contact #social-media span {
     margin: 0px 5px; }
+
+@media screen and (max-width: 960px) {
+  #contact label {
+    left: 0;
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 470px; }
+  #contact .card {
+    margin: 0 auto; } }
+@media screen and (max-width: 560px) {
+  #contact label {
+    width: 280px; }
+  #contact .card {
+    width: 280px; }
+    #contact .card #email {
+      margin-right: 20px; }
+    #contact .card #website {
+      margin-right: 0px; }
+    #contact .card .back {
+      background-position: 50%; }
+  #contact #enc-info {
+    display: none; }
+  #contact #social-media {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px; } }
 
 /*# sourceMappingURL=main.css.map */

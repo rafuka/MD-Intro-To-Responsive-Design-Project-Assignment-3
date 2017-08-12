@@ -73,6 +73,7 @@
 	height: 675px;
 	background-color: white;
 	padding: 0;
+	padding-top: 20px;
 	@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
 }
 
@@ -228,7 +229,7 @@ input[type="radio"]:checked ~ .tab-content {
 					height: 90px;
 					width: 100%;
 					padding-left: 70px;
-					padding-top: 10px;
+					padding-top: 15px;
 				    display: flex;
 				    border-top: 1px solid rgba(0,0,0,0.2);
 

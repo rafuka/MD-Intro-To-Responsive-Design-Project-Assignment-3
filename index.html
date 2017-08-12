@@ -23,14 +23,14 @@
 		</div>
 		<nav id="main-nav">
 			<ul class="main-menu">
-				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Skills</a></li>
-				<li><a href="#">Contact</a></li>
+				<!--<li><a href="#">About</a></li>-->
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<ul class="mobile-menu">
 				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
+				<li><a href="#projects">Projects</a></li>
 				<li><a href="#">Skills</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
@@ -201,54 +201,54 @@
 										<h3>Pill Tabs</h3>
 										<div class="pilltabs">
 										    <input type="radio" name="tabs" id="tab1" checked>
-										    <label for="tab1">Home Decor</label>
+										    <label for="tab1">Lorem</label>
 										    <div id="tab1content" class="content">
-										    	<p>Browse through our list of Home Decor Items.</p>
+										    	<p>Aliquam iaculis neque nec sodales aliquet. Proin eget tellus a erat molestie dictum nec id neque. Sed eget pharetra leo. </p>
 										    </div>
 
 										    <input type="radio" name="tabs" id="tab2">
-										    <label for="tab2">Furniture</label>
+										    <label for="tab2">Ipsum</label>
 										    <div id="tab2content" class="content">
-										      <p>Flash sale on Living Room and Bedroom Furniture.</p>
+										      <p>Etiam mollis malesuada nisi ut lacinia. Curabitur sollicitudin venenatis dapibus.</p>
 										    </div>
 
 										    <input type="radio" name="tabs" id="tab3">
-										    <label for="tab3">Kitchen</label>
+										    <label for="tab3">Dolor</label>
 										    <div id="tab3content" class="content">
-										      <p>Bring the best out of the Masterchief in you!</p>
+										      <p>Maecenas vel enim erat. Integer id convallis mi.</p>
 										    </div>
 
 										    <input type="radio" name="tabs" id="tab4">
-										    <label for="tab4">Clearance</label>
+										    <label for="tab4">Amet</label>
 										    <div id="tab4content" class="content">
-										      <p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+										      <p>Sed scelerisque elit eros, sed ultrices tortor volutpat ac. Cras dictum vulputate arcu vitae euismod.</p>
 										    </div>    
 									    </div>
 
 										<h3>Underline Tabs</h3>
 										<div class="undertabs">
 									    	<input type="radio" name="undertabs" id="tab5" checked>
-									    	<label for="tab5">Home Decor</label>
+									    	<label for="tab5">Lorem</label>
 									    	<div id="tab5content" class="content">
-									    		<p>Browse through our list of Home Decor Items.</p>
+									    		<p>Aliquam iaculis neque nec sodales aliquet. Proin eget tellus a erat molestie dictum nec id neque. Sed eget pharetra leo. </p>
 									    	</div>
 
 									    	<input type="radio" name="undertabs" id="tab6">
-									    	<label for="tab6">Furniture</label>
+									    	<label for="tab6">Ipsum</label>
 									    	<div id="tab6content" class="content">
-									    		<p>Flash sale on Living Room and Bedroom Furniture.</p>
+									    		<p>Etiam mollis malesuada nisi ut lacinia. Curabitur sollicitudin venenatis dapibus.</p>
 									    	</div>
 
 									    	<input type="radio" name="undertabs" id="tab7">
-									    	<label for="tab7">Kitchen</label>
+									    	<label for="tab7">Dolor</label>
 									    	<div id="tab7content" class="content">
-									    		<p>Bring the best out of the Masterchief in you!</p>
+									    		<p>Maecenas vel enim erat. Integer id convallis mi.</p>
 									    	</div>
 
 									    	<input type="radio" name="undertabs" id="tab8">
-									    	<label for="tab8">Clearance</label>
+									    	<label for="tab8">Amet</label>
 									    	<div id="tab8content" class="content">
-									    		<p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+									    		<p>Sed scelerisque elit eros, sed ultrices tortor volutpat ac. Cras dictum vulputate arcu vitae euismod.</p>
 									    	</div>
 									    </div>
 									</div>
@@ -256,7 +256,7 @@
 									<div class="slide">
 										<div id="radiocheckbox">
 											<h3>Radio Buttons and Checkboxes</h3>
-											<div id="radiocheckbox">
+											<div id="radiocheckbox-content">
 												<input class="mybox" type="radio" name="radiodemo" id="radiofill">
 												<label for="radiofill">Filled Radio Button</label>
 												<br>
@@ -402,7 +402,7 @@
 					    	<div class="front">
 					    		<h1>Rafael Garcia</h1>
 					    		<p><small>Full Stack Web Developer</small></p>
-					    		<p id="info">Full-Stack Web Developer and computer science enthusiast. Working as a freelance developer since mid 2016.</p>
+					    		<p id="info">I like creating digital experiences.</p>
 					    		<p id="email">rafuk89@gmail.com</p>
 					    		<p id="website"><a href="https://github.com/rafuka">github.com/rafuka</a></p>
 					    		<div id="enc-info">
@@ -512,6 +512,7 @@
 		console.log(sectionArr);
 		var scrollTop 	= window.scrollY;
 		var scrollTopVal = document.getElementById('scrolltop');
+		var mainMenu = document.getElementById('main-nav').firstElementChild;
 
 		var skillBlocks = document.getElementsByClassName('skill-block');
 		console.log('skillBlocks: ');
@@ -593,6 +594,10 @@
 			scrollTop = window.scrollY;
 
 			displaySections(visibleSections);
+
+			if (scrollTop > 300) {
+
+			}
 		});
 
 		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
