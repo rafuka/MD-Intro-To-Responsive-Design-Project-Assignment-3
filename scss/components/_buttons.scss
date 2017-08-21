@@ -76,13 +76,15 @@
 		    position: absolute;
 		    left: 0;
 		    top: calc(100% - 2px);
-		    @include transition(height .2s ease);
+		    @include transition(height .2s ease, box-shadow .2s ease);
+
 		}
 
 		&:hover {
 			top: -3px;
 			&::after {
 				height: 5px;
+				box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.2);
 			}
 		}
 

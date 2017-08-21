@@ -928,15 +928,16 @@ input[type="radio"]:checked ~ .tab-content {
     position: absolute;
     left: 0;
     top: calc(100% - 2px);
-    -moz-transition: height 0.2s ease;
-    -o-transition: height 0.2s ease;
-    -ms-transition: height 0.2s ease;
-    -webkit-transition: height 0.2s ease;
-    transition: height 0.2s ease; }
+    -moz-transition: height 0.2s ease, box-shadow 0.2s ease;
+    -o-transition: height 0.2s ease, box-shadow 0.2s ease;
+    -ms-transition: height 0.2s ease, box-shadow 0.2s ease;
+    -webkit-transition: height 0.2s ease, box-shadow 0.2s ease;
+    transition: height 0.2s ease, box-shadow 0.2s ease; }
   #buttons-slide .btn.btn-press2:hover {
     top: -3px; }
     #buttons-slide .btn.btn-press2:hover::after {
-      height: 5px; }
+      height: 5px;
+      box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.2); }
   #buttons-slide .btn.btn-press2:active {
     top: 0px; }
     #buttons-slide .btn.btn-press2:active::after {
@@ -1111,6 +1112,44 @@ input[type="radio"]:checked ~ .tab-content {
       border-radius: 50%; }
   #radiocheckbox #radiocheckbox-content {
     padding-left: 20px; }
+
+#aria-accordion-wrapper {
+  height: 475px;
+  overflow-y: scroll; }
+  #aria-accordion-wrapper .aria-accordion {
+    max-width: 480px;
+    width: 90%;
+    font-family: sans-serif;
+    display: block;
+    margin: 0 auto; }
+    #aria-accordion-wrapper .aria-accordion .accordion-heading {
+      border: 2px solid #6A88DD;
+      margin: 0;
+      padding: .25em .5em;
+      background-color: #4a70eb;
+      color: white;
+      cursor: pointer;
+      height: 40px;
+      -moz-transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      -o-transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      -ms-transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      -webkit-transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease; }
+      #aria-accordion-wrapper .aria-accordion .accordion-heading:hover {
+        transform: scaleX(1.05); }
+      #aria-accordion-wrapper .aria-accordion .accordion-heading[aria-selected=true] {
+        background-color: white;
+        color: #4a70eb; }
+    #aria-accordion-wrapper .aria-accordion h3[aria-selected='false']:last-of-type {
+      border-bottom: none; }
+    #aria-accordion-wrapper .aria-accordion div[aria-hidden=true] {
+      display: none; }
+    #aria-accordion-wrapper .aria-accordion .accordion-panel {
+      border-bottom: 2px solid #6A88DD;
+      border-left: 2px solid #6A88DD;
+      border-right: 2px solid #6A88DD;
+      padding: .25em .5em;
+      min-height: 10em; }
 
 #contact #contact-wrapper {
   position: relative;

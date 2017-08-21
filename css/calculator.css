@@ -36,7 +36,7 @@
     padding: 0px 10px;
 }
 
-#calculator .btn {
+#calculator .calc-btn {
 	-ms-appearance: none;
 	-webkit-appearance: none;
 	border-radius: 50%;
@@ -54,7 +54,7 @@
 	position: relative;
 }
 
-#calculator .btn:hover {
+#calculator .calc-btn:hover {
 	box-shadow: 0px 0px 15px rgba(50,50,50,0.1);
 }
 
@@ -64,7 +64,7 @@
 	color: white;
 }*/
 
-#calculator .btn::before {
+#calculator .calc-btn::before {
 	content: '';
 	display: inline-block;
 	width: 0px;
@@ -78,7 +78,7 @@
 	opacity: 0;
 }
 
-#calculator .btn:active::before {
+#calculator .calc-btn:active::before {
 	width: 60px;
 	height: 60px;
 	opacity: 1;

@@ -58,7 +58,6 @@
 
 	<label for="mobile-menu-btn" class="mask"></label>
 	<main>
-
 		<section id="projects">
 			<div class="section-wrapper">
 				<h2>Projects</h2>
@@ -73,28 +72,28 @@
 									<input type="text" name="screen" id="screen" disabled value="0">
 									<input type="text" name="history" id="history" disabled value="0">
 									<div class="top">
-										<button class="btn op" id="div">&#247;</button>
-										<button class="btn op" id="del">del</button>
-										<button class="btn op" id="clear">c</button>
+										<button class="calc-btn op" id="div">&#247;</button>
+										<button class="calc-btn op" id="del">del</button>
+										<button class="calc-btn op" id="clear">c</button>
 									</div>
 									<div class="right">
-										<button class="btn op" id="plus">&plus;</button>
-										<button class="btn op" id="minus">&minus;</button>
-										<button class="btn op" id="mult">x</button>
-										<button class="btn op" id="equal">=</button>
+										<button class="calc-btn op" id="plus">&plus;</button>
+										<button class="calc-btn op" id="minus">&minus;</button>
+										<button class="calc-btn op" id="mult">x</button>
+										<button class="calc-btn op" id="equal">=</button>
 									</div>
 									<div class="left">
-										<button class="btn num">9</button>
-										<button class="btn num">8</button>
-										<button class="btn num">7</button>
-										<button class="btn num">6</button>
-										<button class="btn num">5</button>
-										<button class="btn num">4</button>
-										<button class="btn num">3</button>
-										<button class="btn num">2</button>
-										<button class="btn num">1</button>
-										<button class="btn num" id="point">.</button>
-										<button class="btn num" id="zero">0</button>
+										<button class="calc-btn num">9</button>
+										<button class="calc-btn num">8</button>
+										<button class="calc-btn num">7</button>
+										<button class="calc-btn num">6</button>
+										<button class="calc-btn num">5</button>
+										<button class="calc-btn num">4</button>
+										<button class="calc-btn num">3</button>
+										<button class="calc-btn num">2</button>
+										<button class="calc-btn num">1</button>
+										<button class="calc-btn num" id="point">.</button>
+										<button class="calc-btn num" id="zero">0</button>
 									</div>								
 								</div>
 								<footer class="tab-footer">
@@ -296,6 +295,27 @@
 								</footer>
 							</div>
 						</li>
+						<li>
+							<input type="radio" name="projects" id="aria-accordion">
+							<label for="aria-accordion">Aria Accordion</label>
+							<div class="tab-content">
+								<div id="aria-accordion-wrapper">
+									<div class="aria-accordion" role="tablist">
+										<h3 id="heading1" role="tab" class="accordion-heading" aria-controls="panel1" aria-selected="true" tabindex="0">Heading 1</h3>
+										<div id="panel1" role="tabpanel" class="accordion-panel" aria-labelledby="heading1" aria-hidden="false" aria-expanded="true">Content for panel 1</div>
+										<h3 id="heading2" role="tab" class="accordion-heading" aria-controls="panel2" aria-selected="false" tabindex="0">Heading 2</h3>
+										<div id="panel2" role="tabpanel" class="accordion-panel" aria-labelledby="heading2" aria-hidden="true" aria-expanded="false">Content for panel 2</div>
+										<h3 id="heading3" role="tab" class="accordion-heading" aria-controls="panel3" aria-selected="false" tabindex="0">Heading 3</h3>
+										<div id="panel3" role="tabpanel" class="accordion-panel" aria-labelledby="heading3" aria-hidden="true" aria-expanded="false">Content for panel 3</div>
+										<h3 id="heading4" role="tab" class="accordion-heading" aria-controls="panel4" aria-selected="false" tabindex="0">Heading 4</h3>
+										<div id="panel4" role="tabpanel" class="accordion-panel" aria-labelledby="heading4" aria-hidden="true" aria-expanded="false">Content for panel 4</div>
+									</div>
+								</div>
+								<footer class="tab-footer">
+									<p>Technologies: HTML5 + ARIA, CSS3, and vanilla JavaScript.</p>
+								</footer>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -430,198 +450,10 @@
 		<p>&copy; 2017 Rafael Garcia</p>
 	</footer>
 
-	<script type="text/javascript">
-		var calculator = document.getElementById("calculator");
-		var screen = document.getElementById("screen");
-		var history = document.getElementById("history");
-		var op = null;
-		var lastOp = false;
-		var val1 = null;
-		var val2 = null;
-
-
-		function calculate(val1, op, val2) {
-			switch(op) {
-				case "plus":
-					return +val1 + +val2;
-					break;
-				case "minus":
-					return +val1 - +val2;
-					break;
-				case "mult":
-					return +val1 * +val2;
-					break;
-				case "div":
-					return +val1 / +val2;
-					break;
-			}
-		}
-
-		calculator.addEventListener('click', function(e) {
-			
-			var element = e.target;
-
-			if (element.classList.contains('btn')) {
-
-				if (element.classList.contains('num')) {
-
-					console.log('num');
-
-					if (lastOp) {
-
-						screen.value = '' + element.innerHTML;
-						lastOp = false;
-					}	
-
-					else if (screen.value == '0') {
-
-						screen.value = element.innerHTML;
-					}
-					else {
-						
-						screen.value += element.innerHTML;				
-					}
-				}
-				else {
-					console.log('op');
-
-					if (!lastOp) {
-
-						if (!val1) {
-							val1 = screen.value;
-						}
-						else {
-							screen.value = calculate(val1, op, screen.value);
-							val1 = screen.value;
-						}
-					}	
-
-					op = element.id;
-					lastOp = true;
-			
-				}
-			}
-		});
-	</script>
-	<script type="text/javascript">
-		var modal 		= document.getElementById('search-modal');
-		var srchbtn 	= document.getElementById('search-btn');
-		var close 		= document.getElementById('close-btn');
-		var devwidth 	= document.getElementById('devwidth');
-		var sectionArr 	= document.getElementsByClassName('section-wrapper');
-		console.log(sectionArr);
-		var scrollTop 	= window.scrollY;
-		var scrollTopVal = document.getElementById('scrolltop');
-		var mainMenu = document.getElementById('main-nav').firstElementChild;
-
-		var skillBlocks = document.getElementsByClassName('skill-block');
-		console.log('skillBlocks: ');
-		console.log(skillBlocks);
-
-		function getDocHeight() {
-		    var D = document;
-		    return Math.max(
-		        D.body.scrollHeight, D.documentElement.scrollHeight,
-		        D.body.offsetHeight, D.documentElement.offsetHeight,
-		        D.body.clientHeight, D.documentElement.clientHeight
-		    );
-		}
-
-		var docHeight = getDocHeight();
-
-
-		var visibleSections = new Array(sectionArr.length);
-		console.log('visible Sections');
-		console.log(visibleSections);
-
-		function displaySections(sections) {
-			if (modal.style.display !== 'none') {
-				scrollTopVal.innerHTML = "" + window.scrollY;
-			}
-
-			scrollTop = window.scrollY;
-
-			if (scrollTop >= 0 && scrollTop < 350 && !visibleSections[0]) {
-				setTimeout(function() {
-					sectionArr[0].style.opacity = 1;
-					sectionArr[0].style.top = '0px';
-				}, 200);
-
-				visibleSections[0] = true;
-			}
-
-			if (scrollTop >= 350 && scrollTop < 2500 && !visibleSections[1]) {
-				setTimeout(function() {
-					sectionArr[1].style.opacity = 1;
-					sectionArr[1].style.top = '0px';
-					sectionArr[1].style.left = '0px';
-					
-					setTimeout(function() {
-						skillBlocks[0].style.opacity = 1;
-						skillBlocks[0].style.top = '0px';
-					}, 200);
-					setTimeout(function() {
-						skillBlocks[1].style.opacity = 1;
-						skillBlocks[1].style.top = '0px';
-					}, 600);
-					setTimeout(function() {
-						skillBlocks[2].style.opacity = 1;
-						skillBlocks[2].style.top = '0px';
-					}, 900);
-
-				}, 200);
-
-				visibleSections[1] = true;
-			}
-
-			if (scrollTop >= 1400 && !visibleSections[2]) {
-				setTimeout(function() {
-					sectionArr[2].style.opacity = 1;
-					sectionArr[2].style.top = '0px';
-				}, 200);
-
-				visibleSections[2] = true;
-			}
-		}
-
-		displaySections(visibleSections);
-
-		window.addEventListener('scroll', function(e) {
-			if (modal.style.display !== 'none') {
-				scrollTopVal.innerHTML = "" + window.scrollY;
-			}
-
-			scrollTop = window.scrollY;
-
-			displaySections(visibleSections);
-
-			if (scrollTop > 300) {
-
-			}
-		});
-
-		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-		devwidth.innerHTML = "" + w;
-
-		srchbtn.onclick = function() {
-			modal.style.display = 'block';
-			setTimeout(function() {
-				modal.style.opacity = 1;
-			}, 100);
-
-			w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-			devwidth.innerHTML = "" + w;
-			
-		}
-
-		close.onclick = function() {
-			modal.style.opacity = 0;
-			setTimeout(function() {
-				modal.style.display = 'none';
-			}, 200);
-			
-		}
-	</script>
+	<script type="text/javascript" src="scripts/calculator.js"></script>
+	<script type="text/javascript" src="scripts/accordion.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	
 </body>
 
 </html>
