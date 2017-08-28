@@ -406,8 +406,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					
+					</div>		
 				</div>
 			</div>
 		</section>
@@ -415,6 +414,19 @@
 		<section id="contact">
 			<div class="section-wrapper">
 				<h2>Contact</h2>
+				<form id="contact-form">
+					<div class="input-group">
+						<input type="text" name="contact-email" id="contact-email" required>
+						<label for="contact-email">e-mail</label>
+						<input type="text" name="contact-name" id="contact-name" required>
+						<label for="contact-name">name</label>
+					</div>
+
+					<div class="input-group">
+						<textarea name="contact-message" id="contact-message" form="contact-form" required placeholder="Message..."></textarea>
+					</div>
+					<button class="btn btn-lg" id="contact-form-btn" type="submit">Send!</button>
+				</form>
 				<div id="contact-wrapper">
 					<label for="card-toggle">
 						<input type="checkbox" id="card-toggle">
@@ -439,7 +451,6 @@
 					    	<div class="back">
 					    	</div>
 					    </div>
-
 					</label>
 				</div>	
 			</div>
