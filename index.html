@@ -21,35 +21,37 @@
 		<div id="logo-wrapper">
 			Rafael García
 		</div>
-		<nav id="main-nav">
-			<ul class="main-menu">
-				<!--<li><a href="#">About</a></li>-->
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#contact">Contact</a></li>
+		<nav>
+			<ul class="nav">
+				<li class="nav__item"><a class="nav__link" href="#">About</a></li>
+				<li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+				<li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+				<li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+				<li class="nav__item"><a class="nav__link" id="bloglink" href="#">Blog</a></li>
 			</ul>
 			<ul class="mobile-menu">
 				<li><a href="#">About</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#">Skills</a></li>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#">Contact</a></li>
+				<li><a id="bloglink" href="#" >Blog</a></li>
 			</ul>
 		</nav>
-		<div id="search-bar-wrapper">
-			<input type="text" id="search" name="search" required>
-			<label for="search">search</label>
-			<button id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+		<div class="search-bar">
+			<input class="search-bar__input" type="text" id="search" name="search" required>
+			<label class="search-bar__label" for="search">search</label>
+			<button class="search-bar__button" id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
 	</header>
-	<div id="search-modal">
-		<div id="modal-content">
-			<div class="modal-header">
-				<span id="close-btn">&times;</span>
+	<div class="modal" id="modal">
+		<div class="modal__content">
+			<div class="modal__header">
+				<span class="modal__close" id="close-btn">&times;</span>
 			</div>
-			<div class="modal-body">
-				<p>Sorry! <br><br> Search feature is currently disabled.</p>		
+			<div class="modal__body">
+				<p>Sorry! <br><br> This feature is currently disabled.</p>		
 			</div>
-			<div class="modal-footer">
+			<div class="modal__footer">
 				<p id="devwidth"></p>
 				<p id="scrolltop"></p>
 			</div>

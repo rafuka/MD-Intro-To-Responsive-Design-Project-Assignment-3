@@ -65,37 +65,6 @@ section:nth-child(even) {
 #mobile-menu-btn {
   display: none; }
 
-#logo-wrapper {
-  display: inline-block;
-  color: white;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1.5em; }
-
-#main-nav {
-  display: inline-block; }
-  #main-nav a {
-    position: relative;
-    color: white;
-    padding: 20px;
-    opacity: 0.8; }
-    #main-nav a:hover {
-      opacity: 1; }
-  #main-nav .main-menu {
-    position: relative; }
-
-#search-bar-wrapper {
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
-  padding-right: 5px;
-  background-color: rgba(200, 200, 200, 0.3);
-  position: relative;
-  top: 0px;
-  border-radius: 8px;
-  transition: opacity .3s ease, visibility 0s 0.3s; }
-  #search-bar-wrapper .form-group {
-    display: inline-block; }
-
 #main-header {
   display: flex;
   justify-content: space-around;
@@ -105,6 +74,23 @@ section:nth-child(even) {
   width: 100%;
   position: fixed;
   z-index: 99999; }
+
+#logo-wrapper {
+  display: inline-block;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em; }
+
+.nav {
+  display: inline-block;
+  position: relative; }
+  .nav__link {
+    position: relative;
+    color: white;
+    padding: 20px;
+    opacity: 0.8; }
+    .nav__link:hover {
+      opacity: 1; }
 
 .section-wrapper {
   padding: 100px 0px;
@@ -627,43 +613,52 @@ input[type="radio"]:checked ~ .tab-content {
 
   .graph .graph-bar .tooltip {
     display: none !important; } }
-#search-bar-wrapper label {
-  position: absolute;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  font-size: 16px;
-  left: 4px;
-  top: 6px;
-  transition: top .3s ease, font-size .3s ease; }
-#search-bar-wrapper button {
-  padding: 3px;
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  position: relative; }
-  #search-bar-wrapper button i {
-    font-size: 1.5em;
-    transition: transform .2s ease; }
-  #search-bar-wrapper button:hover > i {
-    transform: scale(1.2); }
-#search-bar-wrapper #search {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  width: 150px;
-  font-size: 16px;
-  padding: 5px; }
-  #search-bar-wrapper #search:focus + label, #search-bar-wrapper #search:valid + label {
-    top: -12px;
-    font-size: 10px; }
-#search-bar-wrapper #search-btn {
-  height: 0; }
+.search-bar {
+  background-color: rgba(200, 200, 200, 0.3);
+  border-radius: 8px;
+  display: inline-block;
+  opacity: 1;
+  padding-right: 5px;
+  position: relative;
+  top: 0px;
+  transition: opacity .3s ease, visibility 0s 0.3s;
+  visibility: visible; }
+  .search-bar__label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    left: 4px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 6px;
+    transition: top .3s ease, font-size .3s ease; }
+  .search-bar__button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 0;
+    outline: none;
+    padding: 3px;
+    position: relative; }
+    .search-bar__button i {
+      font-size: 1.5em;
+      transition: transform .2s ease; }
+    .search-bar__button:hover > i {
+      transform: scale(1.2); }
+  .search-bar__input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    width: 150px; }
+    .search-bar__input:focus + label, .search-bar__input:valid + label {
+      font-size: 10px;
+      top: -12px; }
 
-#search-modal {
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -674,30 +669,28 @@ input[type="radio"]:checked ~ .tab-content {
   z-index: 99999;
   opacity: 0;
   transition: opacity .2s ease; }
-  #search-modal #modal-content {
+  .modal__content {
     background-color: white;
     display: block;
     width: 60%;
     margin: 15% auto;
-    height: 300px;
-    border-radius: 10px; }
-    #search-modal #modal-content .modal-header {
-      background-color: #f56254;
-      text-align: right;
-      border-radius: 10px 10px 0 0; }
-    #search-modal #modal-content .modal-body {
-      text-align: center;
-      padding: 40px;
-      font-size: 2em;
-      margin-bottom: 25px; }
-  #search-modal #close-btn {
+    height: 300px; }
+  .modal__header {
+    background-color: #f56254;
+    text-align: right; }
+  .modal__body {
+    text-align: center;
+    padding: 40px;
+    font-size: 2em;
+    margin-bottom: 25px; }
+  .modal__close {
     margin-right: 20px;
     font-size: 2.5em;
     color: white; }
-    #search-modal #close-btn:hover {
+    .modal__close:hover {
       cursor: pointer;
       color: black; }
-  #search-modal .modal-footer p {
+  .modal__footer p {
     color: #aaa;
     font-size: .7em;
     text-align: center; }

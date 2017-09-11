@@ -1,42 +1,3 @@
-#logo-wrapper {
-	display: inline-block;
-	color: white;
-	font-family: 'Roboto Slab', serif;
-	font-size: 1.5em;
-}
-
-#main-nav {
-	display: inline-block;
-	a {
-		position: relative;
-		color: white;
-	    padding: 20px;
-	    opacity: 0.8;
-	    &:hover {
-	    	opacity: 1;
-	    }
-	}
-
-	.main-menu {
-		position: relative;
-	}
-}
-
-#search-bar-wrapper {
-	display: inline-block;
-	visibility: visible;
-	opacity: 1;
-	padding-right: 5px;
-    background-color: rgba(200,200,200,0.3);
-    position: relative;
-	top: 0px;
-	border-radius: 8px;
-	transition: opacity .3s ease, visibility 0s 0.3s;
-	.form-group {
-		display: inline-block;
-	}
-}
-
 #main-header {
 	display: flex;
     justify-content: space-around;
@@ -47,3 +8,25 @@
     position: fixed;
     z-index: 99999;
 }
+
+#logo-wrapper {
+	display: inline-block;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5em;
+}
+
+.nav {
+	display: inline-block;
+	position: relative;
+	&__link {
+		position: relative;
+		color: white;
+	    padding: 20px;
+	    opacity: 0.8;
+	    &:hover {
+	    	opacity: 1;
+	    }
+	}
+}
+
