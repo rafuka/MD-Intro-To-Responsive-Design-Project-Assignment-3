@@ -31,7 +31,8 @@ main {
   background-color: #F2F2F2;
   padding-top: 60px; }
   main section {
-    min-height: 90vh; }
+    min-height: 90vh;
+    height: 90vh; }
     main section:last-child {
       min-height: fit-content; }
 
@@ -42,7 +43,7 @@ ul li {
 a {
   text-decoration: none; }
 
-section:nth-child(even) {
+section:nth-child(odd) {
   background-color: white;
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); }
 
@@ -92,37 +93,39 @@ section:nth-child(even) {
     .nav__link:hover {
       opacity: 1; }
 
-.section-wrapper {
-  padding: 100px 0px;
+.section__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
   max-width: 900px;
   margin: 0 auto;
-  transition: opacity 1s ease, top 1s ease;
   opacity: 0;
   position: relative;
-  top: 100px; }
-  .section-wrapper > h2 {
-    text-align: center;
-    color: #343739;
-    margin-bottom: 15px;
-    font-size: 2.5em;
-    font-weight: 300; }
-  .section-wrapper > p {
-    text-align: center;
-    margin-bottom: 35px;
-    font-weight: 300; }
+  top: 100px;
+  transition: opacity 1s ease, top 1s ease; }
+.section__title {
+  text-align: center;
+  color: #343739;
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  font-weight: 300; }
+.section__info {
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 300; }
 
-#tabs-wrapper {
+.tabs {
   display: flex;
   position: relative;
   height: 650px;
   min-width: 320px; }
-
-#tabs-list {
-  display: inline-flex;
-  flex-direction: column;
-  vertical-align: top;
-  width: 20%; }
-  #tabs-list li > label {
+  .tabs__list {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    width: 20%; }
+  .tabs__label {
     display: inline-block;
     color: #000;
     color: rgba(0, 0, 0, 0.5);
@@ -132,36 +135,51 @@ section:nth-child(even) {
     text-align: right;
     user-select: none;
     transition: padding .3s ease-out; }
-    #tabs-list li > label:hover {
+    .tabs__label:hover {
       cursor: pointer;
       color: black;
       padding-right: 25px; }
-  #tabs-list input[type='radio'] {
+  .tabs__radio {
     display: none; }
-  #tabs-list li > input[type='radio']:checked + label {
+  .tabs__radio:checked + .tabs__label {
     background-color: white;
     padding-right: 25px;
     color: #000; }
+  .tabs__content {
+    opacity: 0;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 675px;
+    background-color: white;
+    padding: 0;
+    padding-top: 20px;
+    -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+    -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+    -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+    -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
+    transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease; }
+  .tabs__radio:checked ~ .tabs__content {
+    opacity: 1;
+    z-index: 1; }
+  .tabs__footer {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .tabs__footer p:first-child {
+      text-transform: capitalize; }
 
-.tab-content {
-  opacity: 0;
-  width: 80%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 675px;
-  background-color: white;
-  padding: 0;
-  padding-top: 20px;
-  -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
-  -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
-  -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
-  -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
-  transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease; }
-
-input[type="radio"]:checked ~ .tab-content {
-  opacity: 1;
-  z-index: 1; }
+#about {
+  background-image: url("../img/portfolio_bgnd.jpg");
+  background-position: center;
+  background-size: cover; }
+  #about .section__title {
+    color: white;
+    font-size: 3.5em; }
+  #about .section__info {
+    color: white;
+    font-size: 1.5em; }
 
 #skills #skills-container {
   background-color: white;
@@ -791,120 +809,120 @@ input[type="radio"]:checked ~ .tab-content {
 .carousel {
   position: relative;
   height: 475px; }
-  .carousel input[type='radio'] + .slide {
+  .carousel__radio {
     visibility: hidden; }
-  .carousel input[type='radio']:checked + .slide {
+    .carousel__radio + .carousel__slide {
+      visibility: hidden; }
+  .carousel__radio:checked + .carousel__slide {
     visibility: visible; }
-  .carousel .carousel-labels > label {
+  .carousel__pills {
+    position: relative;
+    text-align: center;
+    top: 465px; }
+  .carousel__pill {
+    margin-right: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .carousel__pill:hover {
+      cursor: pointer; }
+  .carousel__labels label[class*='arrow'] {
+    visibility: hidden;
+    position: absolute;
+    font-size: 1.5em; }
+  .carousel__labels label.arrow-right {
+    right: 20px;
+    top: calc(50% - 18px); }
+  .carousel__labels label.arrow-left {
+    left: 20px;
+    top: calc(50% - 18px); }
+  .carousel__labels > label {
     cursor: pointer; }
-    .carousel .carousel-labels > label[class*='arrow'] {
+    .carousel__labels > label[class*='arrow'] {
       color: black;
       color: rgba(0, 0, 0, 0.5);
       transition: transform .2s ease; }
-      .carousel .carousel-labels > label[class*='arrow']:hover {
+      .carousel__labels > label[class*='arrow']:hover {
         color: black;
         transform: scale(1.2); }
+  .carousel__slide {
+    position: absolute;
+    overflow: hidden; }
+    .carousel__slide h3 {
+      text-align: center;
+      margin-bottom: 20px; }
+    .carousel__slide img {
+      width: 100%; }
 
-.slide {
-  position: absolute;
-  overflow: hidden; }
-  .slide h3 {
-    text-align: center;
-    margin-bottom: 20px; }
-  .slide img {
-    width: 100%; }
-
-#slide-1-1 + .slide,
-#slide-1-2 + .slide,
-#slide-1-3 + .slide {
+#slide-1-1 + .carousel__slide,
+#slide-1-2 + .carousel__slide,
+#slide-1-3 + .carousel__slide {
   width: 275px;
   left: 225px;
   top: 30px; }
 
-#slide-2-1 + .slide,
-#slide-2-2 + .slide,
-#slide-2-3 + .slide {
+#slide-2-1 + .carousel__slide,
+#slide-2-2 + .carousel__slide,
+#slide-2-3 + .carousel__slide {
   width: 500px;
   max-height: 445px;
   left: 115px;
   top: 30px; }
 
-#slide-3-1 + .slide,
-#slide-3-2 + .slide,
-#slide-3-3 + .slide {
+#slide-3-1 + .carousel__slide,
+#slide-3-2 + .carousel__slide,
+#slide-3-3 + .carousel__slide {
   width: 500px;
   left: 110px;
   top: 30px; }
 
-#slide-4-1 + .slide,
-#slide-4-2 + .slide,
-#slide-4-3 + .slide {
+#slide-4-1 + .carousel__slide,
+#slide-4-2 + .carousel__slide,
+#slide-4-3 + .carousel__slide {
   width: 500px;
   left: 110px;
   top: 30px; }
 
-.carousel-labels .pills {
-  position: relative;
-  text-align: center;
-  top: 480px; }
-.carousel-labels label.slide-pill {
-  margin-right: 10px;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3); }
-  .carousel-labels label.slide-pill:hover {
-    cursor: pointer; }
-.carousel-labels label[class*='arrow'] {
-  visibility: hidden;
-  position: absolute;
-  font-size: 1.5em; }
-.carousel-labels label.arrow-right {
-  right: 20px;
-  top: calc(50% - 18px); }
-.carousel-labels label.arrow-left {
-  left: 20px;
-  top: calc(50% - 18px); }
-
-#slide-1-1:checked ~ .carousel-labels > label.arrow-left[for="slide-1-3"],
-#slide-1-1:checked ~ .carousel-labels > label.arrow-right[for="slide-1-2"],
-#slide-1-2:checked ~ .carousel-labels > label.arrow-left[for="slide-1-1"],
-#slide-1-2:checked ~ .carousel-labels > label.arrow-right[for="slide-1-3"],
-#slide-1-3:checked ~ .carousel-labels > label.arrow-left[for="slide-1-2"],
-#slide-1-3:checked ~ .carousel-labels > label.arrow-right[for="slide-1-1"],
-#slide-2-1:checked ~ .carousel-labels > label.arrow-left[for="slide-2-3"],
-#slide-2-1:checked ~ .carousel-labels > label.arrow-right[for="slide-2-2"],
-#slide-2-2:checked ~ .carousel-labels > label.arrow-left[for="slide-2-1"],
-#slide-2-2:checked ~ .carousel-labels > label.arrow-right[for="slide-2-3"],
-#slide-2-3:checked ~ .carousel-labels > label.arrow-left[for="slide-2-2"],
-#slide-2-3:checked ~ .carousel-labels > label.arrow-right[for="slide-2-1"],
-#slide-3-1:checked ~ .carousel-labels > label.arrow-left[for="slide-3-3"],
-#slide-3-1:checked ~ .carousel-labels > label.arrow-right[for="slide-3-2"],
-#slide-3-2:checked ~ .carousel-labels > label.arrow-left[for="slide-3-1"],
-#slide-3-2:checked ~ .carousel-labels > label.arrow-right[for="slide-3-3"],
-#slide-3-3:checked ~ .carousel-labels > label.arrow-left[for="slide-3-2"],
-#slide-3-3:checked ~ .carousel-labels > label.arrow-right[for="slide-3-1"],
-#slide-4-1:checked ~ .carousel-labels > label.arrow-left[for="slide-4-3"],
-#slide-4-1:checked ~ .carousel-labels > label.arrow-right[for="slide-4-2"],
-#slide-4-2:checked ~ .carousel-labels > label.arrow-left[for="slide-4-1"],
-#slide-4-2:checked ~ .carousel-labels > label.arrow-right[for="slide-4-3"],
-#slide-4-3:checked ~ .carousel-labels > label.arrow-left[for="slide-4-2"],
-#slide-4-3:checked ~ .carousel-labels > label.arrow-right[for="slide-4-1"] {
+#slide-1-1:checked ~ .carousel__labels > label.arrow-left[for="slide-1-3"],
+#slide-1-1:checked ~ .carousel__labels > label.arrow-right[for="slide-1-2"],
+#slide-1-2:checked ~ .carousel__labels > label.arrow-left[for="slide-1-1"],
+#slide-1-2:checked ~ .carousel__labels > label.arrow-right[for="slide-1-3"],
+#slide-1-3:checked ~ .carousel__labels > label.arrow-left[for="slide-1-2"],
+#slide-1-3:checked ~ .carousel__labels > label.arrow-right[for="slide-1-1"],
+#slide-2-1:checked ~ .carousel__labels > label.arrow-left[for="slide-2-3"],
+#slide-2-1:checked ~ .carousel__labels > label.arrow-right[for="slide-2-2"],
+#slide-2-2:checked ~ .carousel__labels > label.arrow-left[for="slide-2-1"],
+#slide-2-2:checked ~ .carousel__labels > label.arrow-right[for="slide-2-3"],
+#slide-2-3:checked ~ .carousel__labels > label.arrow-left[for="slide-2-2"],
+#slide-2-3:checked ~ .carousel__labels > label.arrow-right[for="slide-2-1"],
+#slide-3-1:checked ~ .carousel__labels > label.arrow-left[for="slide-3-3"],
+#slide-3-1:checked ~ .carousel__labels > label.arrow-right[for="slide-3-2"],
+#slide-3-2:checked ~ .carousel__labels > label.arrow-left[for="slide-3-1"],
+#slide-3-2:checked ~ .carousel__labels > label.arrow-right[for="slide-3-3"],
+#slide-3-3:checked ~ .carousel__labels > label.arrow-left[for="slide-3-2"],
+#slide-3-3:checked ~ .carousel__labels > label.arrow-right[for="slide-3-1"],
+#slide-4-1:checked ~ .carousel__labels > label.arrow-left[for="slide-4-3"],
+#slide-4-1:checked ~ .carousel__labels > label.arrow-right[for="slide-4-2"],
+#slide-4-2:checked ~ .carousel__labels > label.arrow-left[for="slide-4-1"],
+#slide-4-2:checked ~ .carousel__labels > label.arrow-right[for="slide-4-3"],
+#slide-4-3:checked ~ .carousel__labels > label.arrow-left[for="slide-4-2"],
+#slide-4-3:checked ~ .carousel__labels > label.arrow-right[for="slide-4-1"] {
   visibility: visible; }
 
-#slide-1-1:checked ~ .carousel-labels label.slide-pill[for="slide-1-1"],
-#slide-1-2:checked ~ .carousel-labels label.slide-pill[for="slide-1-2"],
-#slide-1-3:checked ~ .carousel-labels label.slide-pill[for="slide-1-3"],
-#slide-2-1:checked ~ .carousel-labels label.slide-pill[for="slide-2-1"],
-#slide-2-2:checked ~ .carousel-labels label.slide-pill[for="slide-2-2"],
-#slide-2-3:checked ~ .carousel-labels label.slide-pill[for="slide-2-3"],
-#slide-3-1:checked ~ .carousel-labels label.slide-pill[for="slide-3-1"],
-#slide-3-2:checked ~ .carousel-labels label.slide-pill[for="slide-3-2"],
-#slide-3-3:checked ~ .carousel-labels label.slide-pill[for="slide-3-3"],
-#slide-4-1:checked ~ .carousel-labels label.slide-pill[for="slide-4-1"],
-#slide-4-2:checked ~ .carousel-labels label.slide-pill[for="slide-4-2"],
-#slide-4-3:checked ~ .carousel-labels label.slide-pill[for="slide-4-3"] {
+#slide-1-1:checked ~ .carousel__labels label.carousel__pill[for="slide-1-1"],
+#slide-1-2:checked ~ .carousel__labels label.carousel__pill[for="slide-1-2"],
+#slide-1-3:checked ~ .carousel__labels label.carousel__pill[for="slide-1-3"],
+#slide-2-1:checked ~ .carousel__labels label.carousel__pill[for="slide-2-1"],
+#slide-2-2:checked ~ .carousel__labels label.carousel__pill[for="slide-2-2"],
+#slide-2-3:checked ~ .carousel__labels label.carousel__pill[for="slide-2-3"],
+#slide-3-1:checked ~ .carousel__labels label.carousel__pill[for="slide-3-1"],
+#slide-3-2:checked ~ .carousel__labels label.carousel__pill[for="slide-3-2"],
+#slide-3-3:checked ~ .carousel__labels label.carousel__pill[for="slide-3-3"],
+#slide-4-1:checked ~ .carousel__labels label.carousel__pill[for="slide-4-1"],
+#slide-4-2:checked ~ .carousel__labels label.carousel__pill[for="slide-4-2"],
+#slide-4-3:checked ~ .carousel__labels label.carousel__pill[for="slide-4-3"] {
   background-color: #90b7f0; }
 
 #buttons-slide {
@@ -912,13 +930,6 @@ input[type="radio"]:checked ~ .tab-content {
   margin-top: 30px; }
   #buttons-slide h3 {
     margin-bottom: 40px; }
-
-.tab-content .tab-footer {
-  margin-top: 30px;
-  padding: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
-  .tab-content .tab-footer p:first-child {
-    text-transform: capitalize; }
 
 .btn {
   display: inline-block;

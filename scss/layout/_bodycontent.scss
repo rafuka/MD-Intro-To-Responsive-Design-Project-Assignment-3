@@ -1,13 +1,18 @@
-.section-wrapper {
-	padding: 100px 0px;
-	max-width: 900px;
-	margin: 0 auto;
-	transition: opacity 1s ease, top 1s ease;
-	opacity: 0;
-	position: relative;
-	top: 100px;
+.section {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		max-width: 900px;
+		margin: 0 auto;
+		opacity: 0;
+		position: relative;
+		top: 100px;
+		transition: opacity 1s ease, top 1s ease;	
+	}
 
-	& > h2 {
+	&__title {
 		text-align: center;
 		color: #343739;
 		margin-bottom: 15px;
@@ -15,27 +20,29 @@
 		font-weight: 300;
 	}
 
-	& > p {
+	&__info {
 		text-align: center;
 		margin-bottom: 35px;
 		font-weight: 300;
-	}
-} 
 
-#tabs-wrapper {
+	}
+}
+ 
+
+.tabs {
 	display: flex;
 	position: relative;
 	height: 650px;
 	min-width: 320px;
-}
 
-#tabs-list {
-	display: inline-flex;
-	flex-direction: column;
-	vertical-align: top;
-	width: 20%;
+	&__list {
+		display: inline-flex;
+		flex-direction: column;
+		vertical-align: top;
+		width: 20%;
+	}
 
-	li > label {
+	&__label {
 		display: inline-block;
 	    color: #000;
 	    color: rgba(0,0,0,0.5);
@@ -53,33 +60,59 @@
 		}
 	}
 
-	input[type='radio'] {
+	&__radio {
 		display: none;
 	}
 
-	li > input[type='radio']:checked + label {
+	&__radio:checked + &__label {
 		background-color: white;
 		padding-right: 25px;
 		color: #000;
 	}
+
+	&__content {
+		opacity: 0;
+		width: 80%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 675px;
+		background-color: white;
+		padding: 0;
+		padding-top: 20px;
+		@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
+	}
+
+	&__radio:checked ~ &__content {
+		opacity: 1;
+	    z-index: 1;
+	}
+
+	&__footer {
+	  	margin-top: 30px;
+	  	padding: 20px;
+	  	border-top: 1px solid rgba(0, 0, 0, 0.1); 
+
+    	p:first-child {
+    		text-transform: capitalize;
+    	}
+	}
 }
 
-.tab-content {
-	opacity: 0;
-	width: 80%;
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 675px;
-	background-color: white;
-	padding: 0;
-	padding-top: 20px;
-	@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
-}
+#about {
+	background-image: url('../img/portfolio_bgnd.jpg');
+	background-position: center;
+	background-size: cover;
 
-input[type="radio"]:checked ~ .tab-content {
-	opacity: 1;
-    z-index: 1;
+	& .section__title {
+		color: white;
+		font-size: 3.5em;
+	}
+
+	& .section__info {
+		color: white;
+		font-size: 1.5em;
+	}
 }
 
 #skills {

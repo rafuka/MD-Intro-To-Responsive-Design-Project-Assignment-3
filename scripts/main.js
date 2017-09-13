@@ -4,7 +4,7 @@ var bloglink    = document.getElementById('bloglink');
 var contactbtn  = document.getElementById('contact-form-btn');
 var closebtn 	= document.getElementById('close-btn');
 var devwidth 	= document.getElementById('devwidth');
-var sectionArr 	= document.getElementsByClassName('section-wrapper');
+var sectionArr 	= document.getElementsByClassName('section__wrapper');
 var scrollTop 	= window.scrollY;
 var scrollTopVal = document.getElementById('scrolltop');
 
@@ -32,7 +32,7 @@ function displaySections(sections) {
 
   scrollTop = window.scrollY;
 
-  if (scrollTop >= 0 && scrollTop < 350 && !visibleSections[0]) {
+  if (scrollTop >= 0 && scrollTop < 450 ) {
       setTimeout(function() {
          sectionArr[0].style.opacity = 1;
          sectionArr[0].style.top = '0px';
@@ -41,11 +41,20 @@ function displaySections(sections) {
       visibleSections[0] = true;
   }
 
-  if (scrollTop >= 350 && scrollTop < 2500 && !visibleSections[1]) {
+  if (scrollTop >= 450 && scrollTop < 1550 && !visibleSections[1]) {
       setTimeout(function() {
          sectionArr[1].style.opacity = 1;
          sectionArr[1].style.top = '0px';
-         sectionArr[1].style.left = '0px';
+     }, 200);
+
+      visibleSections[1] = true;
+  }
+
+  if (scrollTop >= 1550 && scrollTop < 2750 && !visibleSections[2]) {
+      setTimeout(function() {
+         sectionArr[2].style.opacity = 1;
+         sectionArr[2].style.top = '0px';
+         sectionArr[2].style.left = '0px';
 
          setTimeout(function() {
             skillBlocks[0].style.opacity = 1;
@@ -62,16 +71,16 @@ function displaySections(sections) {
 
      }, 200);
 
-      visibleSections[1] = true;
+      visibleSections[2] = true;
   }
 
-  if (scrollTop >= 1400 && !visibleSections[2]) {
+  if (scrollTop >= 2750 && !visibleSections[3]) {
       setTimeout(function() {
-         sectionArr[2].style.opacity = 1;
-         sectionArr[2].style.top = '0px';
+         sectionArr[3].style.opacity = 1;
+         sectionArr[3].style.top = '0px';
      }, 200);
 
-      visibleSections[2] = true;
+      visibleSections[3] = true;
   }
 }
 

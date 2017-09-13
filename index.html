@@ -43,6 +43,7 @@
 			<button class="search-bar__button" id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
 	</header>
+
 	<div class="modal" id="modal">
 		<div class="modal__content">
 			<div class="modal__header">
@@ -60,16 +61,24 @@
 
 	<label for="mobile-menu-btn" class="mask"></label>
 	<main>
+		<section id="about">
+			<div class="section__wrapper">
+				<h2 class="section__title">Hello!</h2>
+				<p class="section__info">I'm Rafael Garcia, a full-stack web developer. In this site you can take a look at some of the projects I've worked on and some information about my skills.</p>
+			</div>
+			
+		</section>
+
 		<section id="projects">
-			<div class="section-wrapper">
-				<h2>Projects</h2>
-				<p>These are the projects I've built for the BovAcademy courses.</p>
-				<div id="tabs-wrapper">
-					<ul id="tabs-list">
-						<li>
-							<input type="radio" name="projects" id="calc" checked>
-							<label for="calc">Calculator</label>
-							<div class="tab-content">
+			<div class="section__wrapper">
+				<h2 class="section__title">Projects</h2>
+				<p class="section__info">These are the projects I've built for the BovAcademy courses.</p>
+				<div class="tabs">
+					<ul class="tabs__list">
+						<li class="tabs__item">
+							<input class="tabs__radio" type="radio" name="projects" id="calc" checked>
+							<label class="tabs__label" for="calc">Calculator</label>
+							<div class="tabs__content">
 								<div id="calculator">
 									<input type="text" name="screen" id="screen" disabled value="0">
 									<input type="text" name="history" id="history" disabled value="0">
@@ -98,33 +107,33 @@
 										<button class="calc-btn num" id="zero">0</button>
 									</div>								
 								</div>
-								<footer class="tab-footer">
+								<footer class="tabs__footer">
 									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
 								</footer>
 							</div>
 						</li>
-						<li>
-							<input type="radio" name="projects" id="shop">
-							<label for="shop">Shopping Cart</label>
-							<div class="tab-content">
+						<li class="tabs__item">
+							<input class="tabs__radio" type="radio" name="projects" id="shop">
+							<label class="tabs__label" for="shop">Shopping Cart</label>
+							<div class="tabs__content">
 								<div class="carousel">
-									<input type="radio" name="p2-slides" id="slide-2-1" checked>
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p2-slides" id="slide-2-1" checked>
+									<div class="carousel__slide">
 										<img src="img/shop1.png">
 									</div>
-									<input type="radio" name="p2-slides" id="slide-2-2">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p2-slides" id="slide-2-2">
+									<div class="carousel__slide">
 										<img src="img/shop2.png">
 									</div>
-									<input type="radio" name="p2-slides" id="slide-2-3">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p2-slides" id="slide-2-3">
+									<div class="carousel__slide">
 										<img src="img/shop3.png">
 									</div>
-									<div class="carousel-labels">
-										<div class="pills">
-											<label class="slide-pill" for="slide-2-1"></label>
-											<label class="slide-pill" for="slide-2-2"></label>
-											<label class="slide-pill" for="slide-2-3"></label>
+									<div class="carousel__labels">
+										<div class="carousel__pills">
+											<label class="carousel__pill" for="slide-2-1"></label>
+											<label class="carousel__pill" for="slide-2-2"></label>
+											<label class="carousel__pill" for="slide-2-3"></label>
 										</div>
 										
 										<label class="arrow-left" for="slide-2-1"><i class="material-icons">keyboard_arrow_left</i></label>
@@ -135,33 +144,33 @@
 										<label class="arrow-right" for="slide-2-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
-								<footer class="tab-footer">
+								<footer class="tabs__footer">
 									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
 								</footer>
 							</div>
 						</li>
-						<li>
-							<input type="radio" name="projects" id="forms">
-							<label for="forms">Forms</label>
-							<div class="tab-content">
+						<li class="tabs__item">
+							<input class="tabs__radio" type="radio" name="projects" id="forms">
+							<label class="tabs__label" for="forms">Forms</label>
+							<div class="tabs__content">
 								<div class="carousel">
-									<input type="radio" name="p3-slides" id="slide-3-1" checked>
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-1" checked>
+									<div class="carousel__slide">
 										<img src="img/forms1.png">
 									</div>
-									<input type="radio" name="p3-slides" id="slide-3-2">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-2">
+									<div class="carousel__slide">
 										<img src="img/forms2.png">
 									</div>
-									<input type="radio" name="p3-slides" id="slide-3-3">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-3">
+									<div class="carousel__slide">
 										<img src="img/forms3.png">
 									</div>
-									<div class="carousel-labels">
-										<div class="pills">
-											<label class="slide-pill" for="slide-3-1"></label>
-											<label class="slide-pill" for="slide-3-2"></label>
-											<label class="slide-pill" for="slide-3-3"></label>
+									<div class="carousel__labels">
+										<div class="carousel__pills">
+											<label class="carousel__pill" for="slide-3-1"></label>
+											<label class="carousel__pill" for="slide-3-2"></label>
+											<label class="carousel__pill" for="slide-3-3"></label>
 										</div>
 										<label class="arrow-left" for="slide-3-1"><i class="material-icons">keyboard_arrow_left</i></label>
 										<label class="arrow-right" for="slide-3-1"><i class="material-icons">keyboard_arrow_right</i></label>
@@ -171,18 +180,18 @@
 										<label class="arrow-right" for="slide-3-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
-								<footer class="tab-footer">
+								<footer class="tabs__footer">
 									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
 								</footer>
 							</div>				
 						</li>
-						<li>
-							<input type="radio" name="projects" id="uicomp">
-							<label for="uicomp">Non-JS UI Components</label>
-							<div class="tab-content">
+						<li class="tabs__item">
+							<input class="tabs__radio" type="radio" name="projects" id="uicomp">
+							<label class="tabs__label" for="uicomp">Non-JS UI Components</label>
+							<div class="tabs__content">
 								<div class="carousel">
-									<input type="radio" name="p4-slides" id="slide-4-1" checked>
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p4-slides" id="slide-4-1" checked>
+									<div class="carousel__slide">
 										<div id="buttons-slide">
 											<h3>Buttons</h3>
 											<button class="btn btn-sm">One</button>
@@ -197,8 +206,8 @@
 											<br>
 										</div>
 									</div>
-									<input type="radio" name="p4-slides" id="slide-4-2">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p4-slides" id="slide-4-2">
+									<div class="carousel__slide">
 										<h3>Pill Tabs</h3>
 										<div class="pilltabs">
 										    <input type="radio" name="tabs" id="tab1" checked>
@@ -253,8 +262,8 @@
 									    	</div>
 									    </div>
 									</div>
-									<input type="radio" name="p4-slides" id="slide-4-3">
-									<div class="slide">
+									<input class="carousel__radio" type="radio" name="p4-slides" id="slide-4-3">
+									<div class="carousel__slide">
 										<div id="radiocheckbox">
 											<h3>Radio Buttons and Checkboxes</h3>
 											<div id="radiocheckbox-content">
@@ -278,11 +287,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="carousel-labels">
-										<div class="pills">
-											<label class="slide-pill" for="slide-4-1"></label>
-											<label class="slide-pill" for="slide-4-2"></label>
-											<label class="slide-pill" for="slide-4-3"></label>
+									<div class="carousel__labels">
+										<div class="carousel__pills">
+											<label class="carousel__pill" for="slide-4-1"></label>
+											<label class="carousel__pill" for="slide-4-2"></label>
+											<label class="carousel__pill" for="slide-4-3"></label>
 										</div>
 										<label class="arrow-left" for="slide-4-1"><i class="material-icons">keyboard_arrow_left</i></label>
 										<label class="arrow-right" for="slide-4-1"><i class="material-icons">keyboard_arrow_right</i></label>
@@ -292,15 +301,15 @@
 										<label class="arrow-right" for="slide-4-3"><i class="material-icons">keyboard_arrow_right</i></label>
 									</div>
 								</div>
-								<footer class="tab-footer">
+								<footer class="tabs__footer">
 									<p>Technologies: HTML5, and CSS3.</p>
 								</footer>
 							</div>
 						</li>
-						<li>
-							<input type="radio" name="projects" id="aria-accordion">
-							<label for="aria-accordion">Aria Accordion</label>
-							<div class="tab-content">
+						<li class="tabs__item">
+							<input class="tabs__radio" type="radio" name="projects" id="aria-accordion">
+							<label class="tabs__label" for="aria-accordion">Aria Accordion</label>
+							<div class="tabs__content">
 								<div id="aria-accordion-wrapper">
 									<div class="aria-accordion" role="tablist">
 										<h3 id="heading1" role="tab" class="accordion-heading" aria-controls="panel1" aria-selected="true" tabindex="0">Heading 1</h3>
@@ -313,7 +322,7 @@
 										<div id="panel4" role="tabpanel" class="accordion-panel" aria-labelledby="heading4" aria-hidden="true" aria-expanded="false">Content for panel 4</div>
 									</div>
 								</div>
-								<footer class="tab-footer">
+								<footer class="tabs__footer">
 									<p>Technologies: HTML5 + ARIA, CSS3, and vanilla JavaScript.</p>
 								</footer>
 							</div>
@@ -324,9 +333,9 @@
 		</section>
 
 		<section id="skills">
-			<div class="section-wrapper">
-				<h2>Skills</h2>
-				<p>I started doing Web Development as a hobby about 4 years ago. After some time playing with it I started loving it and got more serious about it. I've completed numerous courses on Computer Science and Web Development since. I'm more inclined to Front-End Development but I also have knowledge of PHP and Laravel, as well as some Back-End Javascript. I intend to become a FullStack Web Developer.</p>
+			<div class="section__wrapper">
+				<h2 class="section__title">Skills</h2>
+				<p class="section__info">I started doing Web Development as a hobby about 4 years ago. After some time playing with it I started loving it and got more serious about it. I've completed numerous courses on Computer Science and Web Development since. I'm more inclined to Front-End Development but I also have knowledge of PHP and Laravel, as well as some Back-End Javascript. I intend to become a FullStack Web Developer.</p>
 				<div id="skills-container">
 					<div id="percentage-bar">
 						<span id="percentage-bar-fend">70%</span>
@@ -414,8 +423,8 @@
 		</section>
 
 		<section id="contact">
-			<div class="section-wrapper">
-				<h2>Contact</h2>
+			<div class="section__wrapper">
+				<h2 class="section__title">Contact</h2>
 				<form id="contact-form">
 					<div class="input-group">
 						<input type="text" name="contact-email" id="contact-email" required>

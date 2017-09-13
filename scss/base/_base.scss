@@ -35,7 +35,8 @@ main {
 
 	section {
 		min-height: 90vh;
-
+		height: 90vh;
+		
 		&:last-child {
 			min-height: fit-content;
 		}
@@ -53,7 +54,7 @@ a {
 	text-decoration: none;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
 	background-color: white;
 	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.1);
 }
