@@ -28,20 +28,19 @@ main {
 	position: relative;
 	left: 0px;
 	top: 0px;
-	overflow: scroll;
 	transition: left .5s ease;
 	background-color: $bgndColor;
 	padding-top: 60px;
 
 	section {
-		min-height: 90vh;
-		height: 90vh;
+		height: fit-content;
 		
-		&:last-child {
-			min-height: fit-content;
-		}
+        &#about {
+            height: 100vh;
+        }
 	}
 }
+
 
 ul {
 	li {

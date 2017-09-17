@@ -5,7 +5,7 @@ var contactbtn  = document.getElementById('contact-form-btn');
 var closebtn 	= document.getElementById('close-btn');
 var devwidth 	= document.getElementById('devwidth');
 var sectionArr 	= document.getElementsByClassName('section__wrapper');
-var scrollTop 	= window.scrollY;
+var scrollTop 	= window.scrollY || document.documentElement.scrollTop;
 var scrollTopVal = document.getElementById('scrolltop');
 
 var skillBlocks = document.getElementsByClassName('skill-block');
@@ -27,10 +27,8 @@ var visibleSections = new Array(sectionArr.length);
 
 function displaySections(sections) {
    if (modal.style.display !== 'none') {
-      scrollTopVal.innerHTML = "" + window.scrollY;
+      scrollTopVal.innerHTML = "" + scrollTop;
   }
-
-  scrollTop = window.scrollY;
 
   if (scrollTop >= 0 && scrollTop < 450 ) {
       setTimeout(function() {
@@ -71,7 +69,7 @@ function displaySections(sections) {
 
      }, 200);
 
-      visibleSections[2] = true;
+      visibleSections[2] = true;
   }
 
   if (scrollTop >= 2750 && !visibleSections[3]) {
@@ -80,24 +78,26 @@ function displaySections(sections) {
          sectionArr[3].style.top = '0px';
      }, 200);
 
-      visibleSections[3] = true;
+      visibleSections[3] = true;
   }
 }
 
 displaySections(visibleSections);
 
 window.addEventListener('scroll', function(e) {
+    
+    scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
    if (modal.style.display !== 'none') {
-      scrollTopVal.innerHTML = "" + window.scrollY;
+      scrollTopVal.innerHTML = "" + scrollTop;
   }
+    console.log('scroll me');
 
-  scrollTop = window.scrollY;
+  
+    console.log(scrollTop);
 
   displaySections(visibleSections);
 
-  if (scrollTop > 300) {
-
-  }
 });
 
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
