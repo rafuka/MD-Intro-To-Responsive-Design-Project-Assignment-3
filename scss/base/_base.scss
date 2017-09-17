@@ -31,16 +31,16 @@ main {
 	transition: left .5s ease;
 	background-color: $bgndColor;
 	padding-top: 60px;
-
-	section {
-		height: fit-content;
-		
-        &#about {
-            height: 100vh;
+    
+    section {
+        height: fit-content;
+        
+        &:nth-child(odd) {
+            background-color: white;
+            box-shadow: inset 0px 0px 5px rgba(0,0,0,0.1);
         }
-	}
+    }
 }
-
 
 ul {
 	li {
@@ -51,11 +51,6 @@ ul {
 
 a {
 	text-decoration: none;
-}
-
-section:nth-child(odd) {
-	background-color: white;
-	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.1);
 }
 
 .mask {

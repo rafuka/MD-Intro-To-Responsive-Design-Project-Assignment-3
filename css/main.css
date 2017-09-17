@@ -31,8 +31,9 @@ main {
   padding-top: 60px; }
   main section {
     height: fit-content; }
-    main section#about {
-      height: 100vh; }
+    main section:nth-child(odd) {
+      background-color: white;
+      box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); }
 
 ul li {
   list-style: none;
@@ -40,10 +41,6 @@ ul li {
 
 a {
   text-decoration: none; }
-
-section:nth-child(odd) {
-  background-color: white;
-  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); }
 
 .mask {
   display: inline-block;
@@ -172,7 +169,8 @@ section:nth-child(odd) {
 #about {
   background-image: url("../img/portfolio_bgnd.jpg");
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
   #about .section__title {
     color: white;
     font-size: 3.5em; }
@@ -714,14 +712,14 @@ section:nth-child(odd) {
     font-size: .7em;
     text-align: center; }
 
-#tabs-list .pilltabs {
+.pilltabs {
   position: relative;
   padding: 20px;
   font-family: 'Futura', sans-serif;
   margin-bottom: 100px; }
-  #tabs-list .pilltabs input {
+  .pilltabs input {
     display: none; }
-  #tabs-list .pilltabs label {
+  .pilltabs label {
     padding: 10px;
     cursor: pointer;
     user-select: none;
@@ -733,17 +731,17 @@ section:nth-child(odd) {
     color: #ffac41;
     border: 1px solid transparent;
     border-radius: 7px; }
-  #tabs-list .pilltabs input[type='radio']:checked + label {
+  .pilltabs input[type='radio']:checked + label {
     background-color: #ffac41;
     color: white;
     border-radius: 7px; }
-    #tabs-list .pilltabs input[type='radio']:checked + label + .content {
+    .pilltabs input[type='radio']:checked + label + .content {
       opacity: 1;
       top: 50px; }
-  #tabs-list .pilltabs input[type='radio']:not(:checked) + label:hover {
+  .pilltabs input[type='radio']:not(:checked) + label:hover {
     border: 1px solid #ffac41;
     color: #ffac41; }
-  #tabs-list .pilltabs .content {
+  .pilltabs .content {
     position: absolute;
     top: 80px;
     opacity: 0;
@@ -755,14 +753,15 @@ section:nth-child(odd) {
     -ms-transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out;
     -webkit-transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out;
     transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out; }
-#tabs-list .undertabs {
+
+.undertabs {
   position: relative;
   padding: 20px;
   font-family: 'Futura', sans-serif;
   margin-bottom: 100px; }
-  #tabs-list .undertabs input {
+  .undertabs input {
     display: none; }
-  #tabs-list .undertabs .content {
+  .undertabs .content {
     position: absolute;
     top: 80px;
     opacity: 0;
@@ -774,15 +773,15 @@ section:nth-child(odd) {
     -ms-transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out;
     -webkit-transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out;
     transition: top 0.3s ease-in-out, opacity 0.15s ease-in-out; }
-  #tabs-list .undertabs input[type='radio']:checked + label {
+  .undertabs input[type='radio']:checked + label {
     color: #ffac41; }
-    #tabs-list .undertabs input[type='radio']:checked + label::after {
+    .undertabs input[type='radio']:checked + label::after {
       width: 100%;
       right: 0; }
-    #tabs-list .undertabs input[type='radio']:checked + label + .content {
+    .undertabs input[type='radio']:checked + label + .content {
       opacity: 1;
       top: 50px; }
-  #tabs-list .undertabs label {
+  .undertabs label {
     padding: 10px;
     padding-bottom: 7px;
     cursor: pointer;
@@ -793,7 +792,7 @@ section:nth-child(odd) {
     -webkit-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
     position: relative; }
-    #tabs-list .undertabs label::after {
+    .undertabs label::after {
       content: '';
       width: 0px;
       border-bottom: 2px solid #ffac41;
