@@ -9,9 +9,6 @@
 @import 'layout/header';
 @import 'layout/bodycontent';
 @import 'layout/footer';
-@import 'layout/responsive';
-
-
 
 @import 'components/searchbar';
 @import 'components/modal';
@@ -21,5 +18,7 @@
 @import 'components/radiocheckbox';
 @import 'components/ariaaccordion';
 @import 'components/contactcard';
+
+@import 'layout/responsive';
 
 

@@ -20,7 +20,8 @@ html {
 
 body {
   background-color: #F2F2F2;
-  min-width: 320px; }
+  min-width: 320px;
+  overflow-x: hidden; }
 
 main {
   position: relative;
@@ -30,7 +31,8 @@ main {
   background-color: #F2F2F2;
   padding-top: 60px; }
   main section {
-    height: fit-content; }
+    height: fit-content;
+    width: 100%; }
     main section:nth-child(odd) {
       background-color: white;
       box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); }
@@ -418,218 +420,6 @@ a {
   color: white;
   margin-top: 100px; }
 
-@media screen and (max-width: 960px) {
-  #logo-wrapper {
-    position: absolute;
-    left: -152px;
-    transition: left .5s ease; }
-
-  #search-bar-wrapper {
-    position: absolute;
-    top: 16px;
-    right: 10px;
-    z-index: 999;
-    visibility: visible;
-    transition: opacity .5s ease, visibility 0s 0s; }
-
-  #main-nav {
-    position: absolute;
-    width: 250px;
-    overflow: scroll;
-    left: -365px;
-    top: 60px;
-    flex-direction: column;
-    transition: left .5s ease;
-    height: 100vh;
-    background-color: white; }
-    #main-nav .mobile-menu {
-      flex-direction: column; }
-      #main-nav .mobile-menu li a {
-        color: black; }
-
-  #hamburguer {
-    position: fixed;
-    z-index: 9999999999;
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-    transition: left .5s ease; }
-    #hamburguer span {
-      height: 4px;
-      width: 100%;
-      background-color: white;
-      position: absolute;
-      transform: rotate(0deg);
-      opacity: 1;
-      -moz-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
-      -o-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
-      -ms-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
-      -webkit-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
-      transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease; }
-      #hamburguer span:nth-child(1) {
-        top: 6px; }
-      #hamburguer span:nth-child(2), #hamburguer span:nth-child(3) {
-        top: 18px; }
-      #hamburguer span:nth-child(4) {
-        top: 30px; }
-
-  #mobile-menu-btn:checked + label#hamburguer {
-    left: 90%;
-    left: calc(100% - 60px); }
-    #mobile-menu-btn:checked + label#hamburguer span:nth-child(1), #mobile-menu-btn:checked + label#hamburguer span:nth-child(4) {
-      top: 18px;
-      opacity: 0;
-      -moz-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
-      -o-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
-      -ms-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
-      -webkit-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
-      transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease; }
-    #mobile-menu-btn:checked + label#hamburguer span:nth-child(2) {
-      transform: rotate(45deg);
-      -moz-transition: transform 0.5s 0.5s ease;
-      -o-transition: transform 0.5s 0.5s ease;
-      -ms-transition: transform 0.5s 0.5s ease;
-      -webkit-transition: transform 0.5s 0.5s ease;
-      transition: transform 0.5s 0.5s ease; }
-    #mobile-menu-btn:checked + label#hamburguer span:nth-child(3) {
-      transform: rotate(-45deg);
-      -moz-transition: transform 0.5s 0.5s ease;
-      -o-transition: transform 0.5s 0.5s ease;
-      -ms-transition: transform 0.5s 0.5s ease;
-      -webkit-transition: transform 0.5s 0.5s ease;
-      transition: transform 0.5s 0.5s ease; }
-  #mobile-menu-btn:checked ~ header > #logo-wrapper {
-    left: 20px; }
-  #mobile-menu-btn:checked ~ header > #main-nav {
-    left: 0px; }
-  #mobile-menu-btn:checked ~ header > #search-bar-wrapper {
-    opacity: 0;
-    visibility: hidden;
-    -moz-transition: opacity 0.5s ease, visibility 0s 0.3s;
-    -o-transition: opacity 0.5s ease, visibility 0s 0.3s;
-    -ms-transition: opacity 0.5s ease, visibility 0s 0.3s;
-    -webkit-transition: opacity 0.5s ease, visibility 0s 0.3s;
-    transition: opacity 0.5s ease, visibility 0s 0.3s; }
-  #mobile-menu-btn:checked ~ main {
-    overflow: hidden;
-    left: 250px; }
-  #mobile-menu-btn:checked ~ .mask {
-    z-index: 999999999999;
-    opacity: 0.7;
-    left: 250px;
-    -moz-transition: left 0.5s ease, opacity 0.5s ease;
-    -o-transition: left 0.5s ease, opacity 0.5s ease;
-    -ms-transition: left 0.5s ease, opacity 0.5s ease;
-    -webkit-transition: left 0.5s ease, opacity 0.5s ease;
-    transition: left 0.5s ease, opacity 0.5s ease; }
-
-  .mobile-menu {
-    display: flex;
-    position: relative; }
-
-  .main-menu {
-    display: none; }
-
-  #tabs-list {
-    display: block;
-    width: 100%; }
-    #tabs-list li {
-      display: block;
-      padding: 0; }
-      #tabs-list li > label {
-        text-align: center;
-        padding-right: 0px;
-        background-color: white;
-        border-top: 1px solid #343739;
-        border-top: 1px solid rgba(50, 50, 50, 0.5);
-        border-bottom: none;
-        -moz-transition: background-color 0.1s ease, color 0.1s ease;
-        -o-transition: background-color 0.1s ease, color 0.1s ease;
-        -ms-transition: background-color 0.1s ease, color 0.1s ease;
-        -webkit-transition: background-color 0.1s ease, color 0.1s ease;
-        transition: background-color 0.1s ease, color 0.1s ease; }
-        #tabs-list li > label:hover {
-          background-color: #343739;
-          color: white;
-          padding-right: 0px; }
-      #tabs-list li > input[type='radio']:checked + label {
-        padding-right: 0px;
-        border: none;
-        border-top: 1px solid #343739;
-        background-color: #343739;
-        color: white; }
-    #tabs-list li:last-child > label {
-      border-bottom: 1px solid #343739;
-      border-bottom: 1px solid rgba(50, 50, 50, 0.5); }
-    #tabs-list .tab-content {
-      position: relative;
-      width: 100%;
-      height: 0px;
-      overflow: hidden;
-      -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
-    #tabs-list input[type=radio]:not(:checked) ~ .tab-content {
-      padding-top: 0px; }
-    #tabs-list input[type=radio]:checked ~ .tab-content {
-      height: 675px; }
-    #tabs-list .carousel .slide {
-      width: 100%;
-      left: 0;
-      top: 0;
-      height: 450px; }
-      #tabs-list .carousel .slide img {
-        width: 80%;
-        display: block;
-        margin: 0 auto; }
-    #tabs-list .pilltabs, #tabs-list .undertabs {
-      text-align: center; }
-      #tabs-list .pilltabs .content, #tabs-list .undertabs .content {
-        left: 0px; }
-
-  #skills #skills-block-container .skill-block {
-    width: 450px; } }
-@media screen and (max-width: 600px) {
-  .section-wrapper > p {
-    padding: 0px 12px; }
-
-  #skills #skills-container {
-    padding: 0px; }
-  #skills #skills-block-container {
-    display: block; }
-    #skills #skills-block-container .skill-block {
-      padding: 0px;
-      margin: 0 auto;
-      width: 320px; }
-      #skills #skills-block-container .skill-block .skill-graph {
-        padding: 5px; }
-        #skills #skills-block-container .skill-block .skill-graph .labels-left p {
-          font-size: .7em; }
-        #skills #skills-block-container .skill-block .skill-graph .graph .graph-bar {
-          margin: 0 7px; }
-        #skills #skills-block-container .skill-block .skill-graph .labels-bottom {
-          padding-left: 40px; }
-          #skills #skills-block-container .skill-block .skill-graph .labels-bottom p {
-            white-space: normal;
-            font-size: .7em;
-            margin-left: -2px; } }
-@media screen and (max-width: 430px) {
-  .pilltabs label:nth-last-of-type(1) {
-    display: none !important; }
-  .pilltabs label:nth-last-of-type(2) {
-    display: none !important; }
-
-  .undertabs label:nth-last-of-type(1) {
-    display: none !important; }
-  .undertabs label:nth-last-of-type(2) {
-    display: none !important; }
-
-  .graph .graph-bar .tooltip {
-    display: none !important; } }
 .search-bar {
   background-color: rgba(200, 200, 200, 0.3);
   border-radius: 8px;
@@ -1372,5 +1162,223 @@ a {
     display: flex;
     justify-content: space-around;
     margin-top: 85px; } }
+@media screen and (max-width: 960px) {
+  #logo-wrapper {
+    position: absolute;
+    top: 15px;
+    left: -152px;
+    transition: left .5s ease; }
+
+  .search-bar {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    z-index: 999;
+    visibility: visible;
+    transition: opacity .5s ease, visibility 0s 0s; }
+
+  .nav {
+    align-items: stretch;
+    display: flex;
+    position: absolute;
+    width: 200px;
+    overflow: scroll;
+    left: -365px;
+    top: 60px;
+    flex-direction: column;
+    transition: left .5s ease;
+    height: 100vh;
+    background-color: white; }
+    .nav__item {
+      display: flex; }
+    .nav__link {
+      color: black;
+      padding: 10px;
+      flex-grow: 1;
+      text-align: right; }
+
+  #hamburguer {
+    position: fixed;
+    z-index: 9999999999;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: left .5s ease; }
+    #hamburguer span {
+      height: 4px;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      transform: rotate(0deg);
+      opacity: 1;
+      -moz-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
+      -o-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
+      -ms-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
+      -webkit-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease;
+      transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0.5s ease; }
+      #hamburguer span:nth-child(1) {
+        top: 6px; }
+      #hamburguer span:nth-child(2), #hamburguer span:nth-child(3) {
+        top: 18px; }
+      #hamburguer span:nth-child(4) {
+        top: 30px; }
+
+  #mobile-menu-btn:checked + label#hamburguer {
+    left: 90%;
+    left: calc(100% - 60px); }
+    #mobile-menu-btn:checked + label#hamburguer span:nth-child(1), #mobile-menu-btn:checked + label#hamburguer span:nth-child(4) {
+      top: 18px;
+      opacity: 0;
+      -moz-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
+      -o-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
+      -ms-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
+      -webkit-transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease;
+      transition: transform 0.5s ease, opacity 0.3s ease, top 0.3s 0s ease; }
+    #mobile-menu-btn:checked + label#hamburguer span:nth-child(2) {
+      transform: rotate(45deg);
+      -moz-transition: transform 0.5s 0.5s ease;
+      -o-transition: transform 0.5s 0.5s ease;
+      -ms-transition: transform 0.5s 0.5s ease;
+      -webkit-transition: transform 0.5s 0.5s ease;
+      transition: transform 0.5s 0.5s ease; }
+    #mobile-menu-btn:checked + label#hamburguer span:nth-child(3) {
+      transform: rotate(-45deg);
+      -moz-transition: transform 0.5s 0.5s ease;
+      -o-transition: transform 0.5s 0.5s ease;
+      -ms-transition: transform 0.5s 0.5s ease;
+      -webkit-transition: transform 0.5s 0.5s ease;
+      transition: transform 0.5s 0.5s ease; }
+  #mobile-menu-btn:checked ~ header #logo-wrapper {
+    left: 20px; }
+  #mobile-menu-btn:checked ~ header .search-bar {
+    opacity: 0;
+    visibility: hidden;
+    -moz-transition: opacity 0.5s ease, visibility 0s 0.3s;
+    -o-transition: opacity 0.5s ease, visibility 0s 0.3s;
+    -ms-transition: opacity 0.5s ease, visibility 0s 0.3s;
+    -webkit-transition: opacity 0.5s ease, visibility 0s 0.3s;
+    transition: opacity 0.5s ease, visibility 0s 0.3s; }
+  #mobile-menu-btn:checked ~ header .nav {
+    left: 0px; }
+  #mobile-menu-btn:checked ~ main {
+    overflow-x: hidden;
+    left: 200px; }
+  #mobile-menu-btn:checked ~ .mask {
+    z-index: 999999999999;
+    opacity: 0.7;
+    left: 200px;
+    -moz-transition: left 0.5s ease, opacity 0.5s ease;
+    -o-transition: left 0.5s ease, opacity 0.5s ease;
+    -ms-transition: left 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: left 0.5s ease, opacity 0.5s ease;
+    transition: left 0.5s ease, opacity 0.5s ease; }
+
+  .mobile-menu {
+    display: none;
+    position: relative; }
+
+  #tabs-list {
+    display: block;
+    width: 100%; }
+    #tabs-list li {
+      display: block;
+      padding: 0; }
+      #tabs-list li > label {
+        text-align: center;
+        padding-right: 0px;
+        background-color: white;
+        border-top: 1px solid #343739;
+        border-top: 1px solid rgba(50, 50, 50, 0.5);
+        border-bottom: none;
+        -moz-transition: background-color 0.1s ease, color 0.1s ease;
+        -o-transition: background-color 0.1s ease, color 0.1s ease;
+        -ms-transition: background-color 0.1s ease, color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease, color 0.1s ease;
+        transition: background-color 0.1s ease, color 0.1s ease; }
+        #tabs-list li > label:hover {
+          background-color: #343739;
+          color: white;
+          padding-right: 0px; }
+      #tabs-list li > input[type='radio']:checked + label {
+        padding-right: 0px;
+        border: none;
+        border-top: 1px solid #343739;
+        background-color: #343739;
+        color: white; }
+    #tabs-list li:last-child > label {
+      border-bottom: 1px solid #343739;
+      border-bottom: 1px solid rgba(50, 50, 50, 0.5); }
+    #tabs-list .tab-content {
+      position: relative;
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+      transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
+    #tabs-list input[type=radio]:not(:checked) ~ .tab-content {
+      padding-top: 0px; }
+    #tabs-list input[type=radio]:checked ~ .tab-content {
+      height: 675px; }
+    #tabs-list .carousel .slide {
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 450px; }
+      #tabs-list .carousel .slide img {
+        width: 80%;
+        display: block;
+        margin: 0 auto; }
+    #tabs-list .pilltabs, #tabs-list .undertabs {
+      text-align: center; }
+      #tabs-list .pilltabs .content, #tabs-list .undertabs .content {
+        left: 0px; }
+
+  #skills #skills-block-container .skill-block {
+    width: 450px; } }
+@media screen and (max-width: 600px) {
+  .section-wrapper > p {
+    padding: 0px 12px; }
+
+  #skills #skills-container {
+    padding: 0px; }
+  #skills #skills-block-container {
+    display: block; }
+    #skills #skills-block-container .skill-block {
+      padding: 0px;
+      margin: 0 auto;
+      width: 320px; }
+      #skills #skills-block-container .skill-block .skill-graph {
+        padding: 5px; }
+        #skills #skills-block-container .skill-block .skill-graph .labels-left p {
+          font-size: .7em; }
+        #skills #skills-block-container .skill-block .skill-graph .graph .graph-bar {
+          margin: 0 7px; }
+        #skills #skills-block-container .skill-block .skill-graph .labels-bottom {
+          padding-left: 40px; }
+          #skills #skills-block-container .skill-block .skill-graph .labels-bottom p {
+            white-space: normal;
+            font-size: .7em;
+            margin-left: -2px; } }
+@media screen and (max-width: 430px) {
+  .pilltabs label:nth-last-of-type(1) {
+    display: none !important; }
+  .pilltabs label:nth-last-of-type(2) {
+    display: none !important; }
+
+  .undertabs label:nth-last-of-type(1) {
+    display: none !important; }
+  .undertabs label:nth-last-of-type(2) {
+    display: none !important; }
+
+  .graph .graph-bar .tooltip {
+    display: none !important; } }
+@media screen and (max-width: 359px) {
+  body {
+    overflow-x: scroll; } }
 
 /*# sourceMappingURL=main.css.map */

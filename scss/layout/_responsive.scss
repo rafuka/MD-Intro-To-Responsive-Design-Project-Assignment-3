@@ -2,11 +2,12 @@
 
 	#logo-wrapper {
 		position: absolute;
+		top: 15px;
     	left: -152px;
     	transition: left .5s ease;
 	}
 
-	#search-bar-wrapper {
+	.search-bar {
 		position: absolute;
 		top: 16px;
 		right: 10px;
@@ -15,9 +16,11 @@
 		transition: opacity .5s ease, visibility 0s 0s;
 	}
 
-	#main-nav {
+	.nav {
+		align-items: stretch;
+		display: flex;
 		position: absolute;
-	    width: 250px;
+	    width: 200px;
 	    overflow: scroll;
 	    left: -365px;
 	    top: 60px;
@@ -26,14 +29,17 @@
 	    height: 100vh;
 	    background-color: white;
 
-	    .mobile-menu {
-	    	flex-direction: column;
-	    	li {
-	    		a {
-	    			color: black;
-	    		}
-	    	}
+	    &__item {
+	    	display: flex;
 	    }
+
+	    &__link {
+	    	color: black;
+	    	padding: 10px;
+	    	flex-grow: 1;
+	    	text-align: right;
+	    }
+
 	}
 
 	#hamburguer {
@@ -67,6 +73,7 @@
 	    }
 	}
 
+
 	#mobile-menu-btn {
 		&:checked {
 			& + label#hamburguer {
@@ -88,41 +95,42 @@
 			}
 
 			& ~ header {
-				& > #logo-wrapper {
+				#logo-wrapper {
 					left: 20px;
 				}
-				& > #main-nav {
-					left: 0px;
-				}
-				& > #search-bar-wrapper {
+
+				.search-bar {
 					opacity: 0;
 					visibility: hidden;	
 					@include transition(opacity .5s ease, visibility 0s .3s);	
 				}
+
+				.nav {
+					left: 0px;
+				}
 			}
 
 			& ~ main {
-				overflow: hidden;
-				left: 250px;
+				overflow-x: hidden;
+				left: 200px;
 			}
 
 			& ~ .mask {
 				z-index: 999999999999;
 				opacity: 0.7;
-				left: 250px;
+				left: 200px;
 				@include transition(left .5s ease, opacity .5s ease);
 			}
+
+
 		}
 	}
 
 	.mobile-menu {
-		display: flex;
+		display: none;
 		position: relative;
 	}
 
-	.main-menu {
-		display: none;
-	} 
 
 	#tabs-list {
 		display: block;
@@ -212,9 +220,7 @@
 }
 
 @media screen and (max-width: 600px) {
-	#main-nav {
 
-	}
 
 	.section-wrapper {
 		& > p {
@@ -292,9 +298,7 @@
 }
 
 @media screen and (max-width: 359px) {
-	#main-nav {
-
+	body {
+		overflow-x: scroll;
 	}
-
-	
 }
