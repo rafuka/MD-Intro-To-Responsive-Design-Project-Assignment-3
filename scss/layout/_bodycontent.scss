@@ -71,15 +71,16 @@
 	}
 
 	&__content {
+        background-color: white;
+        height: 675px;
 		opacity: 0;
-		width: 80%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 675px;
-		background-color: white;
-		padding: 0;
+        padding: 0;
 		padding-top: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+		width: 80%;
+		
 		@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
 	}
 
@@ -89,13 +90,29 @@
 	}
 
 	&__footer {
+        border-top: 1px solid rgba(0, 0, 0, 0.1); 
 	  	margin-top: 30px;
 	  	padding: 20px;
-	  	border-top: 1px solid rgba(0, 0, 0, 0.1); 
-
-    	p:first-child {
-    		text-transform: capitalize;
+	  	
+    	p {
+            &:first-child {
+                text-transform: capitalize;
+                margin-bottom  : 50px;
+            }
     	}
+        
+        a {
+            color: #8e69c1;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            i.fa {
+                font-size: 1.5em;
+                margin-right: 5px;
+            }
+        }
 	}
 }
 

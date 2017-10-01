@@ -132,13 +132,25 @@
 	}
 
 
-	#tabs-list {
+	.tabs {
+        &__list {
 		display: block;
 		width: 100%;
-		li {
+        }
+        
+		&__item {
 			display: block;
 			padding: 0;
-			& > label {
+            
+            &:last-child {
+                & > label {
+				border-bottom: 1px solid $mainColor;
+				border-bottom: 1px solid rgba(50,50,50,0.5);
+			     }
+            }
+        }
+        
+        &__label {
 				text-align: center;
 				padding-right: 0px;
 				background-color: white;
@@ -151,45 +163,17 @@
 					color: white;
 					padding-right: 0px;
 				}
-			}
+        }
 
-			& > input[type='radio']:checked {
-				
-				& + label {
-					padding-right: 0px;
-					border: none;
-					border-top: 1px solid $mainColor;
-					background-color: $mainColor;
-					color: white;
-				}
-			}
-		}
-
-		li:last-child  {
-			& > label {
-				border-bottom: 1px solid $mainColor;
-				border-bottom: 1px solid rgba(50,50,50,0.5);
-			}
-		}
-
-		.tab-content {
+        &__content {
 			position: relative;
 			width: 100%;
 			height: 0px;
 			overflow: hidden;
 			@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease, padding .4s ease);
-		}
-
-		input[type=radio]:not(:checked) ~ .tab-content {
-			padding-top: 0px;
-		} 
-
-		input[type=radio]:checked ~ .tab-content {
-			height: 675px;
-		} 
-
-		.carousel {
-			.slide {
+            
+            .carousel {
+			&__slide {
 				width: 100%;
 				left: 0;
 				top: 0;
@@ -201,6 +185,35 @@
 				}
 			}
 		}
+		}
+        
+        &__radio {
+                &:checked {
+                    & + label {
+                        padding-right: 0px;
+                        border: none;
+                        border-top: 1px solid $mainColor;
+                        background-color: $mainColor;
+                        color: white;
+                    }
+                    
+                    & ~ .tabs__content {
+                        height: 675px;
+                    }
+                }
+            
+            &:not(:checked) ~ .tabs__content {
+                padding-top: 0px;
+            }
+				
+			}
+		
+
+		
+
+
+
+		
 
 		.pilltabs, .undertabs {
 			text-align: center;

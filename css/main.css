@@ -144,15 +144,15 @@ a {
     padding-right: 25px;
     color: #000; }
   .tabs__content {
+    background-color: white;
+    height: 675px;
     opacity: 0;
-    width: 80%;
+    padding: 0;
+    padding-top: 20px;
     position: absolute;
     right: 0;
     top: 0;
-    height: 675px;
-    background-color: white;
-    padding: 0;
-    padding-top: 20px;
+    width: 80%;
     -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
     -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
     -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease;
@@ -162,11 +162,19 @@ a {
     opacity: 1;
     z-index: 1; }
   .tabs__footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 30px;
-    padding: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    padding: 20px; }
     .tabs__footer p:first-child {
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      margin-bottom: 50px; }
+    .tabs__footer a {
+      color: #8e69c1; }
+      .tabs__footer a:hover {
+        text-decoration: underline; }
+      .tabs__footer a i.fa {
+        font-size: 1.5em;
+        margin-right: 5px; }
 
 #about {
   background-image: url("../img/portfolio_bgnd.jpg");
@@ -1279,64 +1287,64 @@ a {
     display: none;
     position: relative; }
 
-  #tabs-list {
+  .tabs__list {
     display: block;
     width: 100%; }
-    #tabs-list li {
-      display: block;
-      padding: 0; }
-      #tabs-list li > label {
-        text-align: center;
-        padding-right: 0px;
-        background-color: white;
-        border-top: 1px solid #343739;
-        border-top: 1px solid rgba(50, 50, 50, 0.5);
-        border-bottom: none;
-        -moz-transition: background-color 0.1s ease, color 0.1s ease;
-        -o-transition: background-color 0.1s ease, color 0.1s ease;
-        -ms-transition: background-color 0.1s ease, color 0.1s ease;
-        -webkit-transition: background-color 0.1s ease, color 0.1s ease;
-        transition: background-color 0.1s ease, color 0.1s ease; }
-        #tabs-list li > label:hover {
-          background-color: #343739;
-          color: white;
-          padding-right: 0px; }
-      #tabs-list li > input[type='radio']:checked + label {
-        padding-right: 0px;
-        border: none;
-        border-top: 1px solid #343739;
-        background-color: #343739;
-        color: white; }
-    #tabs-list li:last-child > label {
+  .tabs__item {
+    display: block;
+    padding: 0; }
+    .tabs__item:last-child > label {
       border-bottom: 1px solid #343739;
       border-bottom: 1px solid rgba(50, 50, 50, 0.5); }
-    #tabs-list .tab-content {
-      position: relative;
-      width: 100%;
-      height: 0px;
-      overflow: hidden;
-      -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
-      transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
-    #tabs-list input[type=radio]:not(:checked) ~ .tab-content {
-      padding-top: 0px; }
-    #tabs-list input[type=radio]:checked ~ .tab-content {
-      height: 675px; }
-    #tabs-list .carousel .slide {
+  .tabs__label {
+    text-align: center;
+    padding-right: 0px;
+    background-color: white;
+    border-top: 1px solid #343739;
+    border-top: 1px solid rgba(50, 50, 50, 0.5);
+    border-bottom: none;
+    -moz-transition: background-color 0.1s ease, color 0.1s ease;
+    -o-transition: background-color 0.1s ease, color 0.1s ease;
+    -ms-transition: background-color 0.1s ease, color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease, color 0.1s ease;
+    transition: background-color 0.1s ease, color 0.1s ease; }
+    .tabs__label:hover {
+      background-color: #343739;
+      color: white;
+      padding-right: 0px; }
+  .tabs__content {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    -moz-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+    -o-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+    -ms-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+    -webkit-transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease;
+    transition: opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease, padding 0.4s ease; }
+    .tabs__content .carousel__slide {
       width: 100%;
       left: 0;
       top: 0;
       height: 450px; }
-      #tabs-list .carousel .slide img {
+      .tabs__content .carousel__slide img {
         width: 80%;
         display: block;
         margin: 0 auto; }
-    #tabs-list .pilltabs, #tabs-list .undertabs {
-      text-align: center; }
-      #tabs-list .pilltabs .content, #tabs-list .undertabs .content {
-        left: 0px; }
+  .tabs__radio:checked + label {
+    padding-right: 0px;
+    border: none;
+    border-top: 1px solid #343739;
+    background-color: #343739;
+    color: white; }
+  .tabs__radio:checked ~ .tabs__content {
+    height: 675px; }
+  .tabs__radio:not(:checked) ~ .tabs__content {
+    padding-top: 0px; }
+  .tabs .pilltabs, .tabs .undertabs {
+    text-align: center; }
+    .tabs .pilltabs .content, .tabs .undertabs .content {
+      left: 0px; }
 
   #skills #skills-block-container .skill-block {
     width: 450px; } }
