@@ -232,7 +232,6 @@
 		}
 	}
 
-
     #projects {
         .section__wrapper {
             padding-bottom: 0px;
@@ -241,7 +240,33 @@
 }
 
 @media screen and (max-width: 600px) {
+    #contact-form {
+        .input-group {
+            display: block;
+            width: 100%;
+            input[type="text"] {
+                width: 100%;
+                border: none!important;
+                border-radius: 0px!important;
+                
+                &#contact-name:focus + label[for="contact-name"] {
+                    top: 50px;
+                }
+                
+                &#contact-name:valid + label[for="contact-name"] {
+                    top: 50px;
+                }
+            }
+            
+            label[for="contact-name"] {
+                left: 10px;
+                top: 65px;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 600px) {
 
 	.section-wrapper {
 		& > p {
@@ -296,7 +321,6 @@
 		label:nth-last-of-type(2) {
 			display: none!important;
 		}
-		
 	}
 
 	.undertabs {

@@ -103,7 +103,7 @@
         
         a {
             color: #8e69c1;
-            
+            margin-right: 20px;
             &:hover {
                 text-decoration: underline;
             }
@@ -358,13 +358,13 @@
 					height: 90%;
 				}
 				&:nth-child(3) {
-					height: 70%;
+					height: 60%;
 				}
 				&:nth-child(4) {
 					height: 75%;
 				}
 				&:nth-child(5) {
-					height: 52%;
+					height: 47%;
 				}
 			}
 		}
@@ -373,6 +373,7 @@
 }
 
 #contact-form {
+    padding: 15px;
 	.input-group {
 		display: flex;
 		justify-content: center;
