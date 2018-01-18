@@ -28,15 +28,16 @@ body {
 main {
 	position: relative;
 	left: 0px;
-	top: 0px;
+	top: 60px;
 	transition: left .5s ease;
 	background-color: $bgndColor;
-	padding-top: 60px;
     
     section {
         height: fit-content;
+        position: relative;
+        top: 60px;
         width: 100%;
-        
+         
         &:nth-child(odd) {
             background-color: white;
             box-shadow: inset 0px 0px 5px rgba(0,0,0,0.1);

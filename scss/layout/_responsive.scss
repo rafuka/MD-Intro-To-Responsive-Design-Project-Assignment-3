@@ -18,16 +18,16 @@
 
 	.nav {
 		align-items: stretch;
+		background-color: white;
 		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		left: -365px;
+		overflow: auto;
 		position: absolute;
+		top: 60px;
+		transition: left .5s ease;
 	    width: 200px;
-	    overflow: scroll;
-	    left: -365px;
-	    top: 60px;
-	    flex-direction: column;
-	    transition: left .5s ease;
-	    height: 100vh;
-	    background-color: white;
 
 	    &__item {
 	    	display: flex;
@@ -35,11 +35,13 @@
 
 	    &__link {
 	    	color: black;
-	    	padding: 10px;
+	    	font-variant: small-caps;
+	    	font-weight: bold;
 	    	flex-grow: 1;
+	    	padding: 10px;
 	    	text-align: right;
-	    }
-
+	    	text-transform: lowercase;
+	    }    	
 	}
 
 	#hamburguer {
@@ -72,7 +74,6 @@
 			}
 	    }
 	}
-
 
 	#mobile-menu-btn {
 		&:checked {
@@ -130,7 +131,6 @@
 		display: none;
 		position: relative;
 	}
-
 
 	.tabs {
         height: auto;

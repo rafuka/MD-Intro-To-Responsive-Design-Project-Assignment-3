@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "J.R. Garcia Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafuka/MD-Intro-To-Responsive-Design-Project-Assignment-3.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "J.R. Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafuka/MD-Intro-To-Responsive-Design-Project-Assignment-3/issues"
+  },
+  "homepage": "https://github.com/rafuka/MD-Intro-To-Responsive-Design-Project-Assignment-3#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.1",
+    "grunt-prettysass": "^0.2.3",
+    "grunt-scss-stylize": "^0.6.0"
+  }
+}
