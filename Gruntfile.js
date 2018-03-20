@@ -19,14 +19,27 @@ module.exports = function(grunt) {
 
     cssmin: {
       build: {
-        src: 'css/main.css',
+        src: 'css/prefixed.css',
         dest: 'css/main.min.css'
       }    
     },
 
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions']})
+        ]
+      },
+      dist: {
+        src: 'css/main.css',
+        dest: 'css/prefixed.css'
+      }
+    },
+
     concat: {
       options: {
-        separator: '\n/*next file*/\n\n'
+        separator: '\n\n\n'
       },
       dist: {
         src: ['scripts/accordion.js', 'scripts/calculator.js','scripts/main.js'],
@@ -48,8 +61,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify']);
-
+  grunt.registerTask('prefix', ['postcss']);
 };
