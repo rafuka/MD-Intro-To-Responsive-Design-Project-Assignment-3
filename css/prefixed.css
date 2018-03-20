@@ -896,6 +896,8 @@ a {
     color: black; }
   #radiocheckbox input[type='checkbox'].mybox {
     -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     position: relative;
     width: 25px;
     height: 25px;
@@ -986,6 +988,8 @@ a {
         height: 12px; }
   #radiocheckbox input[type='radio'].mybox {
     -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     position: relative;
     width: 25px;
     height: 25px;

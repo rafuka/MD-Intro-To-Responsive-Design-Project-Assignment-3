@@ -837,7 +837,7 @@ a {
   #radiocheckbox label:hover {
     color: black; }
   #radiocheckbox input[type='checkbox'].mybox {
-    -webkit-appearance: none;
+    appearance: none;
     position: relative;
     width: 25px;
     height: 25px;
@@ -924,7 +924,7 @@ a {
         border-left: 2px solid #33c5dc;
         height: 12px; }
   #radiocheckbox input[type='radio'].mybox {
-    -webkit-appearance: none;
+    appearance: none;
     position: relative;
     width: 25px;
     height: 25px;

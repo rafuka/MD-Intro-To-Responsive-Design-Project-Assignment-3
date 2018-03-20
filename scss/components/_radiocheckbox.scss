@@ -23,7 +23,7 @@
     }
 
     input[type='checkbox'].mybox {
-        -webkit-appearance: none;
+        appearance: none;
         position: relative;
         width: 25px;
         height: 25px;
@@ -128,7 +128,7 @@
     }
 
     input[type='radio'].mybox {
-        -webkit-appearance: none;
+          appearance: none;
           position: relative;
           width: 25px;
           height: 25px;
@@ -208,5 +208,4 @@
     #radiocheckbox-content {
       padding-left: 20px;
     }
-
 }
