@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	
@@ -10,6 +11,11 @@
 	<title>R. Garcia Portfolio</title>
 </head>
 <body>
+	<div id="cookies-notice">
+		<p>This site uses cookies</p>
+		<button id="cookie-accept">Accept</button>
+		<button id="cookie-decline">Decline</button>
+	</div>
 	<input type="checkbox" name="mobile-menu-btn" id="mobile-menu-btn">
 	<label for="mobile-menu-btn" id="hamburguer">
 		<span></span>
@@ -480,6 +486,22 @@
 	</footer>
 
 	<script type="text/javascript" src="scripts/built.min.js"></script>
+	<script type="text/javascript">
+		
+		
+		document.cookie = "cookies-accepted=yes";
+
+		var cookiesArr = document.cookie.split('; ');
+		console.log(cookiesArr);
+
+		if (cookiesArr.indexOf('cookies-accepted=yes') > -1) {
+			console.log('cookies accepted');
+		}
+		else {
+			console.log('cookies declined');
+		}
+		
+	</script>
 	
 </body>
 

@@ -85,7 +85,7 @@ var accordion = document.querySelector('.aria-accordion');
         }
         accordion.addEventListener('click', toggleTab);
         accordion.addEventListener('keydown', handleKey, false);
-/*next file*/
+
 
 var calculator = document.getElementById("calculator");
 		var screen = document.getElementById("screen");
@@ -214,7 +214,7 @@ var calculator = document.getElementById("calculator");
 			}
 		});
 
-/*next file*/
+
 
 var modal 		= document.getElementById('modal');
 var srchbtn 	= document.getElementById('search-btn');
@@ -227,8 +227,6 @@ var scrollTop 	= window.scrollY || document.documentElement.scrollTop;
 var scrollTopVal = document.getElementById('scrolltop');
 
 var skillBlocks = document.getElementsByClassName('skill-block');
-console.log('skillBlocks: ');
-console.log(skillBlocks);
 
 function getDocHeight() {
     var D = document;
@@ -309,10 +307,6 @@ window.addEventListener('scroll', function(e) {
    if (modal.style.display !== 'none') {
       scrollTopVal.innerHTML = "" + scrollTop;
   }
-    console.log('scroll me');
-
-  
-    console.log(scrollTop);
 
   displaySections(visibleSections);
 
@@ -326,7 +320,7 @@ function displayModal() {
    setTimeout(function() {
       modal.style.opacity = 1;
   }, 100);
-   console.log("boom");
+
    w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
    devwidth.innerHTML = "" + w;
 

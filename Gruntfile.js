@@ -19,22 +19,9 @@ module.exports = function(grunt) {
 
     cssmin: {
       build: {
-        src: 'css/prefixed.css',
+        src: 'css/main.css',
         dest: 'css/main.min.css'
       }    
-    },
-
-    postcss: {
-      options: {
-        map: true,
-        processors: [
-          require('autoprefixer')({browsers: ['last 2 versions']})
-        ]
-      },
-      dist: {
-        src: 'css/main.css',
-        dest: 'css/prefixed.css'
-      }
     },
 
     concat: {
@@ -66,4 +53,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify']);
   grunt.registerTask('prefix', ['postcss']);
+  grunt.registerTask('sassify', ['sass', 'cssmin']);
 };
