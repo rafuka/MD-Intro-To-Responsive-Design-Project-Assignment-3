@@ -8,6 +8,7 @@
   font-family: 'Roboto', sans-serif; }
 
 #cookies-notice {
+  display: none;
   position: fixed;
   top: calc(100vh - 70px);
   left: 0px;
@@ -17,7 +18,7 @@
   background-color: black;
   color: white;
   padding: 5px; }
-  #cookies-notice #cookie-accept, #cookies-notice #cookie-decline {
+  #cookies-notice #cookies-accept, #cookies-notice #cookies-decline {
     background-color: white;
     padding: 5px; }
 

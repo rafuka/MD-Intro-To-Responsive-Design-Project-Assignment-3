@@ -13,8 +13,8 @@
 <body>
 	<div id="cookies-notice">
 		<p>This site uses cookies</p>
-		<button id="cookie-accept">Accept</button>
-		<button id="cookie-decline">Decline</button>
+		<button id="cookies-accept">Accept</button>
+		<button id="cookies-decline">Decline</button>
 	</div>
 	<input type="checkbox" name="mobile-menu-btn" id="mobile-menu-btn">
 	<label for="mobile-menu-btn" id="hamburguer">
@@ -487,20 +487,25 @@
 
 	<script type="text/javascript" src="scripts/built.min.js"></script>
 	<script type="text/javascript">
-		
-		
-		document.cookie = "cookies-accepted=yes";
 
-		var cookiesArr = document.cookie.split('; ');
-		console.log(cookiesArr);
+		var cookiesNotice = document.getElementById('cookies-notice');
 
-		if (cookiesArr.indexOf('cookies-accepted=yes') > -1) {
-			console.log('cookies accepted');
-		}
-		else {
-			console.log('cookies declined');
+		if (document.cookie.indexOf('cookies-accepted') == -1) {
+			cookiesNotice.style.display = "block";
 		}
 		
+		var cookiesAcceptBtn = document.getElementById('cookies-accept');
+		var cookiesDeclineBtn = document.getElementById('cookies-decline');
+
+		cookiesAcceptBtn.addEventListener('click', function(e) {
+			document.cookie = "cookies-accepted=yes";
+			cookiesNotice.style.display = "none";
+		});
+
+		cookiesDeclineBtn.addEventListener('click', function(e) {
+			document.cookie = "cookies-accepted=no";
+			cookiesNotice.style.display = "none";
+		});
 	</script>
 	
 </body>
