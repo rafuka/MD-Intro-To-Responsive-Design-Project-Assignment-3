@@ -193,7 +193,7 @@ a {
         margin-right: 5px; }
 
 #about {
-  background-image: url("../img/portfolio_bgnd.jpg");
+  background-image: url("../assets/portfolio_bgnd.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh; }
@@ -1104,7 +1104,7 @@ a {
       border-radius: 3px;
       padding: 20px; }
     #contact #contact-wrapper .card .front {
-      background-image: url("../img/bg2.png"); }
+      background-image: url("../assets/bg2.png"); }
       #contact #contact-wrapper .card .front h1 {
         color: white;
         font-weight: 300;
@@ -1118,7 +1118,7 @@ a {
       -ms-transform: rotateX(180deg);
       -webkit-transform: rotateX(180deg);
       transform: rotateX(180deg);
-      background-image: url("../img/myimg2.jpg");
+      background-image: url("../assets/myimg2.jpg");
       background-size: cover; }
   #contact #contact-wrapper p small {
     font-size: 12px;
