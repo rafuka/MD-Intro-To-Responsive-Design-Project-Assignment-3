@@ -8,7 +8,7 @@
 		max-width: 900px;
 		margin: 0 auto;
 		opacity: 0;
-        padding: 100px 0px;
+    padding: 100px 0px;
 		position: relative;
 		top: 100px;
 		transition: opacity 1s ease, top 1s ease;      
@@ -44,8 +44,7 @@
 
 	&__label {
 		display: inline-block;
-	    color: #000;
-	    color: rgba(0,0,0,0.5);
+	  color: rgba(0,0,0,0.5);
 		width: 100%;
 		padding: 15px 0px;
 		padding-right: 40px;
@@ -71,14 +70,14 @@
 	}
 
 	&__content {
-        background-color: white;
-        height: 675px;
+    background-color: white;
+    height: 675px;
 		opacity: 0;
-        padding: 0;
+    padding: 0;
 		padding-top: 20px;
-        position: absolute;
-        right: 0;
-        top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 		width: 80%;
 		
 		@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
@@ -86,33 +85,34 @@
 
 	&__radio:checked ~ &__content {
 		opacity: 1;
-	    z-index: 1;
+	  z-index: 1;
 	}
 
 	&__footer {
-        border-top: 1px solid rgba(0, 0, 0, 0.1); 
-	  	margin-top: 30px;
-	  	padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
+	  margin-top: 30px;
+	  padding: 20px;
 	  	
-    	p {
-            &:first-child {
-                text-transform: capitalize;
-                margin-bottom  : 50px;
-            }
-    	}
+    p {
+      &:first-child {
+        text-transform: capitalize;
+        margin-bottom  : 50px;
+      }
+    }
         
-        a {
-            color: #8e69c1;
-            margin-right: 20px;
-            &:hover {
-                text-decoration: underline;
-            }
+    a {
+      color: $purple;
+			margin-right: 20px;
+			
+      &:hover {
+        text-decoration: underline;
+      }
             
-            i.fa {
-                font-size: 1.5em;
-                margin-right: 5px;
-            }
-        }
+      i.fa {
+        font-size: 1.5em;
+        margin-right: 5px;
+      }
+    }
 	}
 }
 
@@ -153,7 +153,7 @@
 		width: 70%;
 		height: 20px;
 		display: inline-block;
-		background-color: #d770af;
+		background-color: $red;
 		text-align: left;
 		padding: 0px 15px;
 		line-height: 20px;
@@ -163,7 +163,7 @@
 		width: 30%;
 		height: 20px;
 		display: inline-block;
-		background-color: #4a70eb;
+		background-color: $blue;
 		text-align: right;
 		padding: 0px 15px;
 		line-height: 20px;
@@ -238,49 +238,48 @@
 						width: 20%;
 						margin: 0 13px;
 						border-radius: 5px 5px 0px 0px;
-					    position: relative;
+					  position: relative;
 
-					    .tooltip {
-					    	position: absolute;
-						    display: inline-block;
-						    width: 150px;
-						    background-color: rgba(0,0,0,0.9);
-						    color: white;
-						    padding: 10px;
-						    border-radius: 10px;
-						    left: calc(50% - 75px);
-						    bottom: calc(100% + 12px);
-						    opacity: 0;
-						    visibility: hidden;
-						    @include transition(bottom .4s ease-out, opacity .3s ease-out);
-						    z-index: 999;
-						    font-weight: 300;
+					  .tooltip {
+					    position: absolute;
+						  display: inline-block;
+					    width: 150px;
+					    background-color: rgba(0,0,0,0.9);
+					    color: white;
+					    padding: 10px;
+					    border-radius: 10px;
+					    left: calc(50% - 75px);
+					    bottom: calc(100% + 12px);
+					    opacity: 0;
+					    visibility: hidden;
+					    @include transition(bottom .4s ease-out, opacity .3s ease-out);
+					    z-index: 999;
+					    font-weight: 300;
 
-						    &::after {
-						    	content: ' ';
-							    position: absolute;
-							    width: 0;
-							    height: 0;
-							    left: calc(50% - 12px);
-							    bottom: -12px;
-							    border-top: 12px solid rgba(0,0,0,0.9);
-							    border-right: 12px solid transparent;
-							    border-left: 12px solid transparent;
-						    }
+						  &::after {
+						   	content: ' ';
+							  position: absolute;
+							  width: 0;
+						    height: 0;
+						    left: calc(50% - 12px);
+						    bottom: -12px;
+						    border-top: 12px solid rgba(0,0,0,0.9);
+						    border-right: 12px solid transparent;
+						    border-left: 12px solid transparent;
 					    }
+				    }
 
-					    &:hover {
-					    	.tooltip {
-					    		bottom: calc(100% + 20px);
+					  &:hover {
+					  	.tooltip {
+					  		bottom: calc(100% + 20px);
 								visibility: visible;
 								opacity: 1;
-					    	}
 					    }
+					  }
 					}
 				}
 
 				.labels-bottom {
-
 					border-top: 1px solid rgba(0,0,0,0.2);
 					display: flex;
 					height: 90px;
@@ -288,23 +287,23 @@
 					padding-top: 15px;
 					width: 100%;
 
-				    p {
-				    	transform: rotate(40deg);
-					    width: 20%;
-					    font-size: .9em;
-					    white-space: nowrap;
-				    }
+				  p {
+				  	transform: rotate(40deg);
+				    width: 20%;
+				    font-size: .9em;
+				    white-space: nowrap;
+			    }
 				}
 			}
 		}
 
 		#front-end-skills {
 			h3 {
-				color: #d770af;
+				color: $red;
 			}
 
 			.graph-bar {
-				background-color: #d770af;
+				background-color: $red;
 				&:nth-child(1) {
 					height: 60%;
 				}
@@ -325,11 +324,11 @@
 
 		#back-end-skills {
 			h3 {
-				color: #4a70eb;
+				color: $blue;
 			}
 
 			.graph-bar {
-				background-color: #4a70eb;
+				background-color: $blue;
 				&:nth-child(1) {
 					height: 63%;
 				}
@@ -350,11 +349,11 @@
 
 		#other-skills {
 			h3 {
-				color: #ffac41;
+				color: $yellow;
 			}
 
 			.graph-bar {
-				background-color: #ffac41;
+				background-color: $yellow;
 				&:nth-child(1) {
 					height: 67%;
 				}
@@ -372,12 +371,12 @@
 				}
 			}
 		}
-
 	}
 }
 
 #contact-form {
-    padding: 15px;
+	padding: 15px;
+		
 	.input-group {
 		display: flex;
 		justify-content: center;
@@ -397,7 +396,7 @@
 			height: 50px;
 			padding: 10px 10px 0px 10px;
 			font-size: 1.1em;
-			background-color: #343739;
+			background-color: $black;
 			outline: none;
 			border: none;
 			color: white;
@@ -424,23 +423,21 @@
 			padding: 10px;
 			font-size: 1.1em;
 			outline: none;
-			background-color: #343739;
+			background-color: $black;
 			color: white;
 			border-radius: 0px 0px 5px 5px;
-            scrollbar-track-color: #343739;
-            scrollbar-arrow-color: #343739;
+      scrollbar-track-color: $black;
+      scrollbar-arrow-color: $black;
 		}
 	}
-
 
 	label {
 		position: absolute;
 		font-size: 1.2em;
-    	top: 13px;
-    	color: white;
-    	opacity: .7;
-
-    	@include transition(top .2s ease, font-size .2s ease);
+    top: 13px;
+    color: white;
+    opacity: .7;
+		@include transition(top .2s ease, font-size .2s ease);
 
 		&[for=contact-email] {
 			left: 10px;
@@ -454,7 +451,7 @@
 	#contact-form-btn {
 		display: block;
 		margin: 20px auto;
-		background-color: $mainColor;
+		background-color: $black;
 	}
 }
 

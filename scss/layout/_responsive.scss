@@ -145,7 +145,7 @@
             
             &:last-child {
                 & > label {
-				border-bottom: 1px solid $mainColor;
+				border-bottom: 1px solid $black;
 				border-bottom: 1px solid rgba(50,50,50,0.5);
 			     }
             }
@@ -155,12 +155,12 @@
 				text-align: center;
 				padding-right: 0px;
 				background-color: white;
-				border-top: 1px solid $mainColor;
+				border-top: 1px solid $black;
 				border-top: 1px solid rgba(50,50,50,0.5);
 				border-bottom: none;
 				@include transition(background-color .1s ease, color .1s ease);
 				&:hover {
-					background-color: $mainColor;
+					background-color: $black;
 					color: white;
 					padding-right: 0px;
 				}
@@ -193,8 +193,8 @@
                     & + .tabs__label {
                         padding-right: 0px;
                         border: none;
-                        border-top: 1px solid $mainColor;
-                        background-color: $mainColor;
+                        border-top: 1px solid $black;
+                        background-color: $black;
                         color: white;
                     }
                     
