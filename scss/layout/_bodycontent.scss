@@ -150,7 +150,7 @@
 	}
 
 	#percentage-bar-fend {
-		width: 70%;
+		width: 65%;
 		height: 20px;
 		display: inline-block;
 		background-color: $red;
@@ -160,7 +160,7 @@
 	}
 
 	#percentage-bar-bend {
-		width: 30%;
+		width: 35%;
 		height: 20px;
 		display: inline-block;
 		background-color: $blue;
@@ -306,19 +306,19 @@
 			.graph-bar {
 				background-color: $red;
 				&:nth-child(1) {
-					height: 60%;
+					height: 93%;
 				}
 				&:nth-child(2) {
-					height: 98%;
+					height: 67%;
 				}
 				&:nth-child(3) {
 					height: 30%;
 				}
 				&:nth-child(4) {
-					height: 60%;
+					height: 30%;
 				}
 				&:nth-child(5) {
-					height: 37%;
+					height: 20%;
 				}
 			}
 		}
@@ -331,19 +331,19 @@
 			.graph-bar {
 				background-color: $blue;
 				&:nth-child(1) {
-					height: 63%;
+					height: 65%;
 				}
 				&:nth-child(2) {
-					height: 46%;
+					height: 65%;
 				}
 				&:nth-child(3) {
-					height: 38%;
+					height: 55%;
 				}
 				&:nth-child(4) {
-					height: 43%;
+					height: 30%;
 				}
 				&:nth-child(5) {
-					height: 33%;
+					height: 25%;
 				}
 			}
 		}
@@ -356,19 +356,19 @@
 			.graph-bar {
 				background-color: $yellow;
 				&:nth-child(1) {
-					height: 67%;
+					height: 70%;
 				}
 				&:nth-child(2) {
-					height: 90%;
+					height: 80%;
 				}
 				&:nth-child(3) {
-					height: 60%;
+					height: 50%;
 				}
 				&:nth-child(4) {
-					height: 75%;
+					height: 70%;
 				}
 				&:nth-child(5) {
-					height: 47%;
+					height: 45%;
 				}
 			}
 		}

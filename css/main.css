@@ -215,7 +215,7 @@ a {
   overflow: hidden;
   margin-bottom: 30px; }
 #skills #percentage-bar-fend {
-  width: 70%;
+  width: 65%;
   height: 20px;
   display: inline-block;
   background-color: #F9867B;
@@ -223,7 +223,7 @@ a {
   padding: 0px 15px;
   line-height: 20px; }
 #skills #percentage-bar-bend {
-  width: 30%;
+  width: 35%;
   height: 20px;
   display: inline-block;
   background-color: #4686E6;
@@ -336,43 +336,43 @@ a {
   #skills #skills-block-container #front-end-skills .graph-bar {
     background-color: #F9867B; }
     #skills #skills-block-container #front-end-skills .graph-bar:nth-child(1) {
-      height: 60%; }
+      height: 93%; }
     #skills #skills-block-container #front-end-skills .graph-bar:nth-child(2) {
-      height: 98%; }
+      height: 67%; }
     #skills #skills-block-container #front-end-skills .graph-bar:nth-child(3) {
       height: 30%; }
     #skills #skills-block-container #front-end-skills .graph-bar:nth-child(4) {
-      height: 60%; }
+      height: 30%; }
     #skills #skills-block-container #front-end-skills .graph-bar:nth-child(5) {
-      height: 37%; }
+      height: 20%; }
   #skills #skills-block-container #back-end-skills h3 {
     color: #4686E6; }
   #skills #skills-block-container #back-end-skills .graph-bar {
     background-color: #4686E6; }
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(1) {
-      height: 63%; }
+      height: 65%; }
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(2) {
-      height: 46%; }
+      height: 65%; }
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(3) {
-      height: 38%; }
+      height: 55%; }
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(4) {
-      height: 43%; }
+      height: 30%; }
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(5) {
-      height: 33%; }
+      height: 25%; }
   #skills #skills-block-container #other-skills h3 {
     color: #ffd745; }
   #skills #skills-block-container #other-skills .graph-bar {
     background-color: #ffd745; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(1) {
-      height: 67%; }
+      height: 70%; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(2) {
-      height: 90%; }
+      height: 80%; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(3) {
-      height: 60%; }
+      height: 50%; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(4) {
-      height: 75%; }
+      height: 70%; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(5) {
-      height: 47%; }
+      height: 45%; }
 
 #contact-form {
   padding: 15px; }
