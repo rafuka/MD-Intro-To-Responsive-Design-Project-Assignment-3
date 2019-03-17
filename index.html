@@ -181,44 +181,6 @@
 							</div>
 						</li>
 						<li class="tabs__item">
-							<input class="tabs__radio" type="radio" name="projects" id="forms">
-							<label class="tabs__label" for="forms">Forms</label>
-							<div class="tabs__content">
-								<div class="carousel">
-									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-1" checked>
-									<div class="carousel__slide">
-										<img src="assets/forms1.png">
-									</div>
-									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-2">
-									<div class="carousel__slide">
-										<img src="assets/forms2.png">
-									</div>
-									<input class="carousel__radio" type="radio" name="p3-slides" id="slide-3-3">
-									<div class="carousel__slide">
-										<img src="assets/forms3.png">
-									</div>
-									<div class="carousel__labels">
-										<div class="carousel__pills">
-											<label class="carousel__pill" for="slide-3-1"></label>
-											<label class="carousel__pill" for="slide-3-2"></label>
-											<label class="carousel__pill" for="slide-3-3"></label>
-										</div>
-										<label class="arrow-left" for="slide-3-1"><i class="material-icons">keyboard_arrow_left</i></label>
-										<label class="arrow-right" for="slide-3-1"><i class="material-icons">keyboard_arrow_right</i></label>
-										<label class="arrow-left" for="slide-3-2"><i class="material-icons">keyboard_arrow_left</i></label>
-										<label class="arrow-right" for="slide-3-2"><i class="material-icons">keyboard_arrow_right</i></label>
-										<label class="arrow-left" for="slide-3-3"><i class="material-icons">keyboard_arrow_left</i></label>
-										<label class="arrow-right" for="slide-3-3"><i class="material-icons">keyboard_arrow_right</i></label>
-									</div>
-								</div>
-								<footer class="tabs__footer">
-									<p>Technologies: HTML5, CSS3, and vanilla JavaScript.</p>
-                  <a href="https://github.com/rafuka/MD-Introduction-To-CSS-Project-Assignment-4" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>View on Github</a>
-                  <a href="https://rafuka.github.io/MD-Introduction-To-CSS-Project-Assignment-4/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>View live demo</a>
-								</footer>
-							</div>				
-						</li>
-						<li class="tabs__item">
 							<input class="tabs__radio" type="radio" name="projects" id="uifw">
 							<label class="tabs__label" for="uifw">UI Framework</label>
 							<div class="tabs__content">
@@ -455,8 +417,8 @@
 					    		<p id="info">As a junior FullStack Javascript developer. I thrive the most in creative environments where I can solve problems between different domains. I aspire to become a Web Architect.</p>
 					    		<p id="email">rafuk89@gmail.com</p>
 					    		<div id="social-media">		
-					    			<span><a href="https://www.github.com/rafuka"><i class="fa fa-github"></i></a></span>
-					    			<span><a href="https://www.linkedin.com/in/rafuka"><i class="fa fa-linkedin"></i></a></span>
+					    			<span><a target="_blank" href="https://www.github.com/rafuka"><i class="fa fa-github"></i></a></span>
+					    			<span><a target="_blank" href="https://www.linkedin.com/in/rafuka"><i class="fa fa-linkedin"></i></a></span>
 					    		</div>
 					    	</div>
 					    	<div class="back">
@@ -485,7 +447,9 @@
 		var cookiesDeclineBtn = document.getElementById('cookies-decline');
 
 		cookiesAcceptBtn.addEventListener('click', function(e) {
-			document.cookie = "cookies-accepted=yes";
+			document.cookie = "cookies-accepted=yes,path=/,";
+			console.log('Cookies');
+			console.log(document.cookie);
 			cookiesNotice.style.display = "none";
 		});
 

@@ -15,7 +15,6 @@
 		margin-top: 70px;
 
 		label {
-			cursor: pointer;
 			display: inline-block;
 			@include perspective(1000px);
 			@include transform-style(preserve-3d);
@@ -25,12 +24,12 @@
 			&:hover {
 				.card {
 					@include rotateX(10deg);
-					box-shadow: 0 15px 10px rgba(50,50,50,.2);
+					box-shadow: 0 10px 15px rgba(50,50,50,.2);
 				}
 
 				#card-toggle:checked + .card {
 					@include rotateX(170deg);
-					box-shadow: 0 15px 10px rgba(50,50,50,.2);
+					box-shadow: 0 10px 15px rgba(50,50,50,.2);
 				}
 			}
 		}
@@ -99,7 +98,7 @@
 				color: $purple;
 				font-size: 12px;
 				position: absolute;
-				bottom: 35px;
+				bottom: 30px;
 				right: 25px;
 				margin: 0px;
 			}
@@ -136,9 +135,10 @@
 
 			a {
 				color: $purple;
-				font-size: 30px;
-				margin-right: 10px;
-				
+				font-size: 37px;
+				padding: 5px;
+				transition: all .2s ease;
+
 				i {
 					color: inherit;
 					font-size: inherit;
@@ -146,7 +146,14 @@
 			}
 
 			span {
+				display: inline-block;
 				margin: 0px 5px;
+
+				&:hover {
+					a {
+						color: lighten($purple, 15%);
+					}
+				}
 			}
 		}
 	}

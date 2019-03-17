@@ -280,6 +280,7 @@ a {
         display: flex;
         align-items: flex-end; }
         #skills #skills-block-container .skill-block .skill-graph .graph .graph-bar {
+          cursor: help;
           height: 100%;
           width: 20%;
           margin: 0 13px;
@@ -359,9 +360,9 @@ a {
     #skills #skills-block-container #back-end-skills .graph-bar:nth-child(5) {
       height: 33%; }
   #skills #skills-block-container #other-skills h3 {
-    color: #f3d052; }
+    color: #ffd745; }
   #skills #skills-block-container #other-skills .graph-bar {
-    background-color: #f3d052; }
+    background-color: #ffd745; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(1) {
       height: 67%; }
     #skills #skills-block-container #other-skills .graph-bar:nth-child(2) {
@@ -1044,7 +1045,6 @@ a {
   height: 290px;
   margin-top: 70px; }
   #contact #contact-wrapper label {
-    cursor: pointer;
     display: inline-block;
     -moz-perspective: 1000px;
     -o-perspective: 1000px;
@@ -1064,14 +1064,14 @@ a {
       -ms-transform: rotateX(10deg);
       -webkit-transform: rotateX(10deg);
       transform: rotateX(10deg);
-      box-shadow: 0 15px 10px rgba(50, 50, 50, 0.2); }
+      box-shadow: 0 10px 15px rgba(50, 50, 50, 0.2); }
     #contact #contact-wrapper label:hover #card-toggle:checked + .card {
       -moz-transform: rotateX(170deg);
       -o-transform: rotateX(170deg);
       -ms-transform: rotateX(170deg);
       -webkit-transform: rotateX(170deg);
       transform: rotateX(170deg);
-      box-shadow: 0 15px 10px rgba(50, 50, 50, 0.2); }
+      box-shadow: 0 10px 15px rgba(50, 50, 50, 0.2); }
   #contact #contact-wrapper input#card-toggle {
     display: none; }
     #contact #contact-wrapper input#card-toggle:checked + .card {
@@ -1131,7 +1131,7 @@ a {
     color: #8E69C1;
     font-size: 12px;
     position: absolute;
-    bottom: 35px;
+    bottom: 30px;
     right: 25px;
     margin: 0px; }
   #contact #contact-wrapper #enc-info {
@@ -1158,13 +1158,17 @@ a {
     left: 15px; }
     #contact #contact-wrapper #social-media a {
       color: #8E69C1;
-      font-size: 30px;
-      margin-right: 10px; }
+      font-size: 37px;
+      padding: 5px;
+      transition: all .2s ease; }
       #contact #contact-wrapper #social-media a i {
         color: inherit;
         font-size: inherit; }
     #contact #contact-wrapper #social-media span {
+      display: inline-block;
       margin: 0px 5px; }
+      #contact #contact-wrapper #social-media span:hover a {
+        color: #b79fd7; }
 
 @media screen and (max-width: 960px) {
   #contact #contact-wrapper label {
