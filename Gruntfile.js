@@ -52,6 +52,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify']);
-  grunt.registerTask('prefix', ['postcss']);
   grunt.registerTask('sassify', ['sass', 'cssmin']);
 };
