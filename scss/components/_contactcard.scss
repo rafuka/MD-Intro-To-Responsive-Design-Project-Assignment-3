@@ -1,4 +1,13 @@
 #contact {
+	#codewars {
+		position: absolute;
+    right: 15px;
+		top: 25px;
+		
+		img {
+			height: 27px;
+		}
+	}
 
 	#contact-wrapper {
 		position: relative;
@@ -10,19 +19,18 @@
 			display: inline-block;
 			@include perspective(1000px);
 			@include transform-style(preserve-3d);
-			position: absolute;
 			font-family: 'Lato', sans-serif;
-			left: 24%;
+			margin-left: calc(50% - 200px);
 
 			&:hover {
 				.card {
-					@include rotateX(20deg);
-					box-shadow: 0 20px 20px rgba(50,50,50,.2);
+					@include rotateX(10deg);
+					box-shadow: 0 15px 10px rgba(50,50,50,.2);
 				}
 
 				#card-toggle:checked + .card {
-					@include rotateX(160deg);
-					box-shadow: 0 20px 20px rgba(50,50,50,.2);
+					@include rotateX(170deg);
+					box-shadow: 0 15px 10px rgba(50,50,50,.2);
 				}
 			}
 		}
@@ -37,8 +45,8 @@
 
 		.card {
 			position: relative;
-			width: 470px;
-			height: 290px;
+			width: 400px;
+    	height: 250px;
 			@include transform-style(preserve-3d);
 			@include transition(all 600ms);
 			box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
@@ -82,25 +90,18 @@
 			}
 
 			&#info {
-				margin-top: 30px;
+				margin-top: 20px;
 				font-weight: 300;
 			}
 
-			&#email, &#website {
+			&#email {
 				display: inline-block;
 				color: #8e69c1;
 				font-size: 12px;
-				margin-top: 20px;
-				margin-right: 30px;
-			}
-
-			&#website {
-				a {
-					margin: 0;
-					padding: 0;
-					color: inherit;
-					font-size: inherit;
-				}
+				position: absolute;
+				bottom: 35px;
+				right: 25px;
+				margin: 0px;
 			}
 		}
 
@@ -128,7 +129,11 @@
 
 		#social-media {
 			display: inline-block;
-			margin-left: 40px;
+			margin: 0px;
+			position: absolute;
+			bottom: 20px;
+			left: 15px;
+
 			span {
 				margin: 0px 5px;
 			}
@@ -162,14 +167,6 @@
 			}
 			.card {
 				width: 280px;
-
-				#email {
-					margin-right: 20px;
-				}
-
-				#website {
-					margin-right: 0px;
-				}
 
 				.back {
 					background-position: 50%;

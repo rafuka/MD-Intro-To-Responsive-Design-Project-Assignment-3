@@ -323,7 +323,19 @@ input[type="radio"]:checked ~ .tab-content {
 #slide-4-2:checked ~ .carousel-labels > label.arrow-left[for="slide-4-1"],
 #slide-4-2:checked ~ .carousel-labels > label.arrow-right[for="slide-4-3"],
 #slide-4-3:checked ~ .carousel-labels > label.arrow-left[for="slide-4-2"],
-#slide-4-3:checked ~ .carousel-labels > label.arrow-right[for="slide-4-1"] {
+#slide-4-3:checked ~ .carousel-labels > label.arrow-right[for="slide-4-1"],
+#slide-5-1:checked ~ .carousel-labels > label.arrow-left[for="slide-5-3"],
+#slide-5-1:checked ~ .carousel-labels > label.arrow-right[for="slide-5-2"],
+#slide-5-2:checked ~ .carousel-labels > label.arrow-left[for="slide-5-1"],
+#slide-5-2:checked ~ .carousel-labels > label.arrow-right[for="slide-5-3"],
+#slide-5-3:checked ~ .carousel-labels > label.arrow-left[for="slide-5-2"],
+#slide-5-3:checked ~ .carousel-labels > label.arrow-right[for="slide-5-1"],
+#slide-6-1:checked ~ .carousel-labels > label.arrow-left[for="slide-6-3"],
+#slide-6-1:checked ~ .carousel-labels > label.arrow-right[for="slide-6-2"],
+#slide-6-2:checked ~ .carousel-labels > label.arrow-left[for="slide-6-1"],
+#slide-6-2:checked ~ .carousel-labels > label.arrow-right[for="slide-6-3"],
+#slide-6-3:checked ~ .carousel-labels > label.arrow-left[for="slide-6-2"],
+#slide-6-3:checked ~ .carousel-labels > label.arrow-right[for="slide-6-1"] {
 	visibility: visible;
 }
 
@@ -338,7 +350,13 @@ input[type="radio"]:checked ~ .tab-content {
 #slide-3-3:checked ~ .carousel-labels > label.slide-pill[for="slide-3-3"],
 #slide-4-1:checked ~ .carousel-labels > label.slide-pill[for="slide-4-1"],
 #slide-4-2:checked ~ .carousel-labels > label.slide-pill[for="slide-4-2"],
-#slide-4-3:checked ~ .carousel-labels > label.slide-pill[for="slide-4-3"] {
+#slide-4-3:checked ~ .carousel-labels > label.slide-pill[for="slide-4-3"],
+#slide-5-1:checked ~ .carousel-labels > label.slide-pill[for="slide-5-1"],
+#slide-5-2:checked ~ .carousel-labels > label.slide-pill[for="slide-5-2"],
+#slide-5-3:checked ~ .carousel-labels > label.slide-pill[for="slide-5-3"],
+#slide-6-1:checked ~ .carousel-labels > label.slide-pill[for="slide-6-1"],
+#slide-6-2:checked ~ .carousel-labels > label.slide-pill[for="slide-6-2"],
+#slide-6-3:checked ~ .carousel-labels > label.slide-pill[for="slide-6-3"] {
 	background-color: #90b7f0;
 }
 
