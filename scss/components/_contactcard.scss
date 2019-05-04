@@ -1,207 +1,208 @@
 #contact {
-	#codewars {
-		position: absolute;
+  #codewars {
+    position: absolute;
     right: 15px;
-		top: 25px;
-		
-		img {
-			height: 27px;
-		}
-	}
+    top: 25px;
 
-	#contact-wrapper {
-		position: relative;
-		height: 290px;
-		margin-top: 70px;
+    img {
+      height: 27px;
+    }
+  }
 
-		label {
-			display: inline-block;
-			@include perspective(1000px);
-			@include transform-style(preserve-3d);
-			font-family: 'Lato', sans-serif;
-			margin-left: calc(50% - 200px);
+  #contact-wrapper {
+    position: relative;
+    height: 290px;
+    margin-top: 70px;
 
-			&:hover {
-				.card {
-					@include rotateX(10deg);
-					box-shadow: 0 10px 15px rgba(50,50,50,.2);
-				}
+    label {
+      display: inline-block;
+      @include perspective(1000px);
+      @include transform-style(preserve-3d);
+      font-family: "Lato", sans-serif;
+      margin-left: calc(50% - 200px);
 
-				#card-toggle:checked + .card {
-					@include rotateX(170deg);
-					box-shadow: 0 10px 15px rgba(50,50,50,.2);
-				}
-			}
-		}
+      &:hover {
+        .card {
+          @include rotateX(10deg);
+          box-shadow: 0 10px 15px rgba(50, 50, 50, 0.2);
+        }
 
-		input#card-toggle {
-			display: none;
+        #card-toggle:checked + .card {
+          @include rotateX(170deg);
+          box-shadow: 0 10px 15px rgba(50, 50, 50, 0.2);
+        }
+      }
+    }
 
-			&:checked + .card {
-				@include rotateX(180deg);
-			}
-		}
+    input#card-toggle {
+      display: none;
 
-		.card {
-			position: relative;
-			width: 400px;
-    	height: 250px;
-			@include transform-style(preserve-3d);
-			@include transition(all 600ms);
-			box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+      &:checked + .card {
+        @include rotateX(180deg);
+      }
+    }
 
-			.front, .back {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				backface-visibility: hidden;
-				border-radius: 3px;
-				padding: 20px;
-			}
+    .card {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      @include transform-style(preserve-3d);
+      @include transition(all 600ms);
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
 
-			.front {
-				background-image: url('../assets/bg2.png');
+      .front,
+      .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        padding: 20px;
+      }
 
-				h1 {
-					color: $gray;
-					font-weight: 300;
-					margin: 0px;
-				}
+      .front {
+        background-image: url("../assets/bg2.png");
 
-				p {
-					margin: 0px;
-					color: $gray;
-				}
-			}
+        h1 {
+          color: $gray;
+          font-weight: 300;
+          margin: 0px;
+        }
 
-			.back {
-				@include rotateX(180deg);
-				background-image: url('../assets/myimg2.jpg');
-				background-size: cover;
-			}
-		}
+        p {
+          margin: 0px;
+          color: $gray;
+        }
+      }
 
-		p {
-			small {
-				font-size: 12px;
-				font-weight: 400;
-				color: rgba(255,255,255,0.8);
-			}
+      .back {
+        @include rotateX(180deg);
+        background-image: url("../assets/myimg2.jpg");
+        background-size: cover;
+      }
+    }
 
-			&#info {
-				margin-top: 20px;
-				font-weight: 300;
-			}
+    p {
+      small {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+      }
 
-			&#email {
-				display: inline-block;
-				color: $purple;
-				font-size: 12px;
-				position: absolute;
-				bottom: 30px;
-				right: 25px;
-				margin: 0px;
-			}
-		}
+      &#info {
+        margin-top: 20px;
+        font-weight: 300;
+      }
 
-		#enc-info {
-			margin-top: 30px;
-			display: inline-block;
-			p {
-				display: inline-block;
-				font-size: 14px;
-				color: rgba(255,255,255,.7);
-				position: relative;
-				top:  -10px;
-				left: 10px;
-				span {
-					color: white;
-				}
-				a {
-					color: $purple;
-				}
-			}
-			img {
-				display: inline-block;
-			}
-		}
+      &#email {
+        display: inline-block;
+        color: $purple;
+        font-size: 12px;
+        position: absolute;
+        bottom: 30px;
+        right: 25px;
+        margin: 0px;
+      }
+    }
 
-		#social-media {
-			display: inline-block;
-			margin: 0px;
-			position: absolute;
-			bottom: 20px;
-			left: 15px;
+    #enc-info {
+      margin-top: 30px;
+      display: inline-block;
+      p {
+        display: inline-block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        position: relative;
+        top: -10px;
+        left: 10px;
+        span {
+          color: white;
+        }
+        a {
+          color: $purple;
+        }
+      }
+      img {
+        display: inline-block;
+      }
+    }
 
-			a {
-				color: $purple;
-				font-size: 37px;
-				padding: 5px;
-				transition: all .2s ease;
+    #social-media {
+      display: inline-block;
+      margin: 0px;
+      position: absolute;
+      bottom: 20px;
+      left: 15px;
 
-				i {
-					color: inherit;
-					font-size: inherit;
-				}
-			}
+      a {
+        color: $purple;
+        font-size: 37px;
+        padding: 5px;
+        transition: all 0.2s ease;
 
-			span {
-				display: inline-block;
-				margin: 0px 5px;
+        i {
+          color: inherit;
+          font-size: inherit;
+        }
+      }
 
-				&:hover {
-					a {
-						color: lighten($purple, 15%);
-					}
-				}
-			}
-		}
-	}
+      span {
+        display: inline-block;
+        margin: 0px 5px;
+
+        &:hover {
+          a {
+            color: lighten($purple, 15%);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
-	#contact {
-		#contact-wrapper {
-			label {
-				left: 0;
-				position: static;
-				display: block;
-				margin: 0 auto;
-				width: 470px;
-			}
+  #contact {
+    #contact-wrapper {
+      label {
+        left: 0;
+        position: static;
+        display: block;
+        margin: 0 auto;
+        width: 470px;
+      }
 
-			.card {
-				margin: 0 auto;
-			}
-		}
-	}
+      .card {
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 560px) {
-	#contact {
-		#contact-wrapper {
-			label {
-				width: 280px;
-			}
-			.card {
-				width: 280px;
+  #contact {
+    #contact-wrapper {
+      label {
+        width: 280px;
+      }
+      .card {
+        width: 280px;
 
-				.back {
-					background-position: 50%;
-				}
-			}
+        .back {
+          background-position: 50%;
+        }
+      }
 
-			#enc-info {
-				display: none;
-			}
+      #enc-info {
+        display: none;
+      }
 
-			#social-media {
-				margin: 0;
-				text-align: center;
-				display: flex;
-				justify-content: space-around;
-				margin-top: 85px;
-			}
-		}
-	}
+      #social-media {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 85px;
+      }
+    }
+  }
 }

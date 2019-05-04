@@ -1,58 +1,58 @@
-
 .search-bar {
-	background-color: rgba(200,200,200,0.3);
-	border-radius: 8px;
-	display: inline-block;
-	opacity: 1;
-	padding-right: 5px;
+  background-color: rgba(200, 200, 200, 0.3);
+  border-radius: 8px;
+  display: inline-block;
+  opacity: 1;
+  padding-right: 5px;
+  position: relative;
+  top: 0px;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+  visibility: visible;
+
+  &__label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    left: 4px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 6px;
+    transition: top 0.3s ease, font-size 0.3s ease;
+  }
+
+  &__button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 0;
+    outline: none;
+    padding: 3px;
     position: relative;
-	top: 0px;
-	transition: opacity .3s ease, visibility 0s 0.3s;
-	visibility: visible;
 
-	&__label {
-		color: rgba(255,255,255,0.7);
-		font-size: 16px;
-		left: 4px;
-		position: absolute;
-		text-transform: capitalize;
-		top: 6px;
-		transition: top .3s ease, font-size .3s ease;
-	}
+    i {
+      font-size: 1.5em;
+      transition: transform 0.2s ease;
+    }
 
-	&__button {
-		-webkit-appearance: none;
-		background-color: transparent;
-		border: none;
-		color: white;
-		cursor: pointer;
-		height: 0;
-		outline: none;
-		padding: 3px;
-	    position: relative;
+    &:hover > i {
+      transform: scale(1.2);
+    }
+  }
 
-	    i {
-	    	font-size: 1.5em;
-   			transition: transform .2s ease;
-	    }
+  &__input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    width: 150px;
 
-	    &:hover > i {
-	    	transform: scale(1.2);
-	    }
-	}
-
-	&__input {
-	    	background-color: transparent;
-		    border: none;
-		    color: white;
-		    font-size: 16px;
-		    outline: none;
-		    padding: 5px;
-		    width: 150px;    
-
-		    &:focus + label, &:valid + label {
-		    	font-size: 10px;
-		    	top: -12px;
-		    }
-	    }
+    &:focus + label,
+    &:valid + label {
+      font-size: 10px;
+      top: -12px;
+    }
+  }
 }

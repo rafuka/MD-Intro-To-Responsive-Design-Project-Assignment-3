@@ -1,461 +1,454 @@
 .section {
-
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		justify-content: center;
-		max-width: 900px;
-		margin: 0 auto;
-		opacity: 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0;
     padding: 100px 0px;
-		position: relative;
-		top: 100px;
-		transition: opacity 1s ease, top 1s ease;      
-	}
+    position: relative;
+    top: 100px;
+    transition: opacity 1s ease, top 1s ease;
+  }
 
-	&__title {
-		text-align: center;
-		color: #343739;
-		margin-bottom: 15px;
-		font-size: 2.5em;
-		font-weight: 300;
-	}
+  &__title {
+    text-align: center;
+    color: #343739;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
 
-	&__info {
-		text-align: center;
-		margin-bottom: 35px;
-		font-weight: 300;
-	}
+  &__info {
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 300;
+  }
 }
- 
+
 .tabs {
-	display: flex;
-	position: relative;
-	height: 650px;
-	min-width: 320px;
+  display: flex;
+  position: relative;
+  height: 650px;
+  min-width: 320px;
 
-	&__list {
-		display: inline-flex;
-		flex-direction: column;
-		vertical-align: top;
-		width: 20%;
-	}
+  &__list {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    width: 20%;
+  }
 
-	&__label {
-		display: inline-block;
-	  color: rgba(0,0,0,0.5);
-		width: 100%;
-		padding: 15px 0px;
-		padding-right: 40px;
-		text-align: right;
-		user-select: none;
-		transition: padding .3s ease-out;
+  &__label {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 15px 0px;
+    padding-right: 40px;
+    text-align: right;
+    user-select: none;
+    transition: padding 0.3s ease-out;
 
-		&:hover {
-			cursor: pointer;
-			color: black;
-			padding-right: 25px;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      color: black;
+      padding-right: 25px;
+    }
+  }
 
-	&__radio {
-		display: none;
-	}
+  &__radio {
+    display: none;
+  }
 
-	&__radio:checked + &__label {
-		background-color: white;
-		padding-right: 25px;
-		color: #000;
-	}
+  &__radio:checked + &__label {
+    background-color: white;
+    padding-right: 25px;
+    color: #000;
+  }
 
-	&__content {
+  &__content {
     background-color: white;
     height: 675px;
-		opacity: 0;
+    opacity: 0;
     padding: 0;
-		padding-top: 20px;
+    padding-top: 20px;
     position: absolute;
     right: 0;
     top: 0;
-		width: 80%;
-		
-		@include transition(opacity .4s ease, z-index 0s .4s, height .4s ease);
-	}
+    width: 80%;
 
-	&__radio:checked ~ &__content {
-		opacity: 1;
-	  z-index: 1;
-	}
+    @include transition(opacity 0.4s ease, z-index 0s 0.4s, height 0.4s ease);
+  }
 
-	&__footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); 
-	  margin-top: 30px;
-	  padding: 20px;
-	  	
+  &__radio:checked ~ &__content {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 20px;
+
     p {
       &:first-child {
         text-transform: capitalize;
-        margin-bottom  : 50px;
+        margin-bottom: 50px;
       }
     }
-        
+
     a {
       color: $purple;
-			margin-right: 20px;
-			
+      margin-right: 20px;
+
       &:hover {
         text-decoration: underline;
       }
-            
+
       i.fa {
         font-size: 1.5em;
         margin-right: 5px;
       }
     }
-	}
+  }
 }
 
 #about {
-	background-image: url('../assets/portfolio_bgnd.jpg');
-	background-position: center;
-	background-size: cover;
-    height: 100vh;
-    
-	.section__title {
-		color: white;
-		font-size: 3.5em;
-	}
+  background-image: url("../assets/portfolio_bgnd.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 
-	.section__info {
-		color: white;
-		font-size: 1.5em;
-	}
+  .section__title {
+    color: white;
+    font-size: 3.5em;
+  }
+
+  .section__info {
+    color: white;
+    font-size: 1.5em;
+  }
 }
 
 #skills {
-	#skills-container {
-		background-color: white;
-		padding: 30px;
-	}
+  #skills-container {
+    background-color: white;
+    padding: 30px;
+  }
 
-	#percentage-bar {
-		width: 80%;
-		display: flex;
-		margin: 0px auto;
-		color: white;
-		border-radius: 5px;
-		overflow: hidden;
-		margin-bottom: 30px;
-	}
+  #percentage-bar {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
 
-	#percentage-bar-fend {
-		width: 65%;
-		height: 20px;
-		display: inline-block;
-		background-color: $red;
-		text-align: left;
-		padding: 0px 15px;
-		line-height: 20px;
-	}
+  #percentage-bar-fend {
+    width: 65%;
+    height: 20px;
+    display: inline-block;
+    background-color: $red;
+    text-align: left;
+    padding: 0px 15px;
+    line-height: 20px;
+  }
 
-	#percentage-bar-bend {
-		width: 35%;
-		height: 20px;
-		display: inline-block;
-		background-color: $blue;
-		text-align: right;
-		padding: 0px 15px;
-		line-height: 20px;
-	}
+  #percentage-bar-bend {
+    width: 35%;
+    height: 20px;
+    display: inline-block;
+    background-color: $blue;
+    text-align: right;
+    padding: 0px 15px;
+    line-height: 20px;
+  }
 
-	#skills-block-container {
-		display: flex;
-		width: 100%;
-		justify-content: space-around;
-		flex-wrap: wrap;
+  #skills-block-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-		.skill-block {
-			width: 50%;
-		    position: relative;
-			top: 100px;
-			opacity: 0;
-			@include transition(top .7s ease-in-out, opacity .7s ease-in-out);
-			
-			h3 {
-				text-align: center;
-				margin: 20px 0px;
-			}
+    .skill-block {
+      width: 50%;
+      position: relative;
+      top: 100px;
+      opacity: 0;
+      @include transition(top 0.7s ease-in-out, opacity 0.7s ease-in-out);
 
-			.skill-graph {
+      h3 {
+        text-align: center;
+        margin: 20px 0px;
+      }
 
-				display: flex;
-				flex-wrap: wrap;
-				flex-direction: row;
-				height: 300px;
-				width: 100%;
-				
-				padding: 0px 23px;
-				
-				
-				position: relative;
+      .skill-graph {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 300px;
+        width: 100%;
 
-				.labels-left {
-					flex: 1 0;
-					height: 210px;
+        padding: 0px 23px;
 
-					p {
-						margin-bottom: 32px;
-					    font-size: .85em;
-					    font-weight: bold;
-					    position: absolute;
-					    width: 89%;
-					    border-bottom: 1px dashed rgba(0,0,0,0.1);
+        position: relative;
 
-					   &:nth-child(1) {
-					   		top: -4%;
-					   }
-					   &:nth-child(2) {
-					   		top: 15%;
-					   }
-					   &:nth-child(3) {
-					   		top: 33%;
-					   }
-					   &:nth-child(4) {
-					   		top: 51%;
-					   }
-					}
-				}
+        .labels-left {
+          flex: 1 0;
+          height: 210px;
 
-				.graph {
-					flex: 4 0;
-					height: 210px;
-					display: flex;
-					align-items: flex-end;
+          p {
+            margin-bottom: 32px;
+            font-size: 0.85em;
+            font-weight: bold;
+            position: absolute;
+            width: 89%;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 
-					.graph-bar {
-						cursor: help;
-						height: 100%;
-						width: 20%;
-						margin: 0 13px;
-						border-radius: 5px 5px 0px 0px;
-					  position: relative;
+            &:nth-child(1) {
+              top: -4%;
+            }
+            &:nth-child(2) {
+              top: 15%;
+            }
+            &:nth-child(3) {
+              top: 33%;
+            }
+            &:nth-child(4) {
+              top: 51%;
+            }
+          }
+        }
 
-					  .tooltip {
-					    position: absolute;
-						  display: inline-block;
-					    width: 150px;
-					    background-color: rgba(0,0,0,0.9);
-					    color: white;
-					    padding: 10px;
-					    border-radius: 10px;
-					    left: calc(50% - 75px);
-					    bottom: calc(100% + 12px);
-					    opacity: 0;
-					    visibility: hidden;
-					    @include transition(bottom .4s ease-out, opacity .3s ease-out);
-					    z-index: 999;
-					    font-weight: 300;
+        .graph {
+          flex: 4 0;
+          height: 210px;
+          display: flex;
+          align-items: flex-end;
 
-						  &::after {
-						   	content: ' ';
-							  position: absolute;
-							  width: 0;
-						    height: 0;
-						    left: calc(50% - 12px);
-						    bottom: -12px;
-						    border-top: 12px solid rgba(0,0,0,0.9);
-						    border-right: 12px solid transparent;
-						    border-left: 12px solid transparent;
-					    }
-				    }
+          .graph-bar {
+            height: 100%;
+            width: 20%;
+            margin: 0 13px;
+            border-radius: 5px 5px 0px 0px;
+            position: relative;
 
-					  &:hover {
-					  	.tooltip {
-					  		bottom: calc(100% + 20px);
-								visibility: visible;
-								opacity: 1;
-					    }
-					  }
-					}
-				}
+            .tooltip {
+              position: absolute;
+              display: inline-block;
+              width: 150px;
+              background-color: rgba(0, 0, 0, 0.9);
+              color: white;
+              padding: 10px;
+              border-radius: 10px;
+              left: calc(50% - 75px);
+              bottom: calc(100% + 12px);
+              opacity: 0;
+              visibility: hidden;
+              @include transition(bottom 0.4s ease-out, opacity 0.3s ease-out);
+              z-index: 999;
+              font-weight: 300;
 
-				.labels-bottom {
-					border-top: 1px solid rgba(0,0,0,0.2);
-					display: flex;
-					height: 90px;
-					padding-left: 70px;
-					padding-top: 15px;
-					width: 100%;
+              &::after {
+                content: " ";
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: calc(50% - 12px);
+                bottom: -12px;
+                border-top: 12px solid rgba(0, 0, 0, 0.9);
+                border-right: 12px solid transparent;
+                border-left: 12px solid transparent;
+              }
+            }
 
-				  p {
-				  	transform: rotate(40deg);
-				    width: 20%;
-				    font-size: .9em;
-				    white-space: nowrap;
-			    }
-				}
-			}
-		}
+            &:hover {
+              .tooltip {
+                bottom: calc(100% + 20px);
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+        }
 
-		#front-end-skills {
-			h3 {
-				color: $red;
-			}
+        .labels-bottom {
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          display: flex;
+          height: 90px;
+          padding-left: 70px;
+          padding-top: 15px;
+          width: 100%;
 
-			.graph-bar {
-				background-color: $red;
-				&:nth-child(1) {
-					height: 93%;
-				}
-				&:nth-child(2) {
-					height: 67%;
-				}
-				&:nth-child(3) {
-					height: 30%;
-				}
-				&:nth-child(4) {
-					height: 30%;
-				}
-				&:nth-child(5) {
-					height: 20%;
-				}
-			}
-		}
+          p {
+            transform: rotate(40deg);
+            width: 20%;
+            font-size: 0.9em;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
 
-		#back-end-skills {
-			h3 {
-				color: $blue;
-			}
+    #front-end-skills {
+      h3 {
+        color: $red;
+      }
 
-			.graph-bar {
-				background-color: $blue;
-				&:nth-child(1) {
-					height: 65%;
-				}
-				&:nth-child(2) {
-					height: 65%;
-				}
-				&:nth-child(3) {
-					height: 55%;
-				}
-				&:nth-child(4) {
-					height: 30%;
-				}
-				&:nth-child(5) {
-					height: 25%;
-				}
-			}
-		}
+      .graph-bar {
+        background-color: $red;
+        &:nth-child(1) {
+          height: 91%;
+        }
+        &:nth-child(2) {
+          height: 75%;
+        }
+        &:nth-child(3) {
+          height: 60%;
+        }
+        &:nth-child(4) {
+          height: 27%;
+        }
+        &:nth-child(5) {
+          height: 18%;
+        }
+      }
+    }
 
-		#other-skills {
-			h3 {
-				color: $yellow;
-			}
+    #back-end-skills {
+      h3 {
+        color: $blue;
+      }
 
-			.graph-bar {
-				background-color: $yellow;
-				&:nth-child(1) {
-					height: 70%;
-				}
-				&:nth-child(2) {
-					height: 80%;
-				}
-				&:nth-child(3) {
-					height: 50%;
-				}
-				&:nth-child(4) {
-					height: 70%;
-				}
-				&:nth-child(5) {
-					height: 45%;
-				}
-			}
-		}
-	}
+      .graph-bar {
+        background-color: $blue;
+        &:nth-child(1) {
+          height: 65%;
+        }
+        &:nth-child(2) {
+          height: 65%;
+        }
+        &:nth-child(3) {
+          height: 60%;
+        }
+        &:nth-child(4) {
+          height: 25%;
+        }
+        &:nth-child(5) {
+          height: 43%;
+        }
+      }
+    }
+
+    #other-skills {
+      h3 {
+        color: $yellow;
+      }
+
+      .graph-bar {
+        background-color: $yellow;
+        &:nth-child(1) {
+          height: 77%;
+        }
+        &:nth-child(2) {
+          height: 85%;
+        }
+        &:nth-child(3) {
+          height: 50%;
+        }
+        &:nth-child(4) {
+          height: 72%;
+        }
+        &:nth-child(5) {
+          height: 50%;
+        }
+      }
+    }
+  }
 }
 
 #contact-form {
-	padding: 15px;
-		
-	.input-group {
-		display: flex;
-		justify-content: center;
-		position: relative;
-		width: 600px;
-		margin: 0 auto;
-		margin-bottom: 15px;
-		
-		&:first-child {
-			margin-top: 40px;
-			margin-bottom: 1px;
-		}
+  padding: 15px;
 
-		input[type=text] {
-			width: 50%;
-			margin: 0;
-			height: 50px;
-			padding: 10px 10px 0px 10px;
-			font-size: 1.1em;
-			background-color: $black;
-			outline: none;
-			border: none;
-			color: white;
+  .input-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
 
-			&:focus + label, &:valid + label {
-				font-size: .9em;
-				top: 1px;
-			}
+    &:first-child {
+      margin-top: 40px;
+      margin-bottom: 1px;
+    }
 
-			&#contact-email {
-				border-right: 1px solid $bgndColor;
-				border-radius: 5px 0px 0px 0px;
-			}
+    input[type="text"] {
+      width: 50%;
+      margin: 0;
+      height: 50px;
+      padding: 10px 10px 0px 10px;
+      font-size: 1.1em;
+      background-color: $black;
+      outline: none;
+      border: none;
+      color: white;
 
-			&#contact-name {
-				border-radius: 0px 5px 0px 0px;
-			}
-		}
+      &:focus + label,
+      &:valid + label {
+        font-size: 0.9em;
+        top: 1px;
+      }
 
-		textarea {
-			border: none;
-			width: 100%;
-			height: 250px;
-			padding: 10px;
-			font-size: 1.1em;
-			outline: none;
-			background-color: $black;
-			color: white;
-			border-radius: 0px 0px 5px 5px;
+      &#contact-email {
+        border-right: 1px solid $bgndColor;
+        border-radius: 5px 0px 0px 0px;
+      }
+
+      &#contact-name {
+        border-radius: 0px 5px 0px 0px;
+      }
+    }
+
+    textarea {
+      border: none;
+      width: 100%;
+      height: 250px;
+      padding: 10px;
+      font-size: 1.1em;
+      outline: none;
+      background-color: $black;
+      color: white;
+      border-radius: 0px 0px 5px 5px;
       scrollbar-track-color: $black;
       scrollbar-arrow-color: $black;
-		}
-	}
+    }
+  }
 
-	label {
-		position: absolute;
-		font-size: 1.2em;
+  label {
+    position: absolute;
+    font-size: 1.2em;
     top: 13px;
     color: white;
-    opacity: .7;
-		@include transition(top .2s ease, font-size .2s ease);
+    opacity: 0.7;
+    @include transition(top 0.2s ease, font-size 0.2s ease);
 
-		&[for=contact-email] {
-			left: 10px;
-		}
+    &[for="contact-email"] {
+      left: 10px;
+    }
 
-		&[for=contact-name] {
-			left: calc(50% + 10px);
-		}
-	}
+    &[for="contact-name"] {
+      left: calc(50% + 10px);
+    }
+  }
 
-	#contact-form-btn {
-		display: block;
-		margin: 20px auto;
-		background-color: $black;
-	}
+  #contact-form-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: $black;
+  }
 }
-
-
-
-
